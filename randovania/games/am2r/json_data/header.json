@@ -372,6 +372,11 @@
                 "long_name": "Metroid DNA 46",
                 "max_capacity": 1,
                 "extra": {}
+            },
+            "Flashlight": {
+                "long_name": "Flashlight",
+                "max_capacity": 4,
+                "extra": {}
             }
         },
         "events": {

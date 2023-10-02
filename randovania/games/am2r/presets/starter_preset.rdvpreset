@@ -124,6 +124,12 @@
                     ],
                     "pickup_count": 9,
                     "requires_main_item": true
+                },
+                "Flashlight": {
+                    "ammo_count": [
+                        1
+                    ],
+                    "pickup_count": 4,
                 }
             }
         },

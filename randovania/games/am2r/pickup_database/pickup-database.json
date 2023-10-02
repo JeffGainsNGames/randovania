@@ -80,6 +80,14 @@
                 "life support system"
             ],
             "hinted_as_major": false
+        },
+        "misc": {
+            "long_name": "Miscellaneous",
+            "hint_details": [
+                "a ",
+                "miscellaneous system"
+            ],
+            "hinted_as_major": false
         }
     },
     "standard_pickups": {
@@ -512,6 +520,17 @@
             "preferred_location_category": "minor",
             "unlocked_by": "Power Bomb Launcher",
             "temporary": "Locked Power Bombs",
+            "allows_negative": true
+        },
+        "Flashlight": {
+            "broad_category": "suit",
+            "model_name": "sItemFlashlight",
+            "offworld_models": {},
+            "items": [
+                "Flashlight"
+            ],
+            "preferred_location_category": "minor",
+            "description": "Brightens the room when collected (or darkens with negative values)",
             "allows_negative": true
         }
     },

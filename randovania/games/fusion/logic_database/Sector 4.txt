@@ -6,82 +6,82 @@ Extra - map_name: s4-21-05
   * Elevator to Elevator to Sector 4/Elevator to Sector 4
 
 ----------------
-Pump Control
+Pump Control Unit
 Extra - map_name: s4-00-06
 ----------------
-Pump Control Access
+Pump Shaft
 Extra - map_name: s4-05-03
 ----------------
-Save Room North
+Breeding Save Room
 Extra - map_name: s4-06-03
 ----------------
-Beside Owtch Room
+Breeding Access
 Extra - map_name: s4-07-03
 ----------------
-Corpse Tank
+Breeding Tank
 Extra - map_name: s4-08-03
 ----------------
-Serris Arena Access
+Broken Bridge
 Extra - map_name: s4-10-01
 ----------------
 Serris Arena
 Extra - map_name: s4-11-01
 ----------------
-Serris Exit
+Serris Escape
 Extra - map_name: s4-13-01
 ----------------
-Save Room (exit)
+Escape Save Room
 Extra - map_name: s4-16-04
 ----------------
-Big Room
+Eastern Reservoir
 Extra - map_name: s4-12-05
 ----------------
-Access
+Reservoir Access
 Extra - map_name: s4-15-06
 ----------------
 Entrance Hub
 Extra - map_name: s4-16-05
 ----------------
-Entrance Recharge
+Entrance Recharge Room
 Extra - map_name: generic_recharge
 ----------------
-Entrance Save
+Entrance Save Room
 Extra - map_name: generic_save
 ----------------
-Entrance Nav
+Entrance Navigation Room
 Extra - map_name: generic_nav
 ----------------
-Owtch Room
+Owtch Couch
 Extra - map_name: s4-06-04
 ----------------
-Left Room
+Western Reservoir
 Extra - map_name: s4-06-06
 ----------------
-Speedway
+Waterway
 Extra - map_name: s4-10-07
 ----------------
-Crabs
+Skultera Processing
 Extra - map_name: s4-10-05
 ----------------
-Snaky
+Bridge Access
 Extra - map_name: s4-11-03
 ----------------
-Snaky Save
+Bridge Save Room
 Extra - map_name: generic_save_right
 ----------------
-Connection to Sector 5
+Flooded Entrance
 Extra - map_name: s4-06-08
 ----------------
-Watery Shaft Central
+Aquarium Central Shaft
 Extra - map_name: s4-09-08
 ----------------
-Save Room underwater E
+Aquarium Northern Save Room
 Extra - map_name: generic_save_left
 ----------------
-Snail Room
+The Worst Room in the Game
 Extra - map_name: s4-10-09
 ----------------
-Hidden Route
+Aquarium West Tunnel
 Extra - map_name: s4-06-11
 ----------------
 Security Backdoor
@@ -90,53 +90,53 @@ Extra - map_name: s4-04-11
 Security Access
 Extra - map_name: s4-05-12
 ----------------
-Security
+Level 4 Security Room
 Extra - map_name: s4-04-15
 ----------------
 Crab Hangout
 Extra - map_name: s4-06-13
 ----------------
-Storage
+Bottom of the Aquarium
 Extra - map_name: s4-07-15
 ----------------
-Hidden Pool
+Aquarium East Tunnel
 Extra - map_name: s4-10-12
 ----------------
-Shaft
+Evir Shaft
 Extra - map_name: s4-13-10
 ----------------
-connection
+Aquarium Hub Access
 Extra - map_name: s4-14-10
 ----------------
-better have ice
+Aquarium Hub
 Extra - map_name: s4-15-08
 ----------------
-save station by better have ice
+Aquarium Eastern Save Room
 Extra - map_name: generic_save_left
 ----------------
-Checkpoint
+Drain Pipe
 Extra - map_name: s4-16-07
 ----------------
-Thingy Blockade
+Powamp Hub
 Extra - map_name: s4-18-06
 ----------------
 Data Room
 Extra - map_name: s4-20-07
 ----------------
-Owtch connection
+Hang-Owtch
 Extra - map_name: s4-20-06
 ----------------
 East Shaft
 Extra - map_name: s4-21-06
 ----------------
-to a6
+Connection to Sector 6 (NOC)
 Extra - map_name: s4-23-06
 ----------------
-to a2
+Connection to Sector 2 (TRO)
 Extra - map_name: s4-20-12
 ----------------
-Upper Hallway
+Aquarium Storage
 Extra - map_name: s4-18-08
 ----------------
-Lower Hallway
+Aquarium Speedway
 Extra - map_name: s4-17-09

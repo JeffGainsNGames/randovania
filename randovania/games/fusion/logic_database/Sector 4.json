@@ -33,42 +33,42 @@
                 }
             }
         },
-        "Pump Control": {
+        "Pump Control Unit": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-00-06"
             },
             "nodes": {}
         },
-        "Pump Control Access": {
+        "Pump Shaft": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-05-03"
             },
             "nodes": {}
         },
-        "Save Room North": {
+        "Breeding Save Room": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-06-03"
             },
             "nodes": {}
         },
-        "Beside Owtch Room": {
+        "Breeding Access": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-07-03"
             },
             "nodes": {}
         },
-        "Corpse Tank": {
+        "Breeding Tank": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-08-03"
             },
             "nodes": {}
         },
-        "Serris Arena Access": {
+        "Broken Bridge": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-10-01"
@@ -82,28 +82,28 @@
             },
             "nodes": {}
         },
-        "Serris Exit": {
+        "Serris Escape": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-13-01"
             },
             "nodes": {}
         },
-        "Save Room (exit)": {
+        "Escape Save Room": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-16-04"
             },
             "nodes": {}
         },
-        "Big Room": {
+        "Eastern Reservoir": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-12-05"
             },
             "nodes": {}
         },
-        "Access": {
+        "Reservoir Access": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-15-06"
@@ -117,98 +117,98 @@
             },
             "nodes": {}
         },
-        "Entrance Recharge": {
+        "Entrance Recharge Room": {
             "default_node": null,
             "extra": {
                 "map_name": "generic_recharge"
             },
             "nodes": {}
         },
-        "Entrance Save": {
+        "Entrance Save Room": {
             "default_node": null,
             "extra": {
                 "map_name": "generic_save"
             },
             "nodes": {}
         },
-        "Entrance Nav": {
+        "Entrance Navigation Room": {
             "default_node": null,
             "extra": {
                 "map_name": "generic_nav"
             },
             "nodes": {}
         },
-        "Owtch Room": {
+        "Owtch Couch": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-06-04"
             },
             "nodes": {}
         },
-        "Left Room": {
+        "Western Reservoir": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-06-06"
             },
             "nodes": {}
         },
-        "Speedway": {
+        "Waterway": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-10-07"
             },
             "nodes": {}
         },
-        "Crabs": {
+        "Skultera Processing": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-10-05"
             },
             "nodes": {}
         },
-        "Snaky": {
+        "Bridge Access": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-11-03"
             },
             "nodes": {}
         },
-        "Snaky Save": {
+        "Bridge Save Room": {
             "default_node": null,
             "extra": {
                 "map_name": "generic_save_right"
             },
             "nodes": {}
         },
-        "Connection to Sector 5": {
+        "Flooded Entrance": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-06-08"
             },
             "nodes": {}
         },
-        "Watery Shaft Central": {
+        "Aquarium Central Shaft": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-09-08"
             },
             "nodes": {}
         },
-        "Save Room underwater E": {
+        "Aquarium Northern Save Room": {
             "default_node": null,
             "extra": {
                 "map_name": "generic_save_left"
             },
             "nodes": {}
         },
-        "Snail Room": {
+        "The Worst Room in the Game": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-10-09"
             },
             "nodes": {}
         },
-        "Hidden Route": {
+        "Aquarium West Tunnel": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-06-11"
@@ -229,7 +229,7 @@
             },
             "nodes": {}
         },
-        "Security": {
+        "Level 4 Security Room": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-04-15"
@@ -243,56 +243,56 @@
             },
             "nodes": {}
         },
-        "Storage": {
+        "Bottom of the Aquarium": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-07-15"
             },
             "nodes": {}
         },
-        "Hidden Pool": {
+        "Aquarium East Tunnel": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-10-12"
             },
             "nodes": {}
         },
-        "Shaft": {
+        "Evir Shaft": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-13-10"
             },
             "nodes": {}
         },
-        "connection": {
+        "Aquarium Hub Access": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-14-10"
             },
             "nodes": {}
         },
-        "better have ice": {
+        "Aquarium Hub": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-15-08"
             },
             "nodes": {}
         },
-        "save station by better have ice": {
+        "Aquarium Eastern Save Room": {
             "default_node": null,
             "extra": {
                 "map_name": "generic_save_left"
             },
             "nodes": {}
         },
-        "Checkpoint": {
+        "Drain Pipe": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-16-07"
             },
             "nodes": {}
         },
-        "Thingy Blockade": {
+        "Powamp Hub": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-18-06"
@@ -306,7 +306,7 @@
             },
             "nodes": {}
         },
-        "Owtch connection": {
+        "Hang-Owtch": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-20-06"
@@ -320,28 +320,28 @@
             },
             "nodes": {}
         },
-        "to a6": {
+        "Connection to Sector 6 (NOC)": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-23-06"
             },
             "nodes": {}
         },
-        "to a2": {
+        "Connection to Sector 2 (TRO)": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-20-12"
             },
             "nodes": {}
         },
-        "Upper Hallway": {
+        "Aquarium Storage": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-18-08"
             },
             "nodes": {}
         },
-        "Lower Hallway": {
+        "Aquarium Speedway": {
             "default_node": null,
             "extra": {
                 "map_name": "s4-17-09"

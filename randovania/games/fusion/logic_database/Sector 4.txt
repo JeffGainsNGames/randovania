@@ -1,6 +1,142 @@
 ----------------
 Sector 4 Elevator
+Extra - map_name: s4-21-05
 > Elevator to Main Deck; Heals? False
   * Layers: default
   * Elevator to Elevator to Sector 4/Elevator to Sector 4
 
+----------------
+Pump Control
+Extra - map_name: s4-00-06
+----------------
+Pump Control Access
+Extra - map_name: s4-05-03
+----------------
+Save Room North
+Extra - map_name: s4-06-03
+----------------
+Beside Owtch Room
+Extra - map_name: s4-07-03
+----------------
+Corpse Tank
+Extra - map_name: s4-08-03
+----------------
+Serris Arena Access
+Extra - map_name: s4-10-01
+----------------
+Serris Arena
+Extra - map_name: s4-11-01
+----------------
+Serris Exit
+Extra - map_name: s4-13-01
+----------------
+Save Room (exit)
+Extra - map_name: s4-16-04
+----------------
+Big Room
+Extra - map_name: s4-12-05
+----------------
+Access
+Extra - map_name: s4-15-06
+----------------
+Entrance Hub
+Extra - map_name: s4-16-05
+----------------
+Entrance Recharge
+Extra - map_name: generic_recharge
+----------------
+Entrance Save
+Extra - map_name: generic_save
+----------------
+Entrance Nav
+Extra - map_name: generic_nav
+----------------
+Owtch Room
+Extra - map_name: s4-06-04
+----------------
+Left Room
+Extra - map_name: s4-06-06
+----------------
+Speedway
+Extra - map_name: s4-10-07
+----------------
+Crabs
+Extra - map_name: s4-10-05
+----------------
+Snaky
+Extra - map_name: s4-11-03
+----------------
+Snaky Save
+Extra - map_name: generic_save_right
+----------------
+Connection to Sector 5
+Extra - map_name: s4-06-08
+----------------
+Watery Shaft Central
+Extra - map_name: s4-09-08
+----------------
+Save Room underwater E
+Extra - map_name: generic_save_left
+----------------
+Snail Room
+Extra - map_name: s4-10-09
+----------------
+Hidden Route
+Extra - map_name: s4-06-11
+----------------
+Security Backdoor
+Extra - map_name: s4-04-11
+----------------
+Security Access
+Extra - map_name: s4-05-12
+----------------
+Security
+Extra - map_name: s4-04-15
+----------------
+Crab Hangout
+Extra - map_name: s4-06-13
+----------------
+Storage
+Extra - map_name: s4-07-15
+----------------
+Hidden Pool
+Extra - map_name: s4-10-12
+----------------
+Shaft
+Extra - map_name: s4-13-10
+----------------
+connection
+Extra - map_name: s4-14-10
+----------------
+better have ice
+Extra - map_name: s4-15-08
+----------------
+save station by better have ice
+Extra - map_name: generic_save_left
+----------------
+Checkpoint
+Extra - map_name: s4-16-07
+----------------
+Thingy Blockade
+Extra - map_name: s4-18-06
+----------------
+Data Room
+Extra - map_name: s4-20-07
+----------------
+Owtch connection
+Extra - map_name: s4-20-06
+----------------
+East Shaft
+Extra - map_name: s4-21-06
+----------------
+to a6
+Extra - map_name: s4-23-06
+----------------
+to a2
+Extra - map_name: s4-20-12
+----------------
+Upper Hallway
+Extra - map_name: s4-18-08
+----------------
+Lower Hallway
+Extra - map_name: s4-17-09

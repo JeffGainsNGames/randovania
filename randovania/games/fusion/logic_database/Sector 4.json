@@ -30,6 +30,321 @@
                     "connections": {}
                 }
             }
+        },
+        "Pump Control": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-00-06"
+            },
+            "nodes": {}
+        },
+        "Pump Control Access": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-05-03"
+            },
+            "nodes": {}
+        },
+        "Save Room North": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-06-03"
+            },
+            "nodes": {}
+        },
+        "Beside Owtch Room": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-07-03"
+            },
+            "nodes": {}
+        },
+        "Corpse Tank": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-08-03"
+            },
+            "nodes": {}
+        },
+        "Serris Arena Access": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-10-01"
+            },
+            "nodes": {}
+        },
+        "Serris Arena": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-11-01"
+            },
+            "nodes": {}
+        },
+        "Serris Exit": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-13-01"
+            },
+            "nodes": {}
+        },
+        "Save Room (exit)": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-16-04"
+            },
+            "nodes": {}
+        },
+        "Big Room": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-12-05"
+            },
+            "nodes": {}
+        },
+        "Access": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-15-06"
+            },
+            "nodes": {}
+        },
+        "Entrance Hub": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-16-05"
+            },
+            "nodes": {}
+        },
+        "Entrance Recharge": {
+            "default_node": null,
+            "extra": {
+                "map_name": "generic_recharge"
+            },
+            "nodes": {}
+        },
+        "Entrance Save": {
+            "default_node": null,
+            "extra": {
+                "map_name": "generic_save"
+            },
+            "nodes": {}
+        },
+        "Entrance Nav": {
+            "default_node": null,
+            "extra": {
+                "map_name": "generic_nav"
+            },
+            "nodes": {}
+        },
+        "Owtch Room": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-06-04"
+            },
+            "nodes": {}
+        },
+        "Left Room": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-06-06"
+            },
+            "nodes": {}
+        },
+        "Speedway": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-10-07"
+            },
+            "nodes": {}
+        },
+        "Crabs": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-10-05"
+            },
+            "nodes": {}
+        },
+        "Snaky": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-11-03"
+            },
+            "nodes": {}
+        },
+        "Snaky Save": {
+            "default_node": null,
+            "extra": {
+                "map_name": "generic_save_right"
+            },
+            "nodes": {}
+        },
+        "Connection to Sector 5": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-06-08"
+            },
+            "nodes": {}
+        },
+        "Watery Shaft Central": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-09-08"
+            },
+            "nodes": {}
+        },
+        "Save Room underwater E": {
+            "default_node": null,
+            "extra": {
+                "map_name": "generic_save_left"
+            },
+            "nodes": {}
+        },
+        "Snail Room": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-10-09"
+            },
+            "nodes": {}
+        },
+        "Hidden Route": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-06-11"
+            },
+            "nodes": {}
+        },
+        "Security Backdoor": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-04-11"
+            },
+            "nodes": {}
+        },
+        "Security Access": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-05-12"
+            },
+            "nodes": {}
+        },
+        "Security": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-04-15"
+            },
+            "nodes": {}
+        },
+        "Crab Hangout": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-06-13"
+            },
+            "nodes": {}
+        },
+        "Storage": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-07-15"
+            },
+            "nodes": {}
+        },
+        "Hidden Pool": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-10-12"
+            },
+            "nodes": {}
+        },
+        "Shaft": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-13-10"
+            },
+            "nodes": {}
+        },
+        "connection": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-14-10"
+            },
+            "nodes": {}
+        },
+        "better have ice": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-15-08"
+            },
+            "nodes": {}
+        },
+        "save station by better have ice": {
+            "default_node": null,
+            "extra": {
+                "map_name": "generic_save_left"
+            },
+            "nodes": {}
+        },
+        "Checkpoint": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-16-07"
+            },
+            "nodes": {}
+        },
+        "Thingy Blockade": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-18-06"
+            },
+            "nodes": {}
+        },
+        "Data Room": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-20-07"
+            },
+            "nodes": {}
+        },
+        "Owtch connection": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-20-06"
+            },
+            "nodes": {}
+        },
+        "East Shaft": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-21-06"
+            },
+            "nodes": {}
+        },
+        "to a6": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-23-06"
+            },
+            "nodes": {}
+        },
+        "to a2": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-20-12"
+            },
+            "nodes": {}
+        },
+        "Upper Hallway": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-18-08"
+            },
+            "nodes": {}
+        },
+        "Lower Hallway": {
+            "default_node": null,
+            "extra": {
+                "map_name": "s4-17-09"
+            },
+            "nodes": {}
         }
     }
 }

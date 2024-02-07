@@ -4,7 +4,9 @@
     "areas": {
         "Sector 4 Elevator": {
             "default_node": null,
-            "extra": {},
+            "extra": {
+                "map_name": "s4-21-05"
+            },
             "nodes": {
                 "Elevator to Main Deck": {
                     "node_type": "dock",

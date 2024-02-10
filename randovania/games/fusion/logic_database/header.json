@@ -207,6 +207,10 @@
             "VictoryEvent": {
                 "long_name": "Victory Event",
                 "extra": {}
+            },
+            "LowerWaterLevel": {
+                "long_name": "Water Level Lowered",
+                "extra": {}
             }
         },
         "tricks": {
@@ -1034,12 +1038,16 @@
             1
         ],
         "HeatRuns": [
+            1,
             2
         ],
         "Movement": [
+            1,
+            2,
             4
         ],
         "ShinesparkTrick": [
+            1,
             2,
             4
         ]

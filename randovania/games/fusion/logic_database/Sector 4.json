@@ -2907,7 +2907,15 @@
                     "valid_starting_location": false,
                     "pickup_index": 62,
                     "location_category": "minor",
-                    "connections": {}
+                    "connections": {
+                        "Door to Aquarium Shaft West": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        }
+                    }
                 },
                 "Door to Aquarium Shaft West": {
                     "node_type": "dock",
@@ -2936,7 +2944,15 @@
                     "incompatible_dock_weaknesses": [],
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
-                    "connections": {}
+                    "connections": {
+                        "Pickup (Missile Tank)": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        }
+                    }
                 }
             }
         },
@@ -3900,7 +3916,16 @@
                     "incompatible_dock_weaknesses": [],
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
-                    "connections": {}
+                    "connections": {
+                        "Right Side": {
+                            "type": "template",
+                            "data": "Can Use Any Bombs"
+                        },
+                        "Left Side": {
+                            "type": "template",
+                            "data": "Can Use Any Bombs"
+                        }
+                    }
                 },
                 "Right Side": {
                     "node_type": "generic",

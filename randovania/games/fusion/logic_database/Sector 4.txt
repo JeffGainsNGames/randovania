@@ -487,11 +487,15 @@ Extra - room_id: 15
 > Pickup (Missile Tank); Heals? False
   * Layers: default
   * Pickup 62; Category? Minor
+  > Door to Aquarium Shaft West
+      Trivial
 
 > Door to Aquarium Shaft West; Heals? False
   * Layers: default
   * L0 Hatch to Aquarium Shaft West/Door to Worst Room in the Game
   * Extra - door_idx: 35
+  > Pickup (Missile Tank)
+      Trivial
 
 ----------------
 Evir Shaft
@@ -652,6 +656,10 @@ Extra - room_id: 20
   * Layers: default
   * Open Passage to Breeding Tank Access/Other to Reservoir West
   * Extra - door_idx: 71
+  > Right Side
+      Can Use Any Bombs
+  > Left Side
+      Can Use Any Bombs
 
 > Right Side; Heals? False
   * Layers: default

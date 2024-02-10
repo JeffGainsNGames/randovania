@@ -80,7 +80,7 @@ Extra - room_id: 3
   * Extra - door_idx: 9
   > Door to Atmospheric Stabilizer Northwest
       Any of the following:
-          Missiles ≥ 3
+          Missiles ≥ 3 or Screw Attack
           Speed Booster and Knowledge (Beginner)
 
 > Door to Atmospheric Stabilizer Northwest; Heals? False
@@ -88,7 +88,7 @@ Extra - room_id: 3
   * L0 Hatch to Atmospheric Stabilizer Northwest/Door to Yameba Corridor
   * Extra - door_idx: 10
   > Door to Entrance Hub
-      Missiles ≥ 3
+      Missiles ≥ 3 or Screw Attack
 
 ----------------
 Atmospheric Stabilizer Northwest
@@ -517,7 +517,7 @@ Extra - room_id: 18
   * L0 Hatch to Tourian Central Checkpoint/Door to Tourian Shaft East
   * Extra - door_idx: 38
   > Door to Tourian Entrance
-      Screw Attack
+      Morph Ball and Screw Attack
 
 > Door to Tourian Entrance; Heals? False
   * Layers: default
@@ -645,21 +645,33 @@ Extra - room_id: 23
   * Layers: default
   * L0 Hatch to Golden Pirates/Door to Tourian Hub West
   * Extra - door_idx: 50
+  > Door to Tourian Save Room West
+      Trivial
+  > Door to Genesis Habitation
+      Trivial
+  > Door to Ridley Access
+      Trivial
 
 > Door to Tourian Save Room West; Heals? False
   * Layers: default
   * L0 Hatch to Tourian Save Room West/Door to Tourian Hub West
   * Extra - door_idx: 51
+  > Door to Golden Pirates
+      Trivial
 
 > Door to Genesis Habitation; Heals? False
   * Layers: default
   * L0 Hatch to Genesis Habitation/Door to Tourian Hub West
   * Extra - door_idx: 52
+  > Door to Golden Pirates
+      Trivial
 
 > Door to Ridley Access; Heals? False
   * Layers: default
   * L0 Hatch to Ridley Access/Door to Tourian Hub West
   * Extra - door_idx: 53
+  > Door to Golden Pirates
+      Trivial
 
 ----------------
 Tourian Save Room West
@@ -738,7 +750,7 @@ Extra - room_id: 28
   * L0 Hatch to Tourian Central Hub/Door to Tourian Central Checkpoint
   * Extra - door_idx: 59
   > Door to Tourian Shaft East
-      Trivial
+      Wave Beam
 
 ----------------
 Ripper Maze Access
@@ -773,7 +785,7 @@ Extra - room_id: 30
   * L0 Hatch to Ripper Maze Access/Door to Ripper Maze
   * Extra - door_idx: 62
   > Door to Elevator to Restricted Labs
-      Trivial
+      Movement (Beginner)
 
 > Door to Elevator to Restricted Labs; Heals? False
   * Layers: default
@@ -912,14 +924,18 @@ Extra - room_id: 36
   * L0 Hatch to Screw Shaft/Door to Tourian Entrance
   * Extra - door_idx: 7
   > Door to Tourian Shaft East
-      Morph Ball and Screw Attack
+      All of the following:
+          Morph Ball and Screw Attack
+          Space Jump or Damage Runs (Intermediate)
 
 > Door to Tourian Shaft East; Heals? False
   * Layers: default
   * L0 Hatch to Tourian Shaft East/Door to Tourian Entrance
   * Extra - door_idx: 8
   > Door to Screw Shaft
-      Morph Ball and Screw Attack and Wave Beam
+      All of the following:
+          Morph Ball and Screw Attack and Wave Beam
+          Space Jump or Damage Runs (Intermediate)
 
 ----------------
 Charge Core Access
@@ -1156,6 +1172,11 @@ Extra - room_id: 47
   * Layers: default
   * Open Passage to Charge Core Access/Other to Watering Hole
   * Extra - door_idx: 101
+  > Pickup (Hidden Power Bomb Tank)
+      All of the following:
+          Morph Ball and Speed Booster
+          Can Use Bombs or Can Use Springball
+          Gravity Suit or Shinespark Tricks (Expert)
 
 ----------------
 Connection to Sector 2 (TRO)

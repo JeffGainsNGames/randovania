@@ -101,8 +101,9 @@ Extra - room_id: 3
       Trivial
   > Other to Drain Pipe
       Any of the following:
-          After Water Level Lowered or Damage Runs (Intermediate)
-          Gravity Suit and Damage Runs (Beginner)
+          After Water Level Lowered
+          Gravity Suit and Damage Runs (Beginner) and Electrified Water Damage ≥ 99
+          Damage Runs (Intermediate) and Electrified Water Damage ≥ 299
   > Right Side
       All of the following:
           Morph Ball
@@ -121,7 +122,9 @@ Extra - room_id: 3
               Diffusion Missiles
               Ice Beam and Wave Beam
   > Before Data Room
-      After Water Level Lowered or Damage Runs (Beginner)
+      Any of the following:
+          After Water Level Lowered
+          Damage Runs (Beginner) and Electrified Water Damage ≥ 99
 
 > Before Data Room; Heals? False
   * Layers: default
@@ -131,15 +134,18 @@ Extra - room_id: 3
       All of the following:
           Morph Ball
           Any of the following:
-              After Water Level Lowered or Damage Runs (Intermediate)
-              Gravity Suit and Damage Runs (Beginner)
+              After Water Level Lowered
+              Gravity Suit and Damage Runs (Beginner) and Electrified Water Damage ≥ 99
+              Damage Runs (Intermediate) and Electrified Water Damage ≥ 199
           Any of the following:
               Diffusion Missiles
               Ice Beam and Wave Beam
   > Right Side
       All of the following:
           Gravity Suit
-          After Water Level Lowered or Damage Runs (Beginner)
+          Any of the following:
+              After Water Level Lowered
+              Damage Runs (Beginner) and Electrified Water Damage ≥ 99
 
 ----------------
 Data Room
@@ -1226,6 +1232,8 @@ Extra - room_id: 38
 > Pickup (Power Bomb Tank); Heals? False
   * Layers: default
   * Pickup 69; Category? Minor
+  > Other to Aquarium Speedway
+      Trivial
 
 > Pickup (Missile Tank); Heals? False
   * Layers: default

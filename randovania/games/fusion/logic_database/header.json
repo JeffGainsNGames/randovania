@@ -290,6 +290,10 @@
             "LavaDamage": {
                 "long_name": "Lava Damage",
                 "extra": {}
+            },
+            "ElectricDamage": {
+                "long_name": "Electrified Water Damage",
+                "extra": {}
             }
         },
         "versions": {},

@@ -675,21 +675,18 @@
                     ]
                 }
             },
-            "Can activate pillar": {
+            "Can Freeze Enemies": {
                 "type": "or",
                 "data": {
                     "comment": null,
                     "items": [
                         {
-                            "type": "and",
+                            "type": "resource",
                             "data": {
-                                "comment": null,
-                                "items": [
-                                    {
-                                        "type": "template",
-                                        "data": "Can Use Any Bombs"
-                                    }
-                                ]
+                                "type": "items",
+                                "name": "IceBeam",
+                                "amount": 1,
+                                "negate": false
                             }
                         },
                         {
@@ -700,12 +697,58 @@
                                     {
                                         "type": "resource",
                                         "data": {
-                                            "type": "tricks",
-                                            "name": "Knowledge",
+                                            "type": "items",
+                                            "name": "Missiles",
                                             "amount": 1,
                                             "negate": false
                                         }
                                     },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "IceMissiles",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "DiffusionMissiles",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "Can Activate Pillar": {
+                "type": "or",
+                "data": {
+                    "comment": null,
+                    "items": [
+                        {
+                            "type": "template",
+                            "data": "Can Use Any Bombs"
+                        },
+                        {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": [
                                     {
                                         "type": "resource",
                                         "data": {
@@ -714,6 +757,15 @@
                                             "amount": 1,
                                             "negate": false
                                         }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "tricks",
+                                            "name": "Knowledge",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
                                     }
                                 ]
                             }
@@ -726,18 +778,18 @@
                                     {
                                         "type": "resource",
                                         "data": {
-                                            "type": "tricks",
-                                            "name": "Knowledge",
-                                            "amount": 2,
+                                            "type": "items",
+                                            "name": "DiffusionMissiles",
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     },
                                     {
                                         "type": "resource",
                                         "data": {
-                                            "type": "items",
-                                            "name": "DiffusionMissiles",
-                                            "amount": 1,
+                                            "type": "tricks",
+                                            "name": "Knowledge",
+                                            "amount": 2,
                                             "negate": false
                                         }
                                     }
@@ -975,13 +1027,21 @@
     },
     "used_trick_levels": {
         "Combat": [
-            1
+            1,
+            3
         ],
         "Knowledge": [
             1
         ],
         "HeatRuns": [
             2
+        ],
+        "Movement": [
+            4
+        ],
+        "ShinesparkTrick": [
+            2,
+            4
         ]
     },
     "regions": [

@@ -46,6 +46,13 @@ Templates
           Wave Beam and Knowledge (Beginner)
           Diffusion Missiles and Knowledge (Intermediate)
 
+* Can Freeze Enemies:
+      Any of the following:
+          Ice Beam
+          All of the following:
+              Missiles
+              Diffusion Missiles or Ice Missiles
+
 ====================
 Dock Weaknesses
 

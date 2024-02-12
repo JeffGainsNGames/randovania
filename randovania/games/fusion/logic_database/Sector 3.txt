@@ -456,11 +456,9 @@ Extra - room_id: 14
   * L0 Hatch to Sova Suite/Door to Pyrochamber Access
   * Extra - door_idx: 28
   > Door to Pyrochamber
-      All of the following:
-          Varia Suit
-          Any of the following:
-              Space Jump
-              High Jump and Can Freeze Enemies
+      Any of the following:
+          Space Jump
+          High Jump and Can Freeze Enemies
 
 > Door to Pyrochamber; Heals? False
   * Layers: default

@@ -420,7 +420,7 @@ Extra - room_id: 12
   > Pickup (Power Bomb Tank)
       Gravity Suit and Varia Suit and Can Use Power Bombs
   > Door to Sova Suite
-      Can Freeze Enemies or Can climb High Jump Wall
+      Space Jump or Can Freeze Enemies
 
 > Door to Sova Suite; Heals? False
   * Layers: default

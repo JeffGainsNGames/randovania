@@ -3987,17 +3987,6 @@
                         "door_idx": 64
                     },
                     "valid_starting_location": false,
-                    "dock_type": "Other",
-                    "default_connection": {
-                        "region": "Main Deck",
-                        "area": "Main Elevator Shaft (D)",
-                        "node": "Other to Sub-Zero Ventilation"
-                    },
-                    "default_dock_weakness": "Tunnel",
-                    "exclude_from_dock_rando": false,
-                    "incompatible_dock_weaknesses": [],
-                    "override_default_open_requirement": null,
-                    "override_default_lock_requirement": null,
                     "connections": {
                         "Other to Sub-Zero Containment": {
                             "type": "resource",

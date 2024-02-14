@@ -30,12 +30,6 @@ Extra - room_id: 0
 > Event - Omega Metroid; Heals? False
   * Layers: default
   * Event Omega Metroid
-  > Event - Victory
-      Trivial
-
-> Event - Victory; Heals? False
-  * Layers: default
-  * Event Victory Event
 
 > Event - L0; Heals? False
   * Layers: default
@@ -940,7 +934,7 @@ Extra - room_id: 38
 
 > Event - Arachnus; Heals? False
   * Layers: default
-  * Event Arachnus
+  * Event Victory Event
   > Pickup (Morph Ball)
       Trivial
 

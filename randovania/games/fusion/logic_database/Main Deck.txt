@@ -87,8 +87,6 @@ Extra - room_id: 6
   * Layers: default
   * Open Hatch to Docking Bay Access/Door to Docking Bay Shaft
   * Extra - door_idx: 8
-  > Other to Silo Access
-      Can Use Power Bombs
   > Door to Silo Access
       Trivial
   > Door to Station Entrance
@@ -1050,8 +1048,6 @@ Extra - room_id: 42
   * Layers: default
   * L0 Hatch to Quarantine Access/Door to Main Elevator Access (D)
   * Extra - door_idx: 97
-  > Door to Elevator to Sector Hub
-      Trivial
 
 ----------------
 Main Elevator Shaft (D)

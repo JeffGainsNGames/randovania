@@ -239,10 +239,6 @@
             "Ridley": {
                 "long_name": "Neo-Ridley",
                 "extra": {}
-            },
-            "Cooling": {
-                "long_name": "Cooling Unit Operational",
-                "extra": {}
             }
         },
         "tricks": {

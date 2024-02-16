@@ -827,12 +827,12 @@ Extra - room_id: [31]
   * Layers: default
   * L0 Hatch to Ripper Maze/Door to Elevator to Restricted Labs
   * Extra - door_idx: (64,)
-  > Elevator to Main Deck
+  > Other to Elevator to Sector 1 (TRN)
       Trivial
 
-> Elevator to Main Deck; Heals? False
+> Other to Elevator to Sector 1 (TRN); Heals? False
   * Layers: default
-  * Elevator to Elevator to Sector 1 (Tourian)/Elevator to Sector 1
+  * Open Passage to Elevator to Sector 1 (TRN)/Other to Elevator to Restricted Labs
   * Extra - door_idx: (65,)
   > Door to Ripper Maze
       Trivial
@@ -1113,9 +1113,9 @@ Extra - room_id: [40]
 Elevator to Main Deck
 Extra - map_name: Sector 141
 Extra - room_id: [41]
-> Elevator to Main Deck; Heals? False
+> Other to Elevator to Sector 1 (SRX); Heals? False
   * Layers: default
-  * Elevator to Elevator to Sector 1 (SRX)/Elevator to Sector 1
+  * Open Passage to Elevator to Sector 1 (SRX)/Other to Elevator to Main Deck
   * Extra - door_idx: (0,)
   > Door to Entrance Navigation Room
       Trivial
@@ -1124,7 +1124,7 @@ Extra - room_id: [41]
   * Layers: default
   * L0 Hatch to Entrance Navigation Room/Door to Elevator to Main Deck
   * Extra - door_idx: (86,)
-  > Elevator to Main Deck
+  > Other to Elevator to Sector 1 (SRX)
       Trivial
 
 ----------------

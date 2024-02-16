@@ -3460,7 +3460,7 @@
                     "valid_starting_location": false,
                     "dock_type": "Other",
                     "default_connection": {
-                        "region": "Sector 2",
+                        "region": "Sector 2 (TRO)",
                         "area": "Elevator to Main Deck",
                         "node": "Other to Elevator to Sector 2 (TRO)"
                     },
@@ -3595,7 +3595,7 @@
                     "valid_starting_location": false,
                     "dock_type": "Other",
                     "default_connection": {
-                        "region": "Sector 4",
+                        "region": "Sector 4 (AQA)",
                         "area": "Elevator to Main Deck",
                         "node": "Other to Elevator to Sector 4 (AQA)"
                     },
@@ -3684,7 +3684,7 @@
                     "valid_starting_location": false,
                     "dock_type": "Other",
                     "default_connection": {
-                        "region": "Sector 6",
+                        "region": "Sector 6 (NOC)",
                         "area": "Elevator to Main Deck",
                         "node": "Other to Elevator to Sector 6 (NOC)"
                     },
@@ -3819,7 +3819,7 @@
                     "valid_starting_location": false,
                     "dock_type": "Other",
                     "default_connection": {
-                        "region": "Sector 1",
+                        "region": "Sector 1 (SRX)",
                         "area": "Elevator to Main Deck",
                         "node": "Other to Elevator to Sector 1 (SRX)"
                     },
@@ -3954,7 +3954,7 @@
                     "valid_starting_location": false,
                     "dock_type": "Other",
                     "default_connection": {
-                        "region": "Sector 3",
+                        "region": "Sector 3 (PYR)",
                         "area": "Elevator to Main Deck",
                         "node": "Other to Elevator to Sector 3 (PYR)"
                     },
@@ -4043,7 +4043,7 @@
                     "valid_starting_location": false,
                     "dock_type": "Other",
                     "default_connection": {
-                        "region": "Sector 5",
+                        "region": "Sector 5 (ARC)",
                         "area": "Elevator to Main Deck",
                         "node": "Other to Elevator to Sector 5 (ARC)"
                     },
@@ -4415,13 +4415,6 @@
                                 "comment": null,
                                 "items": []
                             }
-                        },
-                        "Door to Crew Quarters East": {
-                            "type": "and",
-                            "data": {
-                                "comment": null,
-                                "items": []
-                            }
                         }
                     }
                 },
@@ -4592,13 +4585,6 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Other to Crew Quarters East": {
-                            "type": "and",
-                            "data": {
-                                "comment": null,
-                                "items": []
-                            }
-                        },
                         "Door to Crew Quarters West": {
                             "type": "or",
                             "data": {
@@ -5037,6 +5023,32 @@
                                                         "name": "NormalDamage",
                                                         "amount": 50,
                                                         "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "items",
+                                                                    "name": "ScrewAttack",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Knowledge",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
                                                     }
                                                 }
                                             ]
@@ -6843,7 +6855,7 @@
                     "valid_starting_location": false,
                     "dock_type": "Other",
                     "default_connection": {
-                        "region": "Sector 2",
+                        "region": "Sector 2 (TRO)",
                         "area": "Overgrown Entrance",
                         "node": "Other to Silo Tunnel"
                     },
@@ -7302,7 +7314,7 @@
                     "valid_starting_location": false,
                     "dock_type": "Other",
                     "default_connection": {
-                        "region": "Sector 6",
+                        "region": "Sector 6 (NOC)",
                         "area": "Checkpoint to Restricted Labs",
                         "node": "Other to Restricted Labs Entrance"
                     },
@@ -7563,7 +7575,7 @@
                 ]
             },
             "nodes": {
-                "Door to Elevator to Sector 1 (Tourian)": {
+                "Door to Elevator to Sector 1 (TRN)": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -7584,7 +7596,7 @@
                     "dock_type": "Door",
                     "default_connection": {
                         "region": "Main Deck",
-                        "area": "Elevator to Sector 1 (Tourian)",
+                        "area": "Elevator to Sector 1 (TRN)",
                         "node": "Door to Restricted Labs Navigation Room"
                     },
                     "default_dock_weakness": "Open Hatch",
@@ -7632,7 +7644,7 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Door to Elevator to Sector 1 (Tourian)": {
+                        "Door to Elevator to Sector 1 (TRN)": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -7643,7 +7655,7 @@
                 }
             }
         },
-        "Elevator to Sector 1 (Tourian)": {
+        "Elevator to Sector 1 (TRN)": {
             "default_node": null,
             "extra": {
                 "map_name": "Main Deck67",
@@ -7674,7 +7686,7 @@
                     "default_connection": {
                         "region": "Main Deck",
                         "area": "Restricted Labs Navigation Room",
-                        "node": "Door to Elevator to Sector 1 (Tourian)"
+                        "node": "Door to Elevator to Sector 1 (TRN)"
                     },
                     "default_dock_weakness": "L4 Hatch",
                     "exclude_from_dock_rando": false,
@@ -7711,9 +7723,9 @@
                     "valid_starting_location": false,
                     "dock_type": "Other",
                     "default_connection": {
-                        "region": "Sector 1",
+                        "region": "Sector 1 (SRX)",
                         "area": "Elevator to Restricted Labs",
-                        "node": "Other to Elevator to Sector 1 (Tourian)"
+                        "node": "Other to Elevator to Sector 1 (TRN)"
                     },
                     "default_dock_weakness": "Open Passage",
                     "exclude_from_dock_rando": false,

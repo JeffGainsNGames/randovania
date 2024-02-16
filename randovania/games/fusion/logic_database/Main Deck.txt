@@ -826,8 +826,6 @@ Extra - room_id: [35]
       Trivial
   > Other to Operations Maintenance Storage
       Trivial
-  > Door to Crew Quarters East
-      Trivial
 
 > Other to Operations Deck; Heals? False
   * Layers: default
@@ -854,8 +852,6 @@ Extra - room_id: [35]
   * Layers: default
   * L0 Hatch to Crew Quarters East/Door to Operations Maintenance Shaft
   * Extra - door_idx: (82,)
-  > Other to Crew Quarters East
-      Trivial
   > Door to Crew Quarters West
       Missiles
 
@@ -938,7 +934,9 @@ Extra - room_id: [38]
   > Event - Arachnus
       All of the following:
           Missiles
-          Combat (Beginner) or Normal Damage ≥ 50
+          Any of the following:
+              Combat (Beginner) or Normal Damage ≥ 50
+              Screw Attack and Knowledge (Beginner)
 
 > Beside Door; Heals? False
   * Layers: default
@@ -1433,9 +1431,9 @@ Extra - room_id: [65]
 Restricted Labs Navigation Room
 Extra - map_name: Main Deck66
 Extra - room_id: [66]
-> Door to Elevator to Sector 1 (Tourian); Heals? False
+> Door to Elevator to Sector 1 (TRN); Heals? False
   * Layers: default
-  * Open Hatch to Elevator to Sector 1 (Tourian)/Door to Restricted Labs Navigation Room
+  * Open Hatch to Elevator to Sector 1 (TRN)/Door to Restricted Labs Navigation Room
   * Extra - door_idx: (151,)
   > Door to Restricted Airlock
       Trivial
@@ -1444,23 +1442,23 @@ Extra - room_id: [66]
   * Layers: default
   * Open Hatch to Restricted Airlock/Door to Restricted Labs Navigation Room
   * Extra - door_idx: (152,)
-  > Door to Elevator to Sector 1 (Tourian)
+  > Door to Elevator to Sector 1 (TRN)
       Trivial
 
 ----------------
-Elevator to Sector 1 (Tourian)
+Elevator to Sector 1 (TRN)
 Extra - map_name: Main Deck67
 Extra - room_id: [67]
 > Door to Restricted Labs Navigation Room; Heals? False
   * Layers: default
-  * L4 Hatch to Restricted Labs Navigation Room/Door to Elevator to Sector 1 (Tourian)
+  * L4 Hatch to Restricted Labs Navigation Room/Door to Elevator to Sector 1 (TRN)
   * Extra - door_idx: (153,)
   > Other to Elevator to Restricted Labs
       Trivial
 
 > Other to Elevator to Restricted Labs; Heals? False
   * Layers: default
-  * Open Passage to Elevator to Restricted Labs/Other to Elevator to Sector 1 (Tourian)
+  * Open Passage to Elevator to Restricted Labs/Other to Elevator to Sector 1 (TRN)
   * Extra - door_idx: (154,)
   > Door to Restricted Labs Navigation Room
       Trivial

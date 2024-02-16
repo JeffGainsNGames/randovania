@@ -2188,6 +2188,13 @@
                                 "items": []
                             }
                         },
+                        "Pickup (Power Bomb Data)": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        },
                         "Door to Frozen Tower": {
                             "type": "and",
                             "data": {
@@ -2254,7 +2261,7 @@
                         "source": "ArcData1"
                     },
                     "valid_starting_location": false,
-                    "pickup_index": 117,
+                    "pickup_index": 113,
                     "location_category": "major",
                     "connections": {
                         "Door to Data Checkpoint": {

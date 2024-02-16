@@ -4473,7 +4473,7 @@
                     "default_connection": {
                         "region": "Main Deck",
                         "area": "Elevator to Sector 2 (TRO)",
-                        "node": "Elevator to Sector 2"
+                        "node": "Elevator to Sector 2 (TRO)"
                     },
                     "default_dock_weakness": "Elevator",
                     "exclude_from_dock_rando": false,

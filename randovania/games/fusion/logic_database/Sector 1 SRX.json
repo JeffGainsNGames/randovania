@@ -4746,7 +4746,7 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Elevator to Sector 1 (TRN)": {
+                        "Elevator to Elevator to Sector 1 (TRN)": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -4755,7 +4755,7 @@
                         }
                     }
                 },
-                "Elevator to Sector 1 (TRN)": {
+                "Elevator to Elevator to Sector 1 (TRN)": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -4777,7 +4777,7 @@
                     "default_connection": {
                         "region": "Main Deck",
                         "area": "Elevator to Sector 1 (TRN)",
-                        "node": "Elevator to Restricted Labs"
+                        "node": "Elevator to Elevator to Restricted Labs"
                     },
                     "default_dock_weakness": "Elevator",
                     "exclude_from_dock_rando": false,
@@ -6356,7 +6356,7 @@
                     "default_connection": {
                         "region": "Main Deck",
                         "area": "Elevator to Sector 1 (SRX)",
-                        "node": "Elevator to Sector 1"
+                        "node": "Elevator to Sector 1 (SRX)"
                     },
                     "default_dock_weakness": "Elevator",
                     "exclude_from_dock_rando": false,

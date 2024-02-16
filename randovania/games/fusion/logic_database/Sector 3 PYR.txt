@@ -606,7 +606,7 @@ Extra - map_name: Sector 320
 Extra - room_id: [20]
 > Elevator to Main Deck; Heals? False
   * Layers: default
-  * Elevator to Elevator to Sector 3 (PYR)/Elevator to Sector 3
+  * Elevator to Elevator to Sector 3 (PYR)/Elevator to Sector 3 (PYR)
   * Extra - door_idx: (0,)
   > Door to Entrance Navigation Room
       Trivial

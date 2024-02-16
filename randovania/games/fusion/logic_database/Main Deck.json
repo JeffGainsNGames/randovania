@@ -3432,7 +3432,7 @@
                                 "items": []
                             }
                         },
-                        "Elevator to Sector 2": {
+                        "Elevator to Sector 2 (TRO)": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -3480,7 +3480,7 @@
                         }
                     }
                 },
-                "Elevator to Sector 2": {
+                "Elevator to Sector 2 (TRO)": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -3567,7 +3567,7 @@
                                 "items": []
                             }
                         },
-                        "Elevator to Sector 4": {
+                        "Elevator to Sector 4 (AQA)": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -3615,7 +3615,7 @@
                         }
                     }
                 },
-                "Elevator to Sector 4": {
+                "Elevator to Sector 4 (AQA)": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -3695,7 +3695,7 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Elevator to Sector 6": {
+                        "Elevator to Sector 6 (NOC)": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -3704,7 +3704,7 @@
                         }
                     }
                 },
-                "Elevator to Sector 6": {
+                "Elevator to Sector 6 (NOC)": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -3791,7 +3791,7 @@
                                 "items": []
                             }
                         },
-                        "Elevator to Sector 1": {
+                        "Elevator to Sector 1 (SRX)": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -3839,7 +3839,7 @@
                         }
                     }
                 },
-                "Elevator to Sector 1": {
+                "Elevator to Sector 1 (SRX)": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -3926,7 +3926,7 @@
                                 "items": []
                             }
                         },
-                        "Elevator to Sector 3": {
+                        "Elevator to Sector 3 (PYR)": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -3974,7 +3974,7 @@
                         }
                     }
                 },
-                "Elevator to Sector 3": {
+                "Elevator to Sector 3 (PYR)": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -4054,7 +4054,7 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Elevator to Sector 5": {
+                        "Elevator to Sector 5 (ARC)": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -4063,7 +4063,7 @@
                         }
                     }
                 },
-                "Elevator to Sector 5": {
+                "Elevator to Sector 5 (ARC)": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -7880,7 +7880,7 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Elevator to Sector 1": {
+                        "Elevator to Elevator to Restricted Labs": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -7889,7 +7889,7 @@
                         }
                     }
                 },
-                "Elevator to Sector 1": {
+                "Elevator to Elevator to Restricted Labs": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -7911,7 +7911,7 @@
                     "default_connection": {
                         "region": "Sector 1 (SRX)",
                         "area": "Elevator to Restricted Labs",
-                        "node": "Elevator to Sector 1 (TRN)"
+                        "node": "Elevator to Elevator to Sector 1 (TRN)"
                     },
                     "default_dock_weakness": "Elevator",
                     "exclude_from_dock_rando": false,

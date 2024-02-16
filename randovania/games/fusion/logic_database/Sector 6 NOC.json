@@ -3246,7 +3246,7 @@
                     "default_connection": {
                         "region": "Main Deck",
                         "area": "Elevator to Sector 6 (NOC)",
-                        "node": "Elevator to Sector 6"
+                        "node": "Elevator to Sector 6 (NOC)"
                     },
                     "default_dock_weakness": "Elevator",
                     "exclude_from_dock_rando": false,

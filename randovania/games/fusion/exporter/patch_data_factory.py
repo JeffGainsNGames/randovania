@@ -59,8 +59,10 @@ class FusionPatchDataFactory(PatchDataFactory):
                 )
 
         final_json = {
-            "MajorLocations": major_pickup_list,
-            "MinorLocations": minor_pickup_list,
+            "Locations": {
+                "MajorLocations": major_pickup_list,
+                "MinorLocations": minor_pickup_list,
+            }
         }
         import json
 

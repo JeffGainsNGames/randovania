@@ -1236,7 +1236,8 @@
         ],
         "Knowledge": [
             1,
-            2
+            2,
+            3
         ],
         "ShinesparkTrick": [
             1,
@@ -1252,6 +1253,11 @@
         "HeatRuns": [
             1,
             2
+        ],
+        "JBJ": [
+            3,
+            4,
+            5
         ]
     },
     "regions": [

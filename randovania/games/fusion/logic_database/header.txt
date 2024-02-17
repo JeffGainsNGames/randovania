@@ -79,9 +79,6 @@ Templates
 * Can Bounce in Ball:
       Can Use Bombs or Can Use Springball
 
-* Can Screw Single Bomb Blocks:
-      Trivial
-
 * Can Break Single Bomb Blocks:
       Any of the following:
           Can Use Any Bombs

@@ -170,41 +170,6 @@
                 "extra": {
                     "item": "None"
                 }
-            },
-            "L0Locks": {
-                "long_name": "L0Locks",
-                "max_capacity": 1,
-                "extra": {
-                    "item": "Level0"
-                }
-            },
-            "L1Locks": {
-                "long_name": "L1Locks",
-                "max_capacity": 1,
-                "extra": {
-                    "item": "Level1"
-                }
-            },
-            "L2Locks": {
-                "long_name": "L2Locks",
-                "max_capacity": 1,
-                "extra": {
-                    "item": "Level2"
-                }
-            },
-            "L3Locks": {
-                "long_name": "L3Locks",
-                "max_capacity": 1,
-                "extra": {
-                    "item": "Level3"
-                }
-            },
-            "L4Locks": {
-                "long_name": "L4Locks",
-                "max_capacity": 1,
-                "extra": {
-                    "item": "Level4"
-                }
             }
         },
         "events": {
@@ -332,7 +297,7 @@
         "tricks": {
             "Combat": {
                 "long_name": "Combat",
-                "description": "The player may be expected to fight enemies/bosses with less equipment than usual.",
+                "description": "",
                 "extra": {}
             },
             "Movement": {
@@ -342,12 +307,12 @@
             },
             "ShinesparkTrick": {
                 "long_name": "Shinespark Tricks",
-                "description": "The player may be expected to use shinesparking to traverse a room (beyond what's expected in vanilla).",
+                "description": "",
                 "extra": {}
             },
             "Knowledge": {
                 "long_name": "Knowledge",
-                "description": "The player may be expected to know alternative enemy/block weaknesses.",
+                "description": "",
                 "extra": {}
             },
             "HeatRuns": {
@@ -363,11 +328,6 @@
             "JBJ": {
                 "long_name": "Jump Bombjump",
                 "description": "The player may be expected to place bombs midair and then get hit by them to gain more height.",
-                "extra": {}
-            },
-            "StandOnFrozenEnemies": {
-                "long_name": "Stand On Frozen Enemies",
-                "description": "The player may be expected to stand on frozen enemies to traverse a room (beyond what's expected in vanilla).",
                 "extra": {}
             }
         },
@@ -430,7 +390,7 @@
             "Can Use Power Bombs": {
                 "type": "and",
                 "data": {
-                    "comment": "TODO: currently PBs hard require bombs. this may change in the future?",
+                    "comment": null,
                     "items": [
                         {
                             "type": "resource",
@@ -449,10 +409,6 @@
                                 "amount": 1,
                                 "negate": false
                             }
-                        },
-                        {
-                            "type": "template",
-                            "data": "Can Use Bombs"
                         }
                     ]
                 }
@@ -1037,326 +993,6 @@
                         }
                     ]
                 }
-            },
-            "Can Kill Purple Geron": {
-                "type": "or",
-                "data": {
-                    "comment": null,
-                    "items": [
-                        {
-                            "type": "and",
-                            "data": {
-                                "comment": null,
-                                "items": [
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "Missiles",
-                                            "amount": 5,
-                                            "negate": false
-                                        }
-                                    },
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "SuperMissiles",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "type": "and",
-                            "data": {
-                                "comment": null,
-                                "items": [
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "tricks",
-                                            "name": "Knowledge",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    },
-                                    {
-                                        "type": "or",
-                                        "data": {
-                                            "comment": null,
-                                            "items": [
-                                                {
-                                                    "type": "template",
-                                                    "data": "Can Use Power Bombs"
-                                                },
-                                                {
-                                                    "type": "resource",
-                                                    "data": {
-                                                        "type": "items",
-                                                        "name": "ScrewAttack",
-                                                        "amount": 1,
-                                                        "negate": false
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    }
-                                ]
-                            }
-                        }
-                    ]
-                }
-            },
-            "Can Kill PB Geron": {
-                "type": "or",
-                "data": {
-                    "comment": null,
-                    "items": [
-                        {
-                            "type": "template",
-                            "data": "Can Use Power Bombs"
-                        },
-                        {
-                            "type": "and",
-                            "data": {
-                                "comment": null,
-                                "items": [
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "ScrewAttack",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    },
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "tricks",
-                                            "name": "Knowledge",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    }
-                                ]
-                            }
-                        }
-                    ]
-                }
-            },
-            "Can Bounce in Ball": {
-                "type": "or",
-                "data": {
-                    "comment": null,
-                    "items": [
-                        {
-                            "type": "template",
-                            "data": "Can Use Bombs"
-                        },
-                        {
-                            "type": "template",
-                            "data": "Can Use Springball"
-                        }
-                    ]
-                }
-            },
-            "Can Break Single Bomb Blocks": {
-                "type": "or",
-                "data": {
-                    "comment": null,
-                    "items": [
-                        {
-                            "type": "template",
-                            "data": "Can Use Any Bombs"
-                        },
-                        {
-                            "type": "and",
-                            "data": {
-                                "comment": null,
-                                "items": [
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "ScrewAttack",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    },
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "tricks",
-                                            "name": "Knowledge",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    }
-                                ]
-                            }
-                        }
-                    ]
-                }
-            },
-            "10 DMG Missiles": {
-                "type": "or",
-                "data": {
-                    "comment": null,
-                    "items": [
-                        {
-                            "type": "resource",
-                            "data": {
-                                "type": "items",
-                                "name": "MissileLauncher",
-                                "amount": 1,
-                                "negate": false
-                            }
-                        },
-                        {
-                            "type": "resource",
-                            "data": {
-                                "type": "items",
-                                "name": "IceMissiles",
-                                "amount": 1,
-                                "negate": false
-                            }
-                        }
-                    ]
-                }
-            },
-            "20 DMG Missiles": {
-                "type": "or",
-                "data": {
-                    "comment": null,
-                    "items": [
-                        {
-                            "type": "and",
-                            "data": {
-                                "comment": null,
-                                "items": [
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "MissileLauncher",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    },
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "IceMissiles",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    }
-                                ]
-                            }
-                        },
-                        {
-                            "type": "resource",
-                            "data": {
-                                "type": "items",
-                                "name": "SuperMissiles",
-                                "amount": 1,
-                                "negate": false
-                            }
-                        }
-                    ]
-                }
-            },
-            "30 DMG Missiles": {
-                "type": "and",
-                "data": {
-                    "comment": null,
-                    "items": [
-                        {
-                            "type": "resource",
-                            "data": {
-                                "type": "items",
-                                "name": "SuperMissiles",
-                                "amount": 1,
-                                "negate": false
-                            }
-                        },
-                        {
-                            "type": "or",
-                            "data": {
-                                "comment": null,
-                                "items": [
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "IceMissiles",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    },
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "MissileLauncher",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    }
-                                ]
-                            }
-                        }
-                    ]
-                }
-            },
-            "45 DMG Missiles": {
-                "type": "and",
-                "data": {
-                    "comment": null,
-                    "items": [
-                        {
-                            "type": "resource",
-                            "data": {
-                                "type": "items",
-                                "name": "MissileLauncher",
-                                "amount": 1,
-                                "negate": false
-                            }
-                        },
-                        {
-                            "type": "resource",
-                            "data": {
-                                "type": "items",
-                                "name": "SuperMissiles",
-                                "amount": 1,
-                                "negate": false
-                            }
-                        },
-                        {
-                            "type": "resource",
-                            "data": {
-                                "type": "items",
-                                "name": "IceMissiles",
-                                "amount": 1,
-                                "negate": false
-                            }
-                        },
-                        {
-                            "type": "resource",
-                            "data": {
-                                "type": "items",
-                                "name": "DiffusionMissiles",
-                                "amount": 1,
-                                "negate": false
-                            }
-                        }
-                    ]
-                }
             }
         },
         "damage_reductions": [],
@@ -1403,8 +1039,8 @@
                         "requirement": {
                             "type": "resource",
                             "data": {
-                                "type": "items",
-                                "name": "L0Locks",
+                                "type": "events",
+                                "name": "Level0Locks",
                                 "amount": 1,
                                 "negate": false
                             }
@@ -1416,8 +1052,8 @@
                         "requirement": {
                             "type": "resource",
                             "data": {
-                                "type": "items",
-                                "name": "L1Locks",
+                                "type": "events",
+                                "name": "Level1Locks",
                                 "amount": 1,
                                 "negate": false
                             }
@@ -1429,8 +1065,8 @@
                         "requirement": {
                             "type": "resource",
                             "data": {
-                                "type": "items",
-                                "name": "L2Locks",
+                                "type": "events",
+                                "name": "Level2Locks",
                                 "amount": 1,
                                 "negate": false
                             }
@@ -1442,8 +1078,8 @@
                         "requirement": {
                             "type": "resource",
                             "data": {
-                                "type": "items",
-                                "name": "L3Locks",
+                                "type": "events",
+                                "name": "Level3Locks",
                                 "amount": 1,
                                 "negate": false
                             }
@@ -1455,13 +1091,30 @@
                         "requirement": {
                             "type": "resource",
                             "data": {
-                                "type": "items",
-                                "name": "L4Locks",
+                                "type": "events",
+                                "name": "Level4Locks",
                                 "amount": 1,
                                 "negate": false
                             }
                         },
                         "lock": null
+                    },
+                    "Eye Door": {
+                        "extra": {},
+                        "requirement": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        },
+                        "lock": {
+                            "lock_type": "front-blast-back-free-unlock",
+                            "requirement": {
+                                "type": "template",
+                                "data": "Can Kill Eye Door"
+                            }
+                        }
                     }
                 },
                 "dock_rando": {
@@ -1572,14 +1225,7 @@
             1,
             2,
             3,
-            4,
-            5
-        ],
-        "WallJump": [
-            1,
-            2,
-            3,
-            5
+            4
         ],
         "Movement": [
             1,
@@ -1597,14 +1243,14 @@
             1,
             2,
             3,
-            4,
+            4
+        ],
+        "WallJump": [
+            1,
+            2,
             5
         ],
         "HeatRuns": [
-            1,
-            2
-        ],
-        "StandOnFrozenEnemies": [
             1,
             2
         ],

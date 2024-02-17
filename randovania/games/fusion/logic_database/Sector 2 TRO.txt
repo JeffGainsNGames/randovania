@@ -16,11 +16,11 @@ Extra - room_id: [0]
   * L0 Hatch to Data Hub Access/Door to Entrance Hub
   * Extra - door_idx: (2,)
   > Door to Entrance Recharge Room
-      High Jump or Space Jump or Can Use Any Bombs
+      Trivial
   > Other to Kihunter Hallway
       All of the following:
           Can Use Power Bombs
-          High Jump or Space Jump
+          High Jump or Space Jump or Wall Jump (Beginner)
   > Door to Owtch Cache A
       Trivial
   > Door to Security Corridor
@@ -235,9 +235,18 @@ Extra - room_id: [9]
           Morph Ball
           Any of the following:
               Can Activate Pillar or Can climb High Jump Wall
-              Stand On Frozen Enemies (Beginner) and Wall Jump (Beginner) and Can Freeze Enemies
+              Wall Jump (Beginner) and Can Freeze Enemies
   > Door to Maintenance Annex
-      Can Bounce in Ball and Can Use Any Bombs
+      All of the following:
+          Morph Ball
+          Any of the following:
+              Morph Ball Bombs
+              All of the following:
+                  Knowledge (Advanced) and Normal Damage ≥ 88
+                  Any of the following:
+                      No Plasma Beam
+                      Diffusion Missiles and No Ice Missiles and No Missile Launcher and No Super Missiles
+              High Jump and Power Bombs
 
 > Door to Maintenance Annex; Heals? False
   * Layers: default
@@ -245,13 +254,19 @@ Extra - room_id: [9]
   * Extra - door_idx: (21,)
   > Door to Data Hub
       All of the following:
-          High Jump and Morph Ball and Space Jump and Wall Jump (Beginner)
+          Morph Ball
           Any of the following:
-              Power Bombs or Screw Attack
-              Morph Ball Bombs and Jump Bombjump (Expert)
-          Any of the following:
-              Power Bombs or Screw Attack
-              Morph Ball Bombs and Jump Bombjump (Advanced)
+              All of the following:
+                  Space Jump
+                  Any of the following:
+                      Power Bombs or Screw Attack
+                      Morph Ball Bombs and Jump Bombjump (Expert)
+              All of the following:
+                  High Jump
+                  Any of the following:
+                      Power Bombs
+                      Morph Ball Bombs and Jump Bombjump (Advanced)
+                      Screw Attack and Wall Jump (Beginner)
 
 ----------------
 Cultivation Station
@@ -272,7 +287,7 @@ Extra - room_id: [10]
   * L0 Hatch to Maintenance Annex/Door to Cultivation Station
   * Extra - door_idx: (22,)
   > Door to Puyo Corridor
-      Can Use Any Bombs
+      Screw Attack or Can Use Any Bombs
 
 > Door to Puyo Corridor; Heals? False
   * Layers: default
@@ -281,7 +296,11 @@ Extra - room_id: [10]
   > Pickup (Missile Tank)
       Can Use Any Bombs
   > Door to Maintenance Annex
-      Can Use Any Bombs and Can climb High Jump Wall
+      All of the following:
+          Morph Ball
+          Any of the following:
+              Power Bombs or Screw Attack
+              Morph Ball Bombs and Jump Bombjump (Advanced)
 
 ----------------
 Puyo Corridor
@@ -302,8 +321,7 @@ Extra - room_id: [11]
       All of the following:
           Morph Ball
           Any of the following:
-              Can climb High Jump Wall
-              Stand On Frozen Enemies (Beginner) and Can Freeze Enemies
+              Can Freeze Enemies or Can climb High Jump Wall
               Morph Ball Bombs and Jump Bombjump (Expert)
 
 ----------------
@@ -344,9 +362,8 @@ Extra - room_id: [13, 46]
       Trivial
   > Beside Drop
       Any of the following:
-          Space Jump
-          High Jump and Can Freeze Enemies
-          Jump Bombjump (Hypermode) and Wall Jump (Hypermode) and Can Use Bombs
+          High Jump or Space Jump or Can Freeze Enemies
+          Morph Ball and Morph Ball Bombs and Jump Bombjump (Hypermode) and Wall Jump (Hypermode)
 
 > Door to Southern Save Access; Heals? False
   * Layers: default
@@ -404,7 +421,7 @@ Extra - room_id: [13, 46]
   > Door to Reo Room
       All of the following:
           Can Use Any Bombs
-          Can Freeze Enemies or Can climb High Jump Wall
+          Wall Jump (Beginner) or Can Freeze Enemies or Can climb High Jump Wall
   > Door to Ripper Roost
       Morph Ball
 
@@ -666,8 +683,6 @@ Extra - room_id: [22, 51]
           Missiles or Super Missiles
           # Health Requirements
           Combat (Beginner) or Normal Damage ≥ 100
-          # Avoid Samus Eaters
-          High Jump or Combat (Intermediate)
 
 > Pickup (Plasma Beam); Heals? False
   * Layers: default
@@ -777,15 +792,6 @@ Extra - room_id: [26]
 > Event - L1 Locks; Heals? False
   * Layers: default
   * Event Level 1 Locks
-  > Pickup (L1 Locks)
-      Trivial
-
-> Pickup (L1 Locks); Heals? False
-  * Layers: default
-  * Pickup 116; Category? Major
-  * Extra - area: 2
-  * Extra - room: 26
-  * Extra - source: Level1
   > Door to Security Access (Lower)
       Trivial
 
@@ -867,7 +873,7 @@ Extra - room_id: [31, 7]
   * Extra - blockx: 40
   * Extra - blocky: 7
   > Door to Data Hub Access
-      Can Use Any Bombs
+      Can Use Bombs
 
 > Door to Zoro Zig-Zag; Heals? False
   * Layers: default
@@ -891,13 +897,12 @@ Extra - room_id: [31, 7]
       Trivial
   > Door to Data Hub Access
       All of the following:
-          Can Bounce in Ball
+          Morph Ball
           Any of the following:
-              Can Use Power Bombs
-              Screw Attack and Knowledge (Beginner)
               All of the following:
-                  Morph Ball Bombs
-                  High Jump or Jump Bombjump (Advanced)
+                  High Jump
+                  Morph Ball Bombs or Power Bombs or Screw Attack
+              Morph Ball Bombs and Jump Bombjump (Advanced)
 
 > Door to Data Hub Access; Heals? False
   * Layers: default
@@ -908,11 +913,13 @@ Extra - room_id: [31, 7]
   > Door to Data Room
       Trivial
   > Door to Data Save Room
-      All of the following:
-          Morph Ball
-          Any of the following:
-              Can Break Single Bomb Blocks
-              Speed Booster and Knowledge (Advanced) and Disabled Door Lock Rando and Disabled Entrance Rando
+      Any of the following:
+          Can Use Any Bombs
+          All of the following:
+              Morph Ball
+              Any of the following:
+                  Screw Attack
+                  Speed Booster and Movement (Intermediate)
 
 ----------------
 Eastern Shaft
@@ -999,8 +1006,8 @@ Extra - room_id: [33]
   * Extra - door_idx: (73,)
   > Beside missile tank
       Any of the following:
-          High Jump or Space Jump or Movement (Expert) or Can Freeze Enemies
-          Speed Booster and Shinespark Tricks (Beginner)
+          High Jump or Screw Attack or Space Jump or Movement (Expert) or Can Freeze Enemies
+          Speed Booster and Shinespark Tricks (Beginner) and Disabled Entrance Rando
 
 > Door to Connection to Sector 1 (SRX); Heals? False
   * Layers: default
@@ -1014,9 +1021,7 @@ Extra - room_id: [33]
   > Pickup (Missile Tank)
       Trivial
   > Door to Entrance Hub
-      Any of the following:
-          High Jump or Space Jump or Combat (Advanced) or Can Freeze Enemies
-          Speed Booster and Shinespark Tricks (Beginner)
+      High Jump or Space Jump or Combat (Advanced) or Can Freeze Enemies
   > Door to Connection to Sector 1 (SRX)
       Screw Attack
 
@@ -1142,7 +1147,7 @@ Extra - room_id: [43]
   * L0 Hatch to Cultivation Station/Door to Maintenance Annex
   * Extra - door_idx: (99,)
   > Door to Zoro Zig-Zag
-      Space Jump
+      Space Jump or Wall Jump (Beginner)
 
 ----------------
 Puyo Palace
@@ -1294,8 +1299,8 @@ Extra - room_id: [54]
   * Extra - blocky: 5
   > Door to Level 1 Security Room
       All of the following:
-          Wall Jump (Beginner) or Can climb High Jump Wall
-          Movement (Intermediate) or Can Use Any Bombs
+          Space Jump or Wall Jump (Beginner)
+          Knowledge (Intermediate) or Movement (Intermediate) or Can Use Any Bombs
 
 > Pickup (Power Bomb Tank); Heals? False
   * Layers: default
@@ -1305,7 +1310,7 @@ Extra - room_id: [54]
   * Extra - blockx: 9
   * Extra - blocky: 14
   > Door to Level 1 Security Room
-      High Jump or Space Jump or Wall Jump (Beginner)
+      Space Jump or Wall Jump (Beginner)
 
 > Door to Level 1 Security Room; Heals? False
   * Layers: default
@@ -1315,18 +1320,18 @@ Extra - room_id: [54]
       Any of the following:
           Space Jump
           All of the following:
-              High Jump and Wall Jump (Advanced) and Can Screw Single Walljump
+              Wall Jump (Intermediate)
               Any of the following:
                   Movement (Hypermode)
-                  Speed Booster and Movement (Expert) and Shinespark Tricks (Expert)
+                  Speed Booster and Movement (Expert) and Shinespark Tricks (Advanced)
   > Pickup (Power Bomb Tank)
       Any of the following:
           Space Jump
           All of the following:
-              High Jump and Wall Jump (Advanced) and Can Screw Single Walljump
+              Wall Jump (Intermediate)
               Any of the following:
                   Movement (Hypermode)
-                  Speed Booster and Movement (Expert) and Shinespark Tricks (Expert)
+                  Speed Booster and Movement (Expert) and Shinespark Tricks (Advanced)
 
 ----------------
 Zazabi Speedway

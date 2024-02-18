@@ -1514,4 +1514,3 @@ Extra - room_id: [59]
   * Layers: default
   * Open Hatch to Overgrown Checkpoint/Door to Cubby
   * Extra - door_idx: (140,)
-

@@ -80,6 +80,13 @@ Extra - room_id: [1]
   * Extra - door_idx: (7,)
   > Door to Entrance Recharge Room
       Trivial
+  > Save Station
+      Trivial
+
+> Save Station; Heals? False
+  * Layers: default
+  > Door to Entrance Navigation Room
+      Trivial
 
 ----------------
 Entrance Navigation Room
@@ -476,6 +483,13 @@ Extra - room_id: [16]
   * Layers: default
   * L0 Hatch to Southern Save Access/Door to Save Room South
   * Extra - door_idx: (37,)
+  > Save Station
+      Trivial
+
+> Save Station; Heals? False
+  * Layers: default
+  > Door to Southern Save Access
+      Trivial
 
 ----------------
 Zazabi Access
@@ -748,7 +762,7 @@ Extra - room_id: [24, 36]
           Morph Ball and After Nettori
           Any of the following:
               Space Jump
-              Speed Booster and Shinespark Tricks (Beginner)
+              Speed Booster and Shinespark Tricks (Beginner) and Disabled Door Lock Rando and Disabled Entrance Rando
               High Jump and Wall Jump (Intermediate)
 
 ----------------
@@ -763,9 +777,7 @@ Extra - room_id: [25]
   * Extra - blockx: 4
   * Extra - blocky: 8
   > Door to Oasis
-      All of the following:
-          Can Use Any Bombs
-          Gravity Suit or High Jump
+      Can Use Any Bombs
 
 > Door to Oasis; Heals? False
   * Layers: default
@@ -774,7 +786,7 @@ Extra - room_id: [25]
   > Pickup (Missile Tank)
       All of the following:
           Can Use Any Bombs
-          Gravity Suit or High Jump
+          Gravity Suit or High Jump or Wall Jump (Expert)
 
 ----------------
 Level 1 Security Room
@@ -1033,7 +1045,7 @@ Extra - room_id: [33]
   > Beside missile tank
       Any of the following:
           High Jump or Screw Attack or Space Jump or Movement (Expert) or Can Freeze Enemies
-          Speed Booster and Shinespark Tricks (Beginner) and Disabled Entrance Rando
+          Speed Booster and Shinespark Tricks (Beginner) and Disabled Door Lock Rando and Disabled Entrance Rando
 
 > Door to Connection to Sector 1 (SRX); Heals? False
   * Layers: default
@@ -1063,11 +1075,18 @@ Extra - room_id: [37]
   * Extra - door_idx: (85,)
   > Door to Entrance Hub
       Trivial
+  > Recharge Terminal
+      Trivial
 
 > Door to Entrance Hub; Heals? False
   * Layers: default
   * L0 Hatch to Entrance Hub/Door to Entrance Recharge Room
   * Extra - door_idx: (86,)
+  > Door to Entrance Save Room
+      Trivial
+
+> Recharge Terminal; Heals? True
+  * Layers: default
   > Door to Entrance Save Room
       Trivial
 
@@ -1108,11 +1127,18 @@ Extra - room_id: [40]
   * Extra - door_idx: (91,)
   > Door to Owtch Office
       Trivial
+  > Save Station
+      Trivial
 
 > Door to Owtch Office; Heals? False
   * Layers: default
   * L0 Hatch to Owtch Office/Door to Zazabi Save Room
   * Extra - door_idx: (92,)
+  > Door to Collapsed Shaft
+      Trivial
+
+> Save Station; Heals? False
+  * Layers: default
   > Door to Collapsed Shaft
       Trivial
 
@@ -1154,18 +1180,20 @@ Extra - room_id: [42]
   > Door to Central Shaft
       All of the following:
           Morph Ball
-          Gravity Suit or High Jump
+          Gravity Suit or High Jump or Wall Jump (Advanced) or Can Activate Pillar
 
 > Door to Central Shaft; Heals? False
   * Layers: default
   * L0 Hatch to Central Shaft/Door to Oasis
   * Extra - door_idx: (95,)
   > Pickup (Missile Tank)
-      Can climb High Jump Wall
+      Any of the following:
+          Can climb High Jump Wall
+          Stand On Frozen Enemies (Intermediate) and Can Freeze Enemies
   > Door to Oasis Storage
       All of the following:
           Morph Ball
-          Gravity Suit or High Jump
+          Gravity Suit or High Jump or Wall Jump (Expert) or Can Activate Pillar
 
 ----------------
 Maintenance Annex
@@ -1224,7 +1252,7 @@ Extra - room_id: [47]
   > Pickup (Power Bomb Tank)
       Space Jump or Movement (Intermediate)
   > Door to Collapsed Shaft
-      Speed Booster and Shinespark Tricks (Intermediate) and Disabled Entrance Rando
+      Speed Booster and Shinespark Tricks (Intermediate) and Disabled Door Lock Rando and Disabled Entrance Rando
   > Door to Central Shaft
       Trivial
 
@@ -1236,10 +1264,10 @@ Extra - room_id: [48]
   * Layers: default
   * Tunnel to Eastern Shaft/Other to Hidden Recharge Room
   * Extra - door_idx: (116,)
-  > Recharge pad
+  > Recharge Terminal
       Trivial
 
-> Recharge pad; Heals? False
+> Recharge Terminal; Heals? True
   * Layers: default
   > Other to Eastern Shaft
       Morph Ball
@@ -1254,11 +1282,18 @@ Extra - room_id: [49]
   * Extra - door_idx: (118,)
   > Door to Eastern Shaft
       Trivial
+  > Save Station
+      Trivial
 
 > Door to Eastern Shaft; Heals? False
   * Layers: default
   * Open Hatch to Eastern Shaft/Door to Nettori Save Room
   * Extra - door_idx: (119,)
+  > Door to Puyo Palace
+      Trivial
+
+> Save Station; Heals? False
+  * Layers: default
   > Door to Puyo Palace
       Trivial
 

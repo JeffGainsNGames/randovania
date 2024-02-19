@@ -317,7 +317,7 @@ Extra - room_id: [13, 74, 85]
   > Event - SA-X
       All of the following:
           # TODO: SA-X combat logic
-          Charge Beam and Plasma Beam
+          Charge Beam and Missiles and Plasma Beam
           Combat (Beginner) or Normal Damage ≥ 500
 
 ----------------
@@ -336,7 +336,9 @@ Extra - room_id: [14]
   * Open Passage to Eastern Hub/Other to Maintenance Corridor
   * Extra - door_idx: (35,)
   > Other to Arachnus Arena
-      Morph Ball
+      All of the following:
+          Morph Ball
+          Wall Jump (Beginner) or Can climb High Jump Wall
 
 ----------------
 Habitation Deck Entrance
@@ -458,6 +460,7 @@ Extra - room_id: [18]
   > Door to Main Deck Navigation Room West
       Trivial
   > Door to Habitation Storage
+      # TODO: Add shinespark
       Can Use Power Bombs
   > Other to Western Hub
       Can Use Any Bombs
@@ -481,7 +484,7 @@ Extra - room_id: [18]
   * L2 Hatch to Habitation Storage/Door to Central Hub
   * Extra - door_idx: (132,)
   > Door to Station Entrance
-      Impossible
+      Can Use Power Bombs
 
 > Other to Western Hub; Heals? False
   * Layers: default
@@ -503,9 +506,9 @@ Extra - room_id: [20]
   > Door to Sub-Zero Containment
       Trivial
   > Other to Western Hub Cache
-      Trivial
+      Morph Ball
   > Other to Central Hub
-      Screw Attack and Knowledge (Beginner)
+      Morph Ball and Screw Attack and Knowledge (Beginner)
 
 > Door to Quarantine Access; Heals? False
   * Layers: default
@@ -526,14 +529,14 @@ Extra - room_id: [20]
   * Tunnel to Western Hub Cache/Other to Western Hub
   * Extra - door_idx: (168,)
   > Door to Main Deck Navigation Room West
-      Trivial
+      Morph Ball
 
 > Other to Central Hub; Heals? False
   * Layers: default
   * Tunnel to Central Hub/Other to Western Hub
   * Extra - door_idx: (202,)
   > Door to Main Deck Navigation Room West
-      Screw Attack and Knowledge (Beginner)
+      Morph Ball and Screw Attack and Knowledge (Beginner)
 
 ----------------
 Eastern Hub
@@ -1407,7 +1410,12 @@ Extra - room_id: [57]
   * Extra - blockx: 12
   * Extra - blocky: 10
   > Door to Central Hub
-      Can Use Any Bombs
+      Any of the following:
+          Can Use Any Bombs
+          All of the following:
+              # Don't fall down the crumble block
+              Movement (Beginner)
+              Wall Jump (Beginner) or Can climb High Jump Wall
 
 > Door to Central Hub; Heals? False
   * Layers: default
@@ -1697,14 +1705,14 @@ Extra - room_id: [72]
   * Extra - blockx: 13
   * Extra - blocky: 9
   > Other to Western Hub
-      Trivial
+      Morph Ball
 
 > Other to Western Hub; Heals? False
   * Layers: default
   * Tunnel to Western Hub/Other to Western Hub Cache
   * Extra - door_idx: (169,)
   > Pickup (Missile Tank)
-      Trivial
+      Morph Ball
 
 ----------------
 Main Elevator Cache
@@ -1878,10 +1886,27 @@ Extra - room_id: [86]
       All of the following:
           All of the following:
               # Weapon Requirements
-              # Yakuza
-              Charge Beam or Missiles ≥ 100
-              # Core-X
-              Missiles
-          # Health Requirements
-          Combat (Beginner) or Normal Damage ≥ 300
+              Any of the following:
+                  # Yakuza
+                  All of the following:
+                      Charge Beam
+                      Wide Beam or Combat (Beginner)
+                  Missiles ≥ 25 and 45 DMG Missiles
+                  Missiles ≥ 35 and Combat (Beginner) and 30 DMG Missiles
+                  Missiles ≥ 55 and Combat (Intermediate) and 20 DMG Missiles
+                  Missiles ≥ 110 and Combat (Expert) and 10 DMG Missiles
+              All of the following:
+                  # Core-X
+                  Missiles
+                  Any of the following:
+                      30 DMG Missiles
+                      Combat (Beginner) and 20 DMG Missiles
+                      Combat (Intermediate) and 10 DMG Missiles
+          Any of the following:
+              # Health Requirements
+              Combat (Hypermode) or Normal Damage ≥ 800
+              Combat (Beginner) and Normal Damage ≥ 700
+              Combat (Intermediate) and Normal Damage ≥ 600
+              Combat (Advanced) and Normal Damage ≥ 400
+              Combat (Expert) and Normal Damage ≥ 200
 

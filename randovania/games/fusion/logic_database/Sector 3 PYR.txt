@@ -140,9 +140,8 @@ Extra - room_id: [3]
       Trivial
   > Other to Level 2 Security Room
       All of the following:
-          Speed Booster
-          # TODO: morph? Also whats the movement for, mid air morph?
-          Movement (Advanced) or Can Use Bombs or Can Use Springball
+          Morph Ball and Speed Booster
+          Shinespark Tricks (Advanced) or Can Bounce in Ball
 
 ----------------
 Level 2 Security Room

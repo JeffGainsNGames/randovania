@@ -235,18 +235,11 @@ Extra - room_id: [9]
           Morph Ball
           Any of the following:
               Can Activate Pillar or Can climb High Jump Wall
-              Wall Jump (Beginner) and Can Freeze Enemies
+              Stand On Frozen Enemies (Beginner) and Wall Jump (Beginner) and Can Freeze Enemies
   > Door to Maintenance Annex
-      All of the following:
-          Morph Ball
-          Any of the following:
-              Morph Ball Bombs
-              All of the following:
-                  Knowledge (Advanced) and Normal Damage ≥ 88
-                  Any of the following:
-                      No Plasma Beam
-                      Diffusion Missiles and No Ice Missiles and No Missile Launcher and No Super Missiles
-              High Jump and Power Bombs
+      Any of the following:
+          Can Bounce in Ball and Can Use Any Bombs
+          Knowledge (Expert) and Normal Damage ≥ 88
 
 > Door to Maintenance Annex; Heals? False
   * Layers: default
@@ -259,14 +252,21 @@ Extra - room_id: [9]
               All of the following:
                   Space Jump
                   Any of the following:
-                      Power Bombs or Screw Attack
-                      Morph Ball Bombs and Jump Bombjump (Expert)
+                      Power Bombs
+                      All of the following:
+                          Morph Ball Bombs
+                          Any of the following:
+                              Jump Bombjump (Expert)
+                              Screw Attack and Knowledge (Beginner)
               All of the following:
                   High Jump
                   Any of the following:
                       Power Bombs
-                      Morph Ball Bombs and Jump Bombjump (Advanced)
-                      Screw Attack and Wall Jump (Beginner)
+                      All of the following:
+                          Morph Ball Bombs
+                          Any of the following:
+                              Jump Bombjump (Advanced)
+                              Screw Attack and Knowledge (Beginner) and Wall Jump (Intermediate)
 
 ----------------
 Cultivation Station
@@ -287,7 +287,7 @@ Extra - room_id: [10]
   * L0 Hatch to Maintenance Annex/Door to Cultivation Station
   * Extra - door_idx: (22,)
   > Door to Puyo Corridor
-      Screw Attack or Can Use Any Bombs
+      Can Break Single Bomb Blocks
 
 > Door to Puyo Corridor; Heals? False
   * Layers: default
@@ -321,7 +321,8 @@ Extra - room_id: [11]
       All of the following:
           Morph Ball
           Any of the following:
-              Can Freeze Enemies or Can climb High Jump Wall
+              Can climb High Jump Wall
+              Stand On Frozen Enemies (Beginner) and Can Freeze Enemies
               Morph Ball Bombs and Jump Bombjump (Expert)
 
 ----------------
@@ -362,8 +363,10 @@ Extra - room_id: [13, 46]
       Trivial
   > Beside Drop
       Any of the following:
-          High Jump or Space Jump or Can Freeze Enemies
-          Morph Ball and Morph Ball Bombs and Jump Bombjump (Hypermode) and Wall Jump (Hypermode)
+          Space Jump
+          High Jump and Wall Jump (Beginner)
+          Stand On Frozen Enemies (Beginner) and Can Freeze Enemies
+          Jump Bombjump (Hypermode) and Wall Jump (Hypermode) and Can Use Bombs
 
 > Door to Southern Save Access; Heals? False
   * Layers: default
@@ -421,7 +424,7 @@ Extra - room_id: [13, 46]
   > Door to Reo Room
       All of the following:
           Can Use Any Bombs
-          Wall Jump (Beginner) or Can Freeze Enemies or Can climb High Jump Wall
+          Wall Jump (Beginner) or Can climb High Jump Wall
   > Door to Ripper Roost
       Morph Ball
 
@@ -442,6 +445,10 @@ Extra - room_id: [14]
   * Extra - door_idx: (34, 100)
   > Door to Central Shaft
       Trivial
+
+> Other to Conceiled Ceiling; Heals? False
+  * Layers: default
+  * Open Passage to Conceiled Ceiling/Lock - Other to Dessgeega Dormitory
 
 ----------------
 Southern Save Access
@@ -547,7 +554,7 @@ Extra - room_id: [18]
           Screw Attack
           Any of the following:
               Space Jump
-              High Jump and Movement (Advanced)
+              High Jump and Wall Jump (Advanced)
   > Event - Zazabi
       All of the following:
           # Weapons Requirements
@@ -614,7 +621,9 @@ Extra - room_id: [20, 34]
   > Door to Shooting Gallery
       Trivial
   > Door to Nettori Arena
-      Can Kill Eye Door and Can climb High Jump Wall
+      All of the following:
+          Can Kill Eye Door
+          Wall Jump (Beginner) or Can climb High Jump Wall
 
 > Door to Shooting Gallery; Heals? False
   * Layers: default
@@ -642,14 +651,14 @@ Extra - room_id: [21]
   * Extra - blockx: 29
   * Extra - blocky: 4
   > Door to Eastern Shaft
-      Trivial
+      Morph Ball
 
 > Door to Eastern Shaft; Heals? False
   * Layers: default
   * L0 Hatch to Eastern Shaft/Door to Owtch Cache B
   * Extra - door_idx: (49,)
   > Pickup (Hidden Energy Tank)
-      Morph Ball and Can climb High Jump Wall
+      Morph Ball
 
 ----------------
 Nettori Arena
@@ -683,6 +692,8 @@ Extra - room_id: [22, 51]
           Missiles or Super Missiles
           # Health Requirements
           Combat (Beginner) or Normal Damage ≥ 100
+          # Avoid Samus Eaters
+          High Jump or Combat (Intermediate)
 
 > Pickup (Plasma Beam); Heals? False
   * Layers: default
@@ -708,7 +719,7 @@ Extra - room_id: [23]
   * L0 Hatch to Eastern Shaft/Door to Kihunter Hallway
   * Extra - door_idx: (52,)
   > Other to Entrance Hub
-      Trivial
+      Morph Ball
 
 > Other to Entrance Hub; Heals? False
   * Layers: default
@@ -733,7 +744,12 @@ Extra - room_id: [24, 36]
   * Open Hatch to Overgrown Hallway/Door to Overgrown Entrance
   * Extra - door_idx: (135, 145)
   > Other to Silo Tunnel
-      After Nettori
+      All of the following:
+          Morph Ball and After Nettori
+          Any of the following:
+              Space Jump
+              Speed Booster and Shinespark Tricks (Beginner)
+              High Jump and Wall Jump (Intermediate)
 
 ----------------
 Oasis Storage
@@ -792,6 +808,15 @@ Extra - room_id: [26]
 > Event - L1 Locks; Heals? False
   * Layers: default
   * Event Level 1 Locks
+  > Pickup (L1 Locks)
+      Trivial
+
+> Pickup (L1 Locks); Heals? False
+  * Layers: default
+  * Pickup 116; Category? Major
+  * Extra - area: 2
+  * Extra - room: 26
+  * Extra - source: Level1
   > Door to Security Access (Lower)
       Trivial
 
@@ -814,7 +839,9 @@ Extra - room_id: [27]
   * Tunnel to Entrance Hub/Other to Entrance Hub Underside
   * Extra - door_idx: (62,)
   > Pickup (Missile Tank)
-      Can Use Any Bombs
+      Any of the following:
+          Can Use Any Bombs
+          Morph Ball and Screw Attack and Knowledge (Beginner)
   > Door to Reo Room
       Trivial
 
@@ -823,7 +850,7 @@ Extra - room_id: [27]
   * L0 Hatch to Reo Room/Door to Entrance Hub Underside
   * Extra - door_idx: (63,)
   > Other to Entrance Hub
-      Can climb High Jump Wall
+      Trivial
 
 ----------------
 Reo Room
@@ -873,7 +900,7 @@ Extra - room_id: [31, 7]
   * Extra - blockx: 40
   * Extra - blocky: 7
   > Door to Data Hub Access
-      Can Use Bombs
+      Can Use Any Bombs
 
 > Door to Zoro Zig-Zag; Heals? False
   * Layers: default
@@ -897,12 +924,13 @@ Extra - room_id: [31, 7]
       Trivial
   > Door to Data Hub Access
       All of the following:
-          Morph Ball
+          Can Bounce in Ball
           Any of the following:
+              Can Use Power Bombs
+              Screw Attack and Knowledge (Beginner)
               All of the following:
-                  High Jump
-                  Morph Ball Bombs or Power Bombs or Screw Attack
-              Morph Ball Bombs and Jump Bombjump (Advanced)
+                  Morph Ball Bombs
+                  High Jump or Jump Bombjump (Advanced)
 
 > Door to Data Hub Access; Heals? False
   * Layers: default
@@ -913,13 +941,11 @@ Extra - room_id: [31, 7]
   > Door to Data Room
       Trivial
   > Door to Data Save Room
-      Any of the following:
-          Can Use Any Bombs
-          All of the following:
-              Morph Ball
-              Any of the following:
-                  Screw Attack
-                  Speed Booster and Movement (Intermediate)
+      All of the following:
+          Morph Ball
+          Any of the following:
+              Can Break Single Bomb Blocks
+              Speed Booster and Knowledge (Intermediate) and Movement (Intermediate) and Disabled Door Lock Rando and Disabled Entrance Rando
 
 ----------------
 Eastern Shaft
@@ -946,7 +972,7 @@ Extra - room_id: [32, 35]
   > Door to Owtch Cache B
       Trivial
   > Other to Hidden Recharge Room
-      Trivial
+      Morph Ball
   > Door to Nettori Save Room
       Trivial
 
@@ -955,7 +981,7 @@ Extra - room_id: [32, 35]
   * Open Hatch to Collapsed Shaft/Door to Eastern Shaft
   * Extra - door_idx: (71, 80)
   > Door to Overgrown Checkpoint
-      After Nettori or Can climb High Jump Wall
+      Space Jump or After Nettori or Wall Jump (Beginner)
   > Door to Nettori Save Room
       Space Jump and After Nettori
 
@@ -964,14 +990,14 @@ Extra - room_id: [32, 35]
   * Open Hatch to Overgrown Checkpoint/Door to Eastern Shaft
   * Extra - door_idx: (72, 81)
   > Door to Collapsed Shaft
-      After Nettori or Can climb High Jump Wall
+      Space Jump or After Nettori or Wall Jump (Beginner)
 
 > Other to Hidden Recharge Room; Heals? False
   * Layers: default
   * Tunnel to Hidden Recharge Room/Other to Eastern Shaft
   * Extra - door_idx: (117, 122)
   > Door to Kihunter Hallway
-      Can Freeze Enemies or Can climb High Jump Wall
+      Trivial
 
 > Door to Nettori Save Room; Heals? False
   * Layers: default
@@ -981,7 +1007,7 @@ Extra - room_id: [32, 35]
       Trivial
   > Door to Kihunter Hallway
       Any of the following:
-          Space Jump
+          Space Jump or Wall Jump (Intermediate)
           High Jump and Can Freeze Enemies
   > Door to Collapsed Shaft
       After Nettori
@@ -1021,7 +1047,9 @@ Extra - room_id: [33]
   > Pickup (Missile Tank)
       Trivial
   > Door to Entrance Hub
-      High Jump or Space Jump or Combat (Advanced) or Can Freeze Enemies
+      Any of the following:
+          High Jump or Space Jump or Combat (Advanced) or Can Freeze Enemies
+          Speed Booster and Shinespark Tricks (Beginner)
   > Door to Connection to Sector 1 (SRX)
       Screw Attack
 
@@ -1096,6 +1124,14 @@ Extra - room_id: [41]
   * Layers: default
   * L0 Hatch to Central Shaft/Door to Conceiled Ceiling
   * Extra - door_idx: (97,)
+  > Other to Dessgeega Dormitory
+      Trivial
+
+> Other to Dessgeega Dormitory; Heals? False
+  * Layers: default
+  * Open Passage to Dessgeega Dormitory/Lock - Other to Conceiled Ceiling
+  > Door to Central Shaft
+      Trivial
 
 ----------------
 Oasis
@@ -1187,6 +1223,8 @@ Extra - room_id: [47]
   * Extra - door_idx: (115,)
   > Pickup (Power Bomb Tank)
       Space Jump or Movement (Intermediate)
+  > Door to Collapsed Shaft
+      Speed Booster and Shinespark Tricks (Intermediate) and Disabled Entrance Rando
   > Door to Central Shaft
       Trivial
 
@@ -1198,6 +1236,13 @@ Extra - room_id: [48]
   * Layers: default
   * Tunnel to Eastern Shaft/Other to Hidden Recharge Room
   * Extra - door_idx: (116,)
+  > Recharge pad
+      Trivial
+
+> Recharge pad; Heals? False
+  * Layers: default
+  > Other to Eastern Shaft
+      Morph Ball
 
 ----------------
 Nettori Save Room
@@ -1241,14 +1286,19 @@ Extra - room_id: [50]
   * Extra - blockx: 3
   * Extra - blocky: 24
   > Door to Central Shaft
-      Can Use Any Bombs
+      Any of the following:
+          Can Use Any Bombs
+          Morph Ball and Screw Attack and Knowledge (Intermediate)
 
 > Door to Central Shaft; Heals? False
   * Layers: default
   * L0 Hatch to Central Shaft/Door to Ripper Roost
   * Extra - door_idx: (114,)
   > Pickup (Power Bomb Tank)
-      Morph Ball and Can Freeze Enemies
+      Any of the following:
+          Movement (Expert)
+          Morph Ball and Can Freeze Enemies
+          Space Jump and Movement (Advanced)
 
 ----------------
 Connection to Sector 1 (SRX)
@@ -1320,18 +1370,18 @@ Extra - room_id: [54]
       Any of the following:
           Space Jump
           All of the following:
-              Wall Jump (Intermediate)
+              High Jump and Wall Jump (Advanced) and Can Screw Single Walljump
               Any of the following:
                   Movement (Hypermode)
-                  Speed Booster and Movement (Expert) and Shinespark Tricks (Advanced)
+                  Speed Booster and Movement (Expert) and Shinespark Tricks (Expert)
   > Pickup (Power Bomb Tank)
       Any of the following:
           Space Jump
           All of the following:
-              Wall Jump (Intermediate)
+              High Jump and Wall Jump (Advanced) and Can Screw Single Walljump
               Any of the following:
                   Movement (Hypermode)
-                  Speed Booster and Movement (Expert) and Shinespark Tricks (Advanced)
+                  Speed Booster and Movement (Expert) and Shinespark Tricks (Expert)
 
 ----------------
 Zazabi Speedway
@@ -1355,7 +1405,7 @@ Extra - room_id: [55]
   * Extra - blockx: 10
   * Extra - blocky: 26
   > Door to Zazabi Arena
-      Can climb High Jump Wall
+      Trivial
 
 > Door to Zazabi Arena; Heals? False
   * Layers: default
@@ -1409,7 +1459,9 @@ Extra - room_id: [57, 58]
   > Door to Eastern Shaft
       Missiles
   > Door to Overgrown Hallway
-      Wave Beam
+      Any of the following:
+          Wave Beam
+          Morph Ball and After Nettori
 
 ----------------
 Cubby

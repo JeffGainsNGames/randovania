@@ -453,10 +453,6 @@ Extra - room_id: [14]
   > Door to Central Shaft
       Trivial
 
-> Other to Conceiled Ceiling; Heals? False
-  * Layers: default
-  * Open Passage to Conceiled Ceiling/Lock - Other to Dessgeega Dormitory
-
 ----------------
 Southern Save Access
 Extra - map_name: Sector 215
@@ -1150,14 +1146,6 @@ Extra - room_id: [41]
   * Layers: default
   * L0 Hatch to Central Shaft/Door to Conceiled Ceiling
   * Extra - door_idx: (97,)
-  > Other to Dessgeega Dormitory
-      Trivial
-
-> Other to Dessgeega Dormitory; Heals? False
-  * Layers: default
-  * Open Passage to Dessgeega Dormitory/Lock - Other to Conceiled Ceiling
-  > Door to Central Shaft
-      Trivial
 
 ----------------
 Oasis

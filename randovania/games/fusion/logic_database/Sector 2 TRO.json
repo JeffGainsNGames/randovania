@@ -2696,33 +2696,6 @@
                             }
                         }
                     }
-                },
-                "Other to Conceiled Ceiling": {
-                    "node_type": "dock",
-                    "heal": false,
-                    "coordinates": {
-                        "x": 103.06,
-                        "y": 27.32,
-                        "z": 0.0
-                    },
-                    "description": "",
-                    "layers": [
-                        "default"
-                    ],
-                    "extra": {},
-                    "valid_starting_location": false,
-                    "dock_type": "Other",
-                    "default_connection": {
-                        "region": "Sector 2 (TRO)",
-                        "area": "Conceiled Ceiling",
-                        "node": "Lock - Other to Dessgeega Dormitory"
-                    },
-                    "default_dock_weakness": "Open Passage",
-                    "exclude_from_dock_rando": false,
-                    "incompatible_dock_weaknesses": [],
-                    "override_default_open_requirement": null,
-                    "override_default_lock_requirement": null,
-                    "connections": {}
                 }
             }
         },
@@ -6827,50 +6800,7 @@
                     "incompatible_dock_weaknesses": [],
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
-                    "connections": {
-                        "Other to Dessgeega Dormitory": {
-                            "type": "and",
-                            "data": {
-                                "comment": null,
-                                "items": []
-                            }
-                        }
-                    }
-                },
-                "Other to Dessgeega Dormitory": {
-                    "node_type": "dock",
-                    "heal": false,
-                    "coordinates": {
-                        "x": 111.78,
-                        "y": 198.57,
-                        "z": 0.0
-                    },
-                    "description": "",
-                    "layers": [
-                        "default"
-                    ],
-                    "extra": {},
-                    "valid_starting_location": false,
-                    "dock_type": "Other",
-                    "default_connection": {
-                        "region": "Sector 2 (TRO)",
-                        "area": "Dessgeega Dormitory",
-                        "node": "Lock - Other to Conceiled Ceiling"
-                    },
-                    "default_dock_weakness": "Open Passage",
-                    "exclude_from_dock_rando": false,
-                    "incompatible_dock_weaknesses": [],
-                    "override_default_open_requirement": null,
-                    "override_default_lock_requirement": null,
-                    "connections": {
-                        "Door to Central Shaft": {
-                            "type": "and",
-                            "data": {
-                                "comment": null,
-                                "items": []
-                            }
-                        }
-                    }
+                    "connections": {}
                 }
             }
         },

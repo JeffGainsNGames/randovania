@@ -707,7 +707,7 @@
                                 "items": [
                                     {
                                         "type": "template",
-                                        "data": "Can Kill Geron"
+                                        "data": "Can Kill Stabilizer Geron"
                                     },
                                     {
                                         "type": "and",
@@ -1471,7 +1471,7 @@
                                 "items": [
                                     {
                                         "type": "template",
-                                        "data": "Can Kill Geron"
+                                        "data": "Can Kill Stabilizer Geron"
                                     }
                                 ]
                             }
@@ -1990,7 +1990,7 @@
                         },
                         "Event - Stabilizer 3 Online": {
                             "type": "template",
-                            "data": "Can Kill Geron"
+                            "data": "Can Kill Stabilizer Geron"
                         }
                     }
                 },
@@ -2290,7 +2290,7 @@
                         },
                         "Event - Stabilizer 4 Online": {
                             "type": "template",
-                            "data": "Can Kill Geron"
+                            "data": "Can Kill Stabilizer Geron"
                         }
                     }
                 },
@@ -5140,7 +5140,7 @@
                         },
                         "Event - Stabilizer 2 Online": {
                             "type": "template",
-                            "data": "Can Kill Geron"
+                            "data": "Can Kill Stabilizer Geron"
                         }
                     }
                 },

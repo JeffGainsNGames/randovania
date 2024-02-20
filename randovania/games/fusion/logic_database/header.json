@@ -517,13 +517,8 @@
                         "comment": null,
                         "items": [
                             {
-                                "type": "resource",
-                                "data": {
-                                    "type": "items",
-                                    "name": "Missiles",
-                                    "amount": 5,
-                                    "negate": false
-                                }
+                                "type": "template",
+                                "data": "Can Missile 25plus"
                             },
                             {
                                 "type": "resource",
@@ -532,271 +527,6 @@
                                     "name": "ChargeBeam",
                                     "amount": 1,
                                     "negate": false
-                                }
-                            },
-                            {
-                                "type": "and",
-                                "data": {
-                                    "comment": null,
-                                    "items": [
-                                        {
-                                            "type": "or",
-                                            "data": {
-                                                "comment": null,
-                                                "items": [
-                                                    {
-                                                        "type": "resource",
-                                                        "data": {
-                                                            "type": "items",
-                                                            "name": "DiffusionMissiles",
-                                                            "amount": 1,
-                                                            "negate": false
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "type": "or",
-                                            "data": {
-                                                "comment": null,
-                                                "items": [
-                                                    {
-                                                        "type": "and",
-                                                        "data": {
-                                                            "comment": null,
-                                                            "items": [
-                                                                {
-                                                                    "type": "resource",
-                                                                    "data": {
-                                                                        "type": "items",
-                                                                        "name": "MissileLauncher",
-                                                                        "amount": 1,
-                                                                        "negate": false
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "type": "resource",
-                                                                    "data": {
-                                                                        "type": "items",
-                                                                        "name": "IceMissiles",
-                                                                        "amount": 1,
-                                                                        "negate": false
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    },
-                                                    {
-                                                        "type": "resource",
-                                                        "data": {
-                                                            "type": "items",
-                                                            "name": "SuperMissiles",
-                                                            "amount": 1,
-                                                            "negate": false
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "type": "and",
-                                "data": {
-                                    "comment": null,
-                                    "items": [
-                                        {
-                                            "type": "resource",
-                                            "data": {
-                                                "type": "items",
-                                                "name": "SuperMissiles",
-                                                "amount": 1,
-                                                "negate": false
-                                            }
-                                        },
-                                        {
-                                            "type": "or",
-                                            "data": {
-                                                "comment": null,
-                                                "items": [
-                                                    {
-                                                        "type": "resource",
-                                                        "data": {
-                                                            "type": "items",
-                                                            "name": "MissileLauncher",
-                                                            "amount": 1,
-                                                            "negate": false
-                                                        }
-                                                    },
-                                                    {
-                                                        "type": "resource",
-                                                        "data": {
-                                                            "type": "items",
-                                                            "name": "IceMissiles",
-                                                            "amount": 1,
-                                                            "negate": false
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "type": "and",
-                                "data": {
-                                    "comment": null,
-                                    "items": [
-                                        {
-                                            "type": "resource",
-                                            "data": {
-                                                "type": "items",
-                                                "name": "Missiles",
-                                                "amount": 2,
-                                                "negate": false
-                                            }
-                                        },
-                                        {
-                                            "type": "or",
-                                            "data": {
-                                                "comment": null,
-                                                "items": [
-                                                    {
-                                                        "type": "resource",
-                                                        "data": {
-                                                            "type": "items",
-                                                            "name": "SuperMissiles",
-                                                            "amount": 1,
-                                                            "negate": false
-                                                        }
-                                                    },
-                                                    {
-                                                        "type": "and",
-                                                        "data": {
-                                                            "comment": null,
-                                                            "items": [
-                                                                {
-                                                                    "type": "resource",
-                                                                    "data": {
-                                                                        "type": "items",
-                                                                        "name": "MissileLauncher",
-                                                                        "amount": 1,
-                                                                        "negate": false
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "type": "or",
-                                                                    "data": {
-                                                                        "comment": null,
-                                                                        "items": [
-                                                                            {
-                                                                                "type": "resource",
-                                                                                "data": {
-                                                                                    "type": "items",
-                                                                                    "name": "IceMissiles",
-                                                                                    "amount": 1,
-                                                                                    "negate": false
-                                                                                }
-                                                                            },
-                                                                            {
-                                                                                "type": "resource",
-                                                                                "data": {
-                                                                                    "type": "items",
-                                                                                    "name": "DiffusionMissiles",
-                                                                                    "amount": 1,
-                                                                                    "negate": false
-                                                                                }
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    },
-                                                    {
-                                                        "type": "and",
-                                                        "data": {
-                                                            "comment": null,
-                                                            "items": [
-                                                                {
-                                                                    "type": "resource",
-                                                                    "data": {
-                                                                        "type": "items",
-                                                                        "name": "IceMissiles",
-                                                                        "amount": 1,
-                                                                        "negate": false
-                                                                    }
-                                                                },
-                                                                {
-                                                                    "type": "or",
-                                                                    "data": {
-                                                                        "comment": null,
-                                                                        "items": [
-                                                                            {
-                                                                                "type": "resource",
-                                                                                "data": {
-                                                                                    "type": "items",
-                                                                                    "name": "DiffusionMissiles",
-                                                                                    "amount": 1,
-                                                                                    "negate": false
-                                                                                }
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                }
-                            },
-                            {
-                                "type": "and",
-                                "data": {
-                                    "comment": null,
-                                    "items": [
-                                        {
-                                            "type": "resource",
-                                            "data": {
-                                                "type": "items",
-                                                "name": "Missiles",
-                                                "amount": 3,
-                                                "negate": false
-                                            }
-                                        },
-                                        {
-                                            "type": "or",
-                                            "data": {
-                                                "comment": null,
-                                                "items": [
-                                                    {
-                                                        "type": "resource",
-                                                        "data": {
-                                                            "type": "items",
-                                                            "name": "MissileLauncher",
-                                                            "amount": 1,
-                                                            "negate": false
-                                                        }
-                                                    },
-                                                    {
-                                                        "type": "resource",
-                                                        "data": {
-                                                            "type": "items",
-                                                            "name": "IceMissiles",
-                                                            "amount": 1,
-                                                            "negate": false
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
                                 }
                             }
                         ]
@@ -991,8 +721,26 @@
                     }
                 }
             },
-            "Can Kill Geron": {
-                "display_name": "Can Kill Geron",
+            "Can Screw Single Walljump": {
+                "display_name": "Can Screw Single Walljump",
+                "requirement": {
+                    "type": "and",
+                    "data": {
+                        "comment": null,
+                        "items": [
+                            {
+                                "type": "or",
+                                "data": {
+                                    "comment": null,
+                                    "items": []
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "Can Kill Stabilizer Geron": {
+                "display_name": "Can Kill Stabilizer Geron",
                 "requirement": {
                     "type": "or",
                     "data": {
@@ -1050,26 +798,61 @@
                     }
                 }
             },
-            "Can Screw Single Walljump": {
-                "display_name": "Can Screw Single Walljump",
+            "Can Kill Missile Geron": {
+                "display_name": "Can Kill Missile Geron",
                 "requirement": {
-                    "type": "and",
+                    "type": "or",
                     "data": {
                         "comment": null,
                         "items": [
                             {
-                                "type": "or",
+                                "type": "template",
+                                "data": "Can Missile 25plus"
+                            },
+                            {
+                                "type": "and",
                                 "data": {
                                     "comment": null,
-                                    "items": []
+                                    "items": [
+                                        {
+                                            "type": "resource",
+                                            "data": {
+                                                "type": "tricks",
+                                                "name": "Knowledge",
+                                                "amount": 1,
+                                                "negate": false
+                                            }
+                                        },
+                                        {
+                                            "type": "or",
+                                            "data": {
+                                                "comment": null,
+                                                "items": [
+                                                    {
+                                                        "type": "resource",
+                                                        "data": {
+                                                            "type": "items",
+                                                            "name": "ScrewAttack",
+                                                            "amount": 1,
+                                                            "negate": false
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "template",
+                                                        "data": "Can Use Power Bombs"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
                                 }
                             }
                         ]
                     }
                 }
             },
-            "Can Kill Purple Geron": {
-                "display_name": "Can Kill Purple Geron",
+            "Can Kill Super Geron": {
+                "display_name": "Can Kill Super Geron",
                 "requirement": {
                     "type": "or",
                     "data": {
@@ -1084,17 +867,93 @@
                                             "type": "resource",
                                             "data": {
                                                 "type": "items",
-                                                "name": "Missiles",
-                                                "amount": 5,
+                                                "name": "SuperMissiles",
+                                                "amount": 1,
                                                 "negate": false
                                             }
+                                        },
+                                        {
+                                            "type": "or",
+                                            "data": {
+                                                "comment": null,
+                                                "items": [
+                                                    {
+                                                        "type": "resource",
+                                                        "data": {
+                                                            "type": "items",
+                                                            "name": "Missiles",
+                                                            "amount": 5,
+                                                            "negate": false
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "and",
+                                                        "data": {
+                                                            "comment": "4 shot",
+                                                            "items": [
+                                                                {
+                                                                    "type": "resource",
+                                                                    "data": {
+                                                                        "type": "items",
+                                                                        "name": "DiffusionMissiles",
+                                                                        "amount": 1,
+                                                                        "negate": false
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "resource",
+                                                                    "data": {
+                                                                        "type": "items",
+                                                                        "name": "Missiles",
+                                                                        "amount": 4,
+                                                                        "negate": false
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "and",
+                                                        "data": {
+                                                            "comment": "3 shot",
+                                                            "items": [
+                                                                {
+                                                                    "type": "template",
+                                                                    "data": "10 DMG Missiles"
+                                                                },
+                                                                {
+                                                                    "type": "resource",
+                                                                    "data": {
+                                                                        "type": "items",
+                                                                        "name": "Missiles",
+                                                                        "amount": 3,
+                                                                        "negate": false
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "and",
+                                "data": {
+                                    "comment": "2 shot",
+                                    "items": [
+                                        {
+                                            "type": "template",
+                                            "data": "45 DMG Missiles"
                                         },
                                         {
                                             "type": "resource",
                                             "data": {
                                                 "type": "items",
-                                                "name": "SuperMissiles",
-                                                "amount": 1,
+                                                "name": "Missiles",
+                                                "amount": 2,
                                                 "negate": false
                                             }
                                         }
@@ -1406,6 +1265,130 @@
                                     "name": "DiffusionMissiles",
                                     "amount": 1,
                                     "negate": false
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "Can Missile 25plus": {
+                "display_name": "Can Missile 25plus",
+                "requirement": {
+                    "type": "or",
+                    "data": {
+                        "comment": null,
+                        "items": [
+                            {
+                                "type": "resource",
+                                "data": {
+                                    "type": "items",
+                                    "name": "Missiles",
+                                    "amount": 5,
+                                    "negate": false
+                                }
+                            },
+                            {
+                                "type": "and",
+                                "data": {
+                                    "comment": "3 shot",
+                                    "items": [
+                                        {
+                                            "type": "template",
+                                            "data": "10 DMG Missiles"
+                                        },
+                                        {
+                                            "type": "resource",
+                                            "data": {
+                                                "type": "items",
+                                                "name": "Missiles",
+                                                "amount": 3,
+                                                "negate": false
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "and",
+                                "data": {
+                                    "comment": "2 shot",
+                                    "items": [
+                                        {
+                                            "type": "resource",
+                                            "data": {
+                                                "type": "items",
+                                                "name": "Missiles",
+                                                "amount": 2,
+                                                "negate": false
+                                            }
+                                        },
+                                        {
+                                            "type": "or",
+                                            "data": {
+                                                "comment": null,
+                                                "items": [
+                                                    {
+                                                        "type": "template",
+                                                        "data": "20 DMG Missiles"
+                                                    },
+                                                    {
+                                                        "type": "and",
+                                                        "data": {
+                                                            "comment": null,
+                                                            "items": [
+                                                                {
+                                                                    "type": "resource",
+                                                                    "data": {
+                                                                        "type": "items",
+                                                                        "name": "DiffusionMissiles",
+                                                                        "amount": 1,
+                                                                        "negate": false
+                                                                    }
+                                                                },
+                                                                {
+                                                                    "type": "template",
+                                                                    "data": "10 DMG Missiles"
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "or",
+                                "data": {
+                                    "comment": "1 shot",
+                                    "items": [
+                                        {
+                                            "type": "template",
+                                            "data": "30 DMG Missiles"
+                                        },
+                                        {
+                                            "type": "and",
+                                            "data": {
+                                                "comment": null,
+                                                "items": [
+                                                    {
+                                                        "type": "resource",
+                                                        "data": {
+                                                            "type": "items",
+                                                            "name": "DiffusionMissiles",
+                                                            "amount": 1,
+                                                            "negate": false
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "template",
+                                                        "data": "20 DMG Missiles"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
                                 }
                             }
                         ]

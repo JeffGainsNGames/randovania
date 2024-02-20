@@ -501,7 +501,7 @@
                                             "items": [
                                                 {
                                                     "type": "template",
-                                                    "data": "Can Kill Purple Geron"
+                                                    "data": "Can Kill Super Geron"
                                                 }
                                             ]
                                         }
@@ -582,7 +582,7 @@
                                             "items": [
                                                 {
                                                     "type": "template",
-                                                    "data": "Can Kill Purple Geron"
+                                                    "data": "Can Kill Super Geron"
                                                 },
                                                 {
                                                     "type": "or",

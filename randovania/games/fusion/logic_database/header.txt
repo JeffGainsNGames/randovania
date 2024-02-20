@@ -14,29 +14,7 @@ Templates
           Morph Ball Bombs or Power Bombs
 
 * Can Kill Eye Door:
-      Any of the following:
-          Charge Beam or Missiles ≥ 5
-          All of the following:
-              Diffusion Missiles
-              Any of the following:
-                  Super Missiles
-                  Ice Missiles and Missile Launcher
-          All of the following:
-              Super Missiles
-              Ice Missiles or Missile Launcher
-          All of the following:
-              Missiles ≥ 2
-              Any of the following:
-                  Super Missiles
-                  All of the following:
-                      Missile Launcher
-                      Diffusion Missiles or Ice Missiles
-                  All of the following:
-                      Ice Missiles
-                      Diffusion Missiles
-          All of the following:
-              Missiles ≥ 3
-              Ice Missiles or Missile Launcher
+      Charge Beam or Can Missile 25plus
 
 * Can Use Springball:
       High Jump and Morph Ball
@@ -57,17 +35,33 @@ Templates
 * Can climb High Jump Wall:
       High Jump or Space Jump
 
-* Can Kill Geron:
+* Can Screw Single Walljump:
+      Impossible
+
+* Can Kill Stabilizer Geron:
       Any of the following:
           Charge Beam or Missiles or Screw Attack
           Knowledge (Beginner) and Can Use Power Bombs
 
-* Can Screw Single Walljump:
-      Impossible
-
-* Can Kill Purple Geron:
+* Can Kill Missile Geron:
       Any of the following:
-          Missiles ≥ 5 and Super Missiles
+          Can Missile 25plus
+          All of the following:
+              Knowledge (Beginner)
+              Screw Attack or Can Use Power Bombs
+
+* Can Kill Super Geron:
+      Any of the following:
+          All of the following:
+              Super Missiles
+              Any of the following:
+                  Missiles ≥ 5
+                  # 4 shot
+                  Diffusion Missiles and Missiles ≥ 4
+                  # 3 shot
+                  Missiles ≥ 3 and 10 DMG Missiles
+          # 2 shot
+          Missiles ≥ 2 and 45 DMG Missiles
           All of the following:
               Knowledge (Beginner)
               Screw Attack or Can Use Power Bombs
@@ -100,6 +94,22 @@ Templates
 
 * 45 DMG Missiles:
       Diffusion Missiles and Ice Missiles and Missile Launcher and Super Missiles
+
+* Can Missile 25plus:
+      Any of the following:
+          Missiles ≥ 5
+          # 3 shot
+          Missiles ≥ 3 and 10 DMG Missiles
+          All of the following:
+              # 2 shot
+              Missiles ≥ 2
+              Any of the following:
+                  20 DMG Missiles
+                  Diffusion Missiles and 10 DMG Missiles
+          Any of the following:
+              # 1 shot
+              30 DMG Missiles
+              Diffusion Missiles and 20 DMG Missiles
 
 ====================
 Dock Weaknesses

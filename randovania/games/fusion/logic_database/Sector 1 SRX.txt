@@ -132,7 +132,7 @@ Extra - room_id: [4]
       After Stabilizer 1 Online
   > Event - Stabilizer 1 Online
       Any of the following:
-          Can Kill Geron
+          Can Kill Stabilizer Geron
           All of the following:
               Speed Booster
               Any of the following:
@@ -276,7 +276,7 @@ Extra - room_id: [9]
       After Stabilizer 5 Online
   > Event - Stabilizer 5 Online
       # TODO: different than normal geron.
-      Can Kill Geron
+      Can Kill Stabilizer Geron
 
 > Event - Stabilizer 5 Online; Heals? False
   * Layers: default
@@ -379,7 +379,7 @@ Extra - room_id: [13]
   > Door to Sciser Puddle
       After Stabilizer 3 Online
   > Event - Stabilizer 3 Online
-      Can Kill Geron
+      Can Kill Stabilizer Geron
 
 > Event - Stabilizer 3 Online; Heals? False
   * Layers: default
@@ -439,7 +439,7 @@ Extra - room_id: [15]
   > Door to South Shaft
       After Stabilizer 4 Online
   > Event - Stabilizer 4 Online
-      Can Kill Geron
+      Can Kill Stabilizer Geron
 
 > Event - Stabilizer 4 Online; Heals? False
   * Layers: default
@@ -898,7 +898,7 @@ Extra - room_id: [32]
   > Door to Shaft North
       After Stabilizer 2 Online
   > Event - Stabilizer 2 Online
-      Can Kill Geron
+      Can Kill Stabilizer Geron
 
 > Event - Stabilizer 2 Online; Heals? False
   * Layers: default

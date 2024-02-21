@@ -140,9 +140,8 @@ Extra - room_id: [3]
       Trivial
   > Other to Level 2 Security Room
       All of the following:
-          Speed Booster
-          # TODO: morph? Also whats the movement for, mid air morph?
-          Movement (Advanced) or Can Use Bombs or Can Use Springball
+          Morph Ball and Speed Booster
+          Shinespark Tricks (Advanced) or Can Bounce in Ball
 
 ----------------
 Level 2 Security Room
@@ -319,7 +318,8 @@ Extra - room_id: [8]
   > Other to Entrance Hub
       Any of the following:
           # TODO: template, also add mid air morph and other stuff to the bombs only path
-          Screw Attack or Can Use Power Bombs
+          Can Use Power Bombs
+          Morph Ball and Screw Attack
           Can Use Bombs and Can Use Springball
   > Above E-Tank
       Any of the following:
@@ -335,8 +335,8 @@ Extra - room_id: [8]
 > Bottom Right; Heals? False
   * Layers: default
   > Door to Deserted Runway
-      # TODO: can you do this with only HJ w/ WJ?
-      Can climb High Jump Wall
+      # Space or High Wall Jumping or Wall Jump with Ice
+      Space Jump
   > Below E-Tank
       All of the following:
           # TODO: use template
@@ -467,7 +467,7 @@ Extra - room_id: [12]
   * L0 Hatch to Lava Reservoirs/Door to Lava Maze
   * Extra - door_idx: (24,)
   > Pickup (Power Bomb Tank)
-      # TODO: do you need bombs/spring in the maze?
+      # Can damage run this with varia (about 500 energy), high jump/spring ball not required
       Gravity Suit and Varia Suit and Can Use Power Bombs
   > Door to Sova Suite
       # TODO: Varia?
@@ -527,12 +527,8 @@ Extra - room_id: [15]
   * L0 Hatch to Pyrochamber Access/Door to Pyrochamber
   * Extra - door_idx: (30,)
   > Door to Boiler Access
-      All of the following:
-          # TODO: see other connection
-          # Movement
-          Can climb High Jump Wall
-          # Heat DMG
-          Varia Suit
+      # Heat DMG
+      Varia Suit
 
 > Door to Boiler Access; Heals? False
   * Layers: default
@@ -541,8 +537,6 @@ Extra - room_id: [15]
   > Door to Pyrochamber Access
       All of the following:
           # TODO: how to get past the wwall things damageless?
-          # Movement - TODO: WJ?
-          Can climb High Jump Wall
           # Heat DMG - TODO: heat run?
           Varia Suit
 
@@ -725,33 +719,55 @@ Extra - room_id: [23, 18]
   * Open Passage to Deserted Runway/Other to B.O.X. Arena
   * Extra - door_idx: (37,)
   > Door to B.O.X. Access
-      Trivial
+      After B.O.X.
 
 > Door to B.O.X. Access; Heals? False
   * Layers: default
   * L0 Hatch to B.O.X. Access/Door to B.O.X. Arena
   * Extra - door_idx: (46, 36)
-  > Other to Deserted Runway
-      Space Jump or After B.O.X.
-  > Event - B.O.X.
-      All of the following:
-          Charge Beam or Missiles
-          Combat (Beginner) or Normal Damage ≥ 100
-  > Door to Data Room
-      After B.O.X.
+  > Arena
+      Trivial
 
 > Event - B.O.X.; Heals? False
   * Layers: default
   * Event B.O.X.
-  > Door to B.O.X. Access
+  > Arena
       Trivial
 
 > Door to Data Room; Heals? False
   * Layers: default
   * L2 Hatch to Data Room/Door to B.O.X. Arena
   * Extra - door_idx: (43,)
-  > Door to B.O.X. Access
+  > Arena
       Trivial
+
+> Arena; Heals? False
+  * Layers: default
+  > Other to Deserted Runway
+      Space Jump or After B.O.X.
+  > Door to B.O.X. Access
+      After B.O.X.
+  > Event - B.O.X.
+      All of the following:
+          Any of the following:
+              # Weapon Requirements
+              Charge Beam
+              Missiles ≥ 30 and 30 DMG Missiles
+              Missiles ≥ 50 and Combat (Beginner) and 20 DMG Missiles
+              Missiles ≥ 75 and Combat (Intermediate) and 10 DMG Missiles
+          Any of the following:
+              # Health Requirements
+              Combat (Hypermode) or Normal Damage ≥ 700
+              Combat (Beginner) and Normal Damage ≥ 600
+              Combat (Intermediate) and Normal Damage ≥ 500
+              Combat (Advanced) and Normal Damage ≥ 200
+              Combat (Expert) and Normal Damage ≥ 100
+          Any of the following:
+              # Dodging Requirements
+              Combat (Advanced) or Normal Damage ≥ 200 or Can climb High Jump Wall
+              Screw Attack and Combat (Intermediate)
+  > Door to Data Room
+      After B.O.X.
 
 ----------------
 Main Boiler Control Room
@@ -861,7 +877,7 @@ Extra - room_id: [28]
   * Extra - room: 28
   * Extra - blockx: 12
   * Extra - blocky: 7
-  > Door to Monkey Bars of Fire
+  > Behind Wall
       Trivial
 
 > Pickup (Missile Tank); Heals? False
@@ -878,23 +894,35 @@ Extra - room_id: [28]
   * Layers: default
   * L0 Hatch to Monkey Bars of Fire/Door to Fiery Storage
   * Extra - door_idx: (56,)
-  > Pickup (Energy Tank)
-      All of the following:
-          # TODO: can you speedboost without collecting the tank?
-          Speed Booster
-          # TODO: if pillar, can you do this without jump upgrades
-          Space Jump or Can Activate Pillar
   > Pickup (Missile Tank)
       Trivial
-  > Door to Connection to Sector 5 (ARC)
-      Screw Attack
+  > Behind Wall
+      Can Break Single Bomb Blocks
 
 > Door to Connection to Sector 5 (ARC); Heals? False
   * Layers: default
   * L0 Hatch to Connection to Sector 5 (ARC)/Door to Fiery Storage
   * Extra - door_idx: (87,)
+  > Behind Wall
+      All of the following:
+          Screw Attack
+          Wall Jump (Beginner) or Can climb High Jump Wall
+
+> Behind Wall; Heals? False
+  * Layers: default
+  > Pickup (Energy Tank)
+      All of the following:
+          Speed Booster
+          Space Jump or Can Activate Pillar
   > Door to Monkey Bars of Fire
-      # TODO: you can't do this with SA alone
+      Any of the following:
+          Can Break Single Bomb Blocks
+          All of the following:
+              Speed Booster
+              Any of the following:
+                  Shinespark Tricks (Advanced)
+                  High Jump and Shinespark Tricks (Intermediate)
+  > Door to Connection to Sector 5 (ARC)
       Screw Attack
 
 ----------------
@@ -1065,8 +1093,8 @@ Extra - room_id: [35]
   * Extra - room: 35
   * Extra - blockx: 4
   * Extra - blocky: 27
-  > Door to Sova Processing
-      Trivial
+  > Beside Pickup
+      Screw Attack
 
 > Pickup (Power Bomb Tank in Shaft); Heals? False
   * Layers: default
@@ -1077,25 +1105,30 @@ Extra - room_id: [35]
   * Extra - blocky: 86
   > Door to Sova Processing
       Trivial
+  > Beside Pickup
+      Speed Booster
 
 > Door to Sova Processing; Heals? False
   * Layers: default
   * L0 Hatch to Sova Processing/Door to Garbage Chute
   * Extra - door_idx: (79,)
-  > Pickup (Power Bomb Tank in Cave)
-      Gravity Suit and Screw Attack and Speed Booster
   > Pickup (Power Bomb Tank in Shaft)
-      Gravity Suit and Speed Booster
-  > Door to Chute Access
-      # TODO: Shinesparking? You also cant get here without ocllecting the pb tank in shaft Also varia?
-      Gravity Suit and Speed Booster
+      # TODO: Heat DMG
+      Gravity Suit and Screw Attack and Speed Booster and Disabled Door Lock Rando and Disabled Entrance Rando
 
 > Door to Chute Access; Heals? False
   * Layers: default
   * L0 Hatch to Chute Access/Door to Garbage Chute
   * Extra - door_idx: (80,)
-  > Door to Sova Processing
-      Impossible
+
+> Beside Pickup; Heals? False
+  * Layers: default
+  > Pickup (Power Bomb Tank in Cave)
+      Screw Attack
+  > Pickup (Power Bomb Tank in Shaft)
+      Trivial
+  > Door to Chute Access
+      Speed Booster
 
 ----------------
 Chute Access

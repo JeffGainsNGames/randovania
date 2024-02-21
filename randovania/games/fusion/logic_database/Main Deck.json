@@ -102,7 +102,7 @@
                                                     "data": {
                                                         "type": "damage",
                                                         "name": "NormalDamage",
-                                                        "amount": 400,
+                                                        "amount": 1000,
                                                         "negate": false
                                                     }
                                                 },
@@ -111,8 +111,112 @@
                                                     "data": {
                                                         "type": "tricks",
                                                         "name": "Combat",
-                                                        "amount": 3,
+                                                        "amount": 5,
                                                         "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "damage",
+                                                                    "name": "NormalDamage",
+                                                                    "amount": 800,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 2,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "damage",
+                                                                    "name": "NormalDamage",
+                                                                    "amount": 600,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 3,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "damage",
+                                                                    "name": "NormalDamage",
+                                                                    "amount": 300,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 4,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "damage",
+                                                                    "name": "NormalDamage",
+                                                                    "amount": 100,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
                                                     }
                                                 }
                                             ]
@@ -598,22 +702,51 @@
                         "Other to Spitter Speedway": {
                             "type": "or",
                             "data": {
-                                "comment": "TODO: this seems very hard to skip",
+                                "comment": null,
                                 "items": [
                                     {
                                         "type": "template",
                                         "data": "Can Use Power Bombs"
                                     },
                                     {
-                                        "type": "or",
+                                        "type": "and",
                                         "data": {
-                                            "comment": "TODO: SPEEDBOOSTER path",
+                                            "comment": null,
                                             "items": [
                                                 {
-                                                    "type": "or",
+                                                    "type": "resource",
                                                     "data": {
-                                                        "comment": null,
-                                                        "items": []
+                                                        "type": "items",
+                                                        "name": "SpeedBooster",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "misc",
+                                                        "name": "EntranceRando",
+                                                        "amount": 1,
+                                                        "negate": true
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "misc",
+                                                        "name": "DoorLockRando",
+                                                        "amount": 1,
+                                                        "negate": true
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "ShinesparkTrick",
+                                                        "amount": 3,
+                                                        "negate": false
                                                     }
                                                 }
                                             ]
@@ -1665,37 +1798,146 @@
                         "Event - SA-X": {
                             "type": "and",
                             "data": {
-                                "comment": "TODO: SA-X combat logic",
+                                "comment": null,
                                 "items": [
                                     {
-                                        "type": "resource",
+                                        "type": "and",
                                         "data": {
-                                            "type": "items",
-                                            "name": "ChargeBeam",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    },
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "PlasmaBeam",
-                                            "amount": 1,
-                                            "negate": false
+                                            "comment": "SA-X Requirements",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "ChargeBeam",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "PlasmaBeam",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "or",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "items",
+                                                                    "name": "WideBeam",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 3,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
                                         }
                                     },
                                     {
                                         "type": "or",
                                         "data": {
-                                            "comment": null,
+                                            "comment": "Core-X Requirements",
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "45 DMG Missiles"
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "template",
+                                                                "data": "30 DMG Missiles"
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "template",
+                                                                "data": "20 DMG Missiles"
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 2,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "template",
+                                                                "data": "10 DMG Missiles"
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 3,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": "Health Requirements",
                                             "items": [
                                                 {
                                                     "type": "resource",
                                                     "data": {
                                                         "type": "tricks",
                                                         "name": "Combat",
-                                                        "amount": 1,
+                                                        "amount": 5,
                                                         "negate": false
                                                     }
                                                 },
@@ -1704,8 +1946,167 @@
                                                     "data": {
                                                         "type": "damage",
                                                         "name": "NormalDamage",
-                                                        "amount": 500,
+                                                        "amount": 1000,
                                                         "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "damage",
+                                                                    "name": "NormalDamage",
+                                                                    "amount": 800,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 2,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "damage",
+                                                                    "name": "NormalDamage",
+                                                                    "amount": 600,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 3,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "damage",
+                                                                    "name": "NormalDamage",
+                                                                    "amount": 400,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 4,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "damage",
+                                                                    "name": "NormalDamage",
+                                                                    "amount": 150,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": "Dodging Requirements",
+                                            "items": [
+                                                {
+                                                    "type": "or",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "items",
+                                                                    "name": "ScrewAttack",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 3,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "or",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "template",
+                                                                "data": "Can Freeze Enemies"
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 2,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
                                                     }
                                                 }
                                             ]
@@ -1807,7 +2208,7 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Other to Arachnus Arena": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
                                 "comment": null,
                                 "items": [
@@ -1818,6 +2219,27 @@
                                             "name": "MorphBall",
                                             "amount": 1,
                                             "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can climb High Jump Wall"
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "WallJump",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
                                         }
                                     }
                                 ]
@@ -2288,23 +2710,7 @@
                     "incompatible_dock_weaknesses": [],
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
-                    "connections": {
-                        "Door to Restricted Labs Corridor": {
-                            "type": "or",
-                            "data": {
-                                "comment": "TODO: can you do this with speedboosting from the other rooms?",
-                                "items": [
-                                    {
-                                        "type": "or",
-                                        "data": {
-                                            "comment": null,
-                                            "items": []
-                                        }
-                                    }
-                                ]
-                            }
-                        }
-                    }
+                    "connections": {}
                 },
                 "Door to Restricted Labs Corridor": {
                     "node_type": "dock",
@@ -2492,26 +2898,11 @@
                         "Door to Habitation Storage": {
                             "type": "or",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: Add shinespark",
                                 "items": [
                                     {
                                         "type": "template",
                                         "data": "Can Use Power Bombs"
-                                    },
-                                    {
-                                        "type": "or",
-                                        "data": {
-                                            "comment": "TODO: cross-room shinespark to kill him",
-                                            "items": [
-                                                {
-                                                    "type": "or",
-                                                    "data": {
-                                                        "comment": null,
-                                                        "items": []
-                                                    }
-                                                }
-                                            ]
-                                        }
                                     }
                                 ]
                             }
@@ -2639,13 +3030,13 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Station Entrance": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
                                 "comment": null,
                                 "items": [
                                     {
                                         "type": "template",
-                                        "data": "Can Use Any Bombs"
+                                        "data": "Can Use Power Bombs"
                                     },
                                     {
                                         "type": "or",
@@ -2770,7 +3161,17 @@
                             "type": "and",
                             "data": {
                                 "comment": null,
-                                "items": []
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "MorphBall",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         },
                         "Other to Central Hub": {
@@ -2809,6 +3210,15 @@
                                                     }
                                                 }
                                             ]
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "MorphBall",
+                                            "amount": 1,
+                                            "negate": false
                                         }
                                     }
                                 ]
@@ -2928,7 +3338,17 @@
                             "type": "and",
                             "data": {
                                 "comment": null,
-                                "items": []
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "MorphBall",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
@@ -2982,6 +3402,15 @@
                                         "data": {
                                             "type": "tricks",
                                             "name": "Knowledge",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "MorphBall",
                                             "amount": 1,
                                             "negate": false
                                         }
@@ -5481,28 +5910,36 @@
                         "Event - Arachnus": {
                             "type": "and",
                             "data": {
-                                "comment": "TODO: Arachnus boss logic",
+                                "comment": null,
                                 "items": [
                                     {
-                                        "type": "resource",
+                                        "type": "or",
                                         "data": {
-                                            "type": "items",
-                                            "name": "Missiles",
-                                            "amount": 1,
-                                            "negate": false
+                                            "comment": "Core-X Requirements",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "Missiles",
+                                                        "amount": 5,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
                                         }
                                     },
                                     {
                                         "type": "or",
                                         "data": {
-                                            "comment": null,
+                                            "comment": "Health Requirements",
                                             "items": [
                                                 {
                                                     "type": "resource",
                                                     "data": {
                                                         "type": "tricks",
                                                         "name": "Combat",
-                                                        "amount": 1,
+                                                        "amount": 3,
                                                         "negate": false
                                                     }
                                                 },
@@ -5511,8 +5948,60 @@
                                                     "data": {
                                                         "type": "damage",
                                                         "name": "NormalDamage",
-                                                        "amount": 50,
+                                                        "amount": 175,
                                                         "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "damage",
+                                                                    "name": "NormalDamage",
+                                                                    "amount": 125,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 2,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "damage",
+                                                                    "name": "NormalDamage",
+                                                                    "amount": 75,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
                                                     }
                                                 }
                                             ]
@@ -6185,8 +6674,25 @@
                                         }
                                     },
                                     {
-                                        "type": "template",
-                                        "data": "Can climb High Jump Wall"
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can climb High Jump Wall"
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "WallJump",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -6252,6 +6758,10 @@
                                                 }
                                             ]
                                         }
+                                    },
+                                    {
+                                        "type": "template",
+                                        "data": "Can Bounce in Ball"
                                     }
                                 ]
                             }
@@ -6847,13 +7357,6 @@
                     "pickup_index": 6,
                     "location_category": "minor",
                     "connections": {
-                        "Door to Central Reactor Core": {
-                            "type": "and",
-                            "data": {
-                                "comment": null,
-                                "items": []
-                            }
-                        },
                         "Other to Silo Scaffolding B": {
                             "type": "and",
                             "data": {
@@ -6893,13 +7396,6 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Pickup (Energy Tank)": {
-                            "type": "and",
-                            "data": {
-                                "comment": null,
-                                "items": []
-                            }
-                        },
                         "Other to Silo Scaffolding B": {
                             "type": "and",
                             "data": {
@@ -7192,6 +7688,15 @@
                                                                 }
                                                             }
                                                         ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "WaveBeam",
+                                                        "amount": 1,
+                                                        "negate": false
                                                     }
                                                 }
                                             ]
@@ -7687,15 +8192,38 @@
                                         "data": "Can Use Any Bombs"
                                     },
                                     {
-                                        "type": "or",
+                                        "type": "and",
                                         "data": {
-                                            "comment": "TODO: get out from the upper way?",
+                                            "comment": "Don't fall down the crumble block",
                                             "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Movement",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
                                                 {
                                                     "type": "or",
                                                     "data": {
                                                         "comment": null,
-                                                        "items": []
+                                                        "items": [
+                                                            {
+                                                                "type": "template",
+                                                                "data": "Can climb High Jump Wall"
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "WallJump",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
                                                     }
                                                 }
                                             ]
@@ -7748,21 +8276,6 @@
                                     {
                                         "type": "template",
                                         "data": "Can Use Springball"
-                                    },
-                                    {
-                                        "type": "or",
-                                        "data": {
-                                            "comment": "TODO: mid air morph?",
-                                            "items": [
-                                                {
-                                                    "type": "or",
-                                                    "data": {
-                                                        "comment": null,
-                                                        "items": []
-                                                    }
-                                                }
-                                            ]
-                                        }
                                     }
                                 ]
                             }
@@ -8116,8 +8629,13 @@
                                         }
                                     },
                                     {
-                                        "type": "template",
-                                        "data": "Can climb High Jump Wall"
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "SpaceJump",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
                                     }
                                 ]
                             }
@@ -9161,7 +9679,17 @@
                             "type": "and",
                             "data": {
                                 "comment": null,
-                                "items": []
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "MorphBall",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
@@ -9200,7 +9728,17 @@
                             "type": "and",
                             "data": {
                                 "comment": null,
-                                "items": []
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "MorphBall",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
@@ -10032,28 +10570,164 @@
                                                         "comment": "Yakuza",
                                                         "items": [
                                                             {
-                                                                "type": "resource",
+                                                                "type": "and",
                                                                 "data": {
-                                                                    "type": "items",
-                                                                    "name": "ChargeBeam",
-                                                                    "amount": 1,
-                                                                    "negate": false
+                                                                    "comment": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "items",
+                                                                                "name": "ChargeBeam",
+                                                                                "amount": 1,
+                                                                                "negate": false
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "or",
+                                                                            "data": {
+                                                                                "comment": null,
+                                                                                "items": [
+                                                                                    {
+                                                                                        "type": "resource",
+                                                                                        "data": {
+                                                                                            "type": "items",
+                                                                                            "name": "WideBeam",
+                                                                                            "amount": 1,
+                                                                                            "negate": false
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "resource",
+                                                                                        "data": {
+                                                                                            "type": "tricks",
+                                                                                            "name": "Combat",
+                                                                                            "amount": 1,
+                                                                                            "negate": false
+                                                                                        }
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ]
                                                                 }
                                                             },
                                                             {
-                                                                "type": "resource",
+                                                                "type": "and",
                                                                 "data": {
-                                                                    "type": "items",
-                                                                    "name": "Missiles",
-                                                                    "amount": 100,
-                                                                    "negate": false
+                                                                    "comment": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "items",
+                                                                                "name": "Missiles",
+                                                                                "amount": 25,
+                                                                                "negate": false
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "template",
+                                                                            "data": "45 DMG Missiles"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "and",
+                                                                "data": {
+                                                                    "comment": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "items",
+                                                                                "name": "Missiles",
+                                                                                "amount": 35,
+                                                                                "negate": false
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "template",
+                                                                            "data": "30 DMG Missiles"
+                                                                        },
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "tricks",
+                                                                                "name": "Combat",
+                                                                                "amount": 1,
+                                                                                "negate": false
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "and",
+                                                                "data": {
+                                                                    "comment": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "items",
+                                                                                "name": "Missiles",
+                                                                                "amount": 55,
+                                                                                "negate": false
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "template",
+                                                                            "data": "20 DMG Missiles"
+                                                                        },
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "tricks",
+                                                                                "name": "Combat",
+                                                                                "amount": 2,
+                                                                                "negate": false
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "and",
+                                                                "data": {
+                                                                    "comment": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "items",
+                                                                                "name": "Missiles",
+                                                                                "amount": 110,
+                                                                                "negate": false
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "template",
+                                                                            "data": "10 DMG Missiles"
+                                                                        },
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "tricks",
+                                                                                "name": "Combat",
+                                                                                "amount": 4,
+                                                                                "negate": false
+                                                                            }
+                                                                        }
+                                                                    ]
                                                                 }
                                                             }
                                                         ]
                                                     }
                                                 },
                                                 {
-                                                    "type": "or",
+                                                    "type": "and",
                                                     "data": {
                                                         "comment": "Core-X",
                                                         "items": [
@@ -10064,6 +10738,60 @@
                                                                     "name": "Missiles",
                                                                     "amount": 1,
                                                                     "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "or",
+                                                                "data": {
+                                                                    "comment": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "template",
+                                                                            "data": "30 DMG Missiles"
+                                                                        },
+                                                                        {
+                                                                            "type": "and",
+                                                                            "data": {
+                                                                                "comment": null,
+                                                                                "items": [
+                                                                                    {
+                                                                                        "type": "resource",
+                                                                                        "data": {
+                                                                                            "type": "tricks",
+                                                                                            "name": "Combat",
+                                                                                            "amount": 1,
+                                                                                            "negate": false
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "template",
+                                                                                        "data": "20 DMG Missiles"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "and",
+                                                                            "data": {
+                                                                                "comment": null,
+                                                                                "items": [
+                                                                                    {
+                                                                                        "type": "resource",
+                                                                                        "data": {
+                                                                                            "type": "tricks",
+                                                                                            "name": "Combat",
+                                                                                            "amount": 2,
+                                                                                            "negate": false
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "template",
+                                                                                        "data": "10 DMG Missiles"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ]
                                                                 }
                                                             }
                                                         ]
@@ -10082,7 +10810,7 @@
                                                     "data": {
                                                         "type": "tricks",
                                                         "name": "Combat",
-                                                        "amount": 1,
+                                                        "amount": 5,
                                                         "negate": false
                                                     }
                                                 },
@@ -10091,8 +10819,112 @@
                                                     "data": {
                                                         "type": "damage",
                                                         "name": "NormalDamage",
-                                                        "amount": 300,
+                                                        "amount": 800,
                                                         "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "damage",
+                                                                    "name": "NormalDamage",
+                                                                    "amount": 700,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "damage",
+                                                                    "name": "NormalDamage",
+                                                                    "amount": 600,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 2,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "damage",
+                                                                    "name": "NormalDamage",
+                                                                    "amount": 400,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 3,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "damage",
+                                                                    "name": "NormalDamage",
+                                                                    "amount": 200,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 4,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
                                                     }
                                                 }
                                             ]

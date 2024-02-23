@@ -89,8 +89,7 @@ Extra - room_id: [3]
       Any of the following:
           # TODO: proper reqs
           Missiles ≥ 3 or Screw Attack
-          # TODO: disabled dlr+er?
-          Speed Booster and Knowledge (Beginner)
+          Speed Booster and Knowledge (Beginner) and Disabled Door Lock Rando and Disabled Entrance Rando
 
 > Door to Atmospheric Stabilizer Northwest; Heals? False
   * Layers: default
@@ -132,12 +131,15 @@ Extra - room_id: [4]
       After Stabilizer 1 Online
   > Event - Stabilizer 1 Online
       Any of the following:
-          Can Kill Geron
+          Charge Beam or Can Kill Missile Geron
           All of the following:
-              Speed Booster
+              # Kill with Shinespark
+              Speed Booster and Disabled Door Lock Rando and Disabled Entrance Rando
               Any of the following:
-                  Shinespark Tricks (Advanced)
+                  # With HJ
                   High Jump and Shinespark Tricks (Intermediate)
+                  # HJ-less
+                  Shinespark Tricks (Advanced) and Wall Jump (Intermediate)
 
 ----------------
 Hornoad Hole
@@ -275,8 +277,7 @@ Extra - room_id: [9]
   > Door to Checkpoint
       After Stabilizer 5 Online
   > Event - Stabilizer 5 Online
-      # TODO: different than normal geron.
-      Can Kill Geron
+      Charge Beam or Can Kill Missile Geron
 
 > Event - Stabilizer 5 Online; Heals? False
   * Layers: default
@@ -379,7 +380,7 @@ Extra - room_id: [13]
   > Door to Sciser Puddle
       After Stabilizer 3 Online
   > Event - Stabilizer 3 Online
-      Can Kill Geron
+      Charge Beam or Can Kill Missile Geron
 
 > Event - Stabilizer 3 Online; Heals? False
   * Layers: default
@@ -439,7 +440,8 @@ Extra - room_id: [15]
   > Door to South Shaft
       After Stabilizer 4 Online
   > Event - Stabilizer 4 Online
-      Can Kill Geron
+      # TODO: you can shinespark this geron from both lower doors. possible without HJ, but more difficult. anything < SJ requires WJ
+      Charge Beam or Can Kill Missile Geron
 
 > Event - Stabilizer 4 Online; Heals? False
   * Layers: default
@@ -491,6 +493,8 @@ Extra - room_id: [17]
       Any of the following:
           Gravity Suit or Space Jump
           Damage Runs (Intermediate) and Lava Damage ≥ 100
+  > Pickup (Missile Tank on Platform)
+      Impossible
 
 > Pickup (Missile Tank in Lava); Heals? False
   * Layers: default
@@ -524,8 +528,8 @@ Extra - room_id: [17]
   > Pickup (Missile Tank on Cliffside)
       Any of the following:
           Space Jump
-          # TODO: shinesparking trick?
-          Speed Booster and Disabled Door Lock Rando and Disabled Entrance Rando
+          # Shinespark across
+          Speed Booster and Shinespark Tricks (Beginner) and Disabled Door Lock Rando and Disabled Entrance Rando
   > Pickup (Missile Tank in Lava)
       All of the following:
           Morph Ball
@@ -759,15 +763,18 @@ Extra - room_id: [26]
   * L0 Hatch to Tourian Hub West/Door to Ridley Arena Access
   * Extra - door_idx: (56,)
   > Door to Ridley Arena
-      # TODO: some way to get past the rippers?
-      Can Kill Eye Door
+      All of the following:
+          Can Kill Eye Door
+          # Some way to get past the rippers - TODO: damage boosting?
+          Screw Attack or Combat (Intermediate) or Can Freeze Enemies
 
 > Door to Ridley Arena; Heals? False
   * Layers: default
   * L0 Hatch to Ridley Arena/Door to Ridley Arena Access
   * Extra - door_idx: (57,)
   > Door to Tourian Hub West
-      Trivial
+      # TODO: see todo on other connection
+      Screw Attack or Combat (Intermediate) or Can Freeze Enemies
 
 ----------------
 Ridley Arena
@@ -777,11 +784,8 @@ Extra - room_id: [27]
   * Layers: default
   * L0 Hatch to Ridley Arena Access/Door to Ridley Arena
   * Extra - door_idx: (58,)
-  > Event - Neo-Ridley
-      All of the following:
-          # TODO: ridley requirements
-          Normal Damage
-          Charge Beam or Missiles ≥ 100
+  > Arena
+      Trivial
 
 > Event - Neo-Ridley; Heals? False
   * Layers: default
@@ -795,8 +799,44 @@ Extra - room_id: [27]
   * Extra - area: 1
   * Extra - room: 27
   * Extra - source: Ridley
+  > Arena
+      Trivial
+
+> Arena; Heals? False
+  * Layers: default
   > Door to Ridley Arena Access
       Space Jump and After Neo-Ridley
+  > Event - Neo-Ridley
+      All of the following:
+          Any of the following:
+              # Ridley Requirements
+              All of the following:
+                  Charge Beam
+                  Any of the following:
+                      Combat (Expert)
+                      All of the following:
+                          Wide Beam
+                          Plasma Beam or Combat (Advanced)
+              Missiles ≥ 150 and Combat (Beginner) and 45 DMG Missiles
+              Missiles ≥ 200 and Combat (Intermediate) and 30 DMG Missiles
+              Missiles ≥ 250 and Combat (Advanced) and 20 DMG Missiles
+          All of the following:
+              # Core-X Requirements
+              Missiles
+              Any of the following:
+                  Combat (Expert) or 45 DMG Missiles
+                  Combat (Beginner) and 30 DMG Missiles
+                  Combat (Intermediate) and 20 DMG Missiles
+                  Combat (Advanced) and 10 DMG Missiles
+          Any of the following:
+              # Health Requirements
+              Combat (Hypermode) or Normal Damage ≥ 1000
+              Combat (Beginner) and Normal Damage ≥ 800
+              Combat (Intermediate) and Normal Damage ≥ 600
+              Combat (Advanced) and Normal Damage ≥ 200
+              Combat (Expert) and Normal Damage ≥ 100
+          # Arena Requirements
+          Space Jump or Combat (Expert)
 
 ----------------
 Tourian Central Checkpoint
@@ -845,39 +885,43 @@ Extra - room_id: [30]
   * Extra - room: 30
   * Extra - blockx: 15
   * Extra - blocky: 8
-  > Door to Elevator to Restricted Labs
-      Morph Ball
+  > Door to Elevator to Restricted Zone
+      Morph Ball and Can Bounce in Ball
 
 > Door to Ripper Maze Access; Heals? False
   * Layers: default
   * L0 Hatch to Ripper Maze Access/Door to Ripper Maze
   * Extra - door_idx: (62,)
-  > Door to Elevator to Restricted Labs
+  > Door to Elevator to Restricted Zone
       Impossible
 
-> Door to Elevator to Restricted Labs; Heals? False
+> Door to Elevator to Restricted Zone; Heals? False
   * Layers: default
-  * L0 Hatch to Elevator to Restricted Labs/Door to Ripper Maze
+  * L0 Hatch to Elevator to Restricted Zone/Door to Ripper Maze
   * Extra - door_idx: (63,)
   > Pickup (Hidden Energy Tank)
-      Diffusion Missiles and Missiles and Morph Ball
+      All of the following:
+          Morph Ball
+          Any of the following:
+              Diffusion Missiles and Missiles
+              Missiles ≥ 5 and Stand On Frozen Enemies (Beginner) and Can Freeze Enemies
   > Door to Ripper Maze Access
       Wall Jump (Beginner) or Can climb High Jump Wall
 
 ----------------
-Elevator to Restricted Labs
+Elevator to Restricted Zone
 Extra - map_name: Sector 131
 Extra - room_id: [31]
 > Door to Ripper Maze; Heals? False
   * Layers: default
-  * L0 Hatch to Ripper Maze/Door to Elevator to Restricted Labs
+  * L0 Hatch to Ripper Maze/Door to Elevator to Restricted Zone
   * Extra - door_idx: (64,)
   > Elevator to Elevator to Sector 1 (TRN)
       Trivial
 
 > Elevator to Elevator to Sector 1 (TRN); Heals? False
   * Layers: default
-  * Elevator to Elevator to Sector 1 (TRN)/Elevator to Elevator to Restricted Labs
+  * Elevator to Elevator to Sector 1 (TRN)/Elevator to Elevator to Restricted Zone
   * Extra - door_idx: (65,)
   > Door to Ripper Maze
       Trivial
@@ -898,7 +942,7 @@ Extra - room_id: [32]
   > Door to Shaft North
       After Stabilizer 2 Online
   > Event - Stabilizer 2 Online
-      Can Kill Geron
+      Charge Beam or Can Kill Missile Geron
 
 > Event - Stabilizer 2 Online; Heals? False
   * Layers: default
@@ -1094,8 +1138,7 @@ Extra - room_id: [39]
   * L0 Hatch to Connection to Sector 2 (TRO)/Door to Antechamber
   * Extra - door_idx: (102,)
   > Top of Room
-      # TODO: template
-      Can Use Bombs or Can Use Springball
+      Can Bounce in Ball
 
 > Top of Room; Heals? False
   * Layers: default
@@ -1168,8 +1211,12 @@ Extra - room_id: [40]
   > Door to Charge Core Escape
       After Charge Core-X
   > Event - Charge Core-X
-      # TODO: Charge Core-X reqs
-      Missiles
+      All of the following:
+          Missiles
+          Any of the following:
+              Combat (Advanced) or Normal Damage ≥ 200
+              Combat (Beginner) and Normal Damage ≥ 125
+              Combat (Intermediate) and Normal Damage ≥ 75
 
 ----------------
 Elevator to Main Deck
@@ -1303,10 +1350,11 @@ Extra - room_id: [47]
   * Extra - door_idx: (101,)
   > Pickup (Hidden Power Bomb Tank)
       All of the following:
-          Morph Ball and Speed Booster and Disabled Door Lock Rando and Disabled Entrance Rando
-          # TODO: template
-          Can Use Bombs or Can Use Springball
-          Gravity Suit or Shinespark Tricks (Expert)
+          Morph Ball and Speed Booster and Disabled Door Lock Rando and Disabled Entrance Rando and Can Bounce in Ball
+          Any of the following:
+              Gravity Suit
+              # TODO: some other requirements to kill that scizor?
+              Shinespark Tricks (Expert)
 
 ----------------
 Connection to Sector 2 (TRO)
@@ -1389,11 +1437,20 @@ Extra - room_id: [51]
       Can climb High Jump Wall
   > Door to Animorphs Cache
       All of the following:
-          # TODO: comment which block is for which enemy
           Any of the following:
-              Can Use Power Bombs
+              # Yard (snail)
               Charge Beam and Wave Beam
-          Missiles or Screw Attack
+              Power Bombs ≥ 2 and Can Use Power Bombs
+          Any of the following:
+              # Gerubus
+              Screw Attack
+              Missiles ≥ 15 and 10 DMG Missiles
+              Missiles ≥ 5 and 45 DMG Missiles
+          Any of the following:
+              # Golden Zebesian
+              Charge Beam or Screw Attack
+              Missiles ≥ 15 and 10 DMG Missiles
+              Missiles ≥ 5 and 45 DMG Missiles
 
 ----------------
 Animorphs Cache

@@ -481,7 +481,7 @@ Extra - room_id: [18]
       Trivial
   > Door to Main Deck Navigation Room West
       Trivial
-  > Door to Habitation Storage
+  > Door to Central Hub Cache
       # TODO: Add shinespark
       Can Use Power Bombs
   > Other to Western Hub
@@ -501,9 +501,9 @@ Extra - room_id: [18]
   > Door to Station Entrance
       Trivial
 
-> Door to Habitation Storage; Heals? False
+> Door to Central Hub Cache; Heals? False
   * Layers: default
-  * L2 Hatch to Habitation Storage/Door to Central Hub
+  * L2 Hatch to Central Hub Cache/Door to Central Hub
   * Extra - door_idx: (132,)
   > Door to Station Entrance
       Can Use Power Bombs
@@ -1423,7 +1423,7 @@ Extra - room_id: [56]
       Trivial
 
 ----------------
-Habitation Storage
+Central Hub Cache
 Extra - map_name: Main Deck57
 Extra - room_id: [57]
 > Pickup (Power Bomb Tank); Heals? False
@@ -1443,7 +1443,7 @@ Extra - room_id: [57]
 
 > Door to Central Hub; Heals? False
   * Layers: default
-  * L2 Hatch to Central Hub/Door to Habitation Storage
+  * L2 Hatch to Central Hub/Door to Central Hub Cache
   * Extra - door_idx: (131,)
   > Pickup (Power Bomb Tank)
       Can Use Bombs or Can Use Springball

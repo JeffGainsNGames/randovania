@@ -99,9 +99,9 @@ Extra - room_id: [3, 6]
   > Door to Entrance Hub
       Can climb High Jump Wall
 
-> Door to Aerie; Heals? False
+> Door to Training Grounds Aerie; Heals? False
   * Layers: default
-  * L0 Hatch to Aerie/Door to Nightmare Training Grounds
+  * L0 Hatch to Training Grounds Aerie/Door to Nightmare Training Grounds
   * Extra - door_idx: (8, 12)
   > Door to Entrance Hub
       Trivial
@@ -119,7 +119,7 @@ Extra - room_id: [3, 6]
   * Extra - door_idx: (78, 80)
   > Door to Gerubus Gully
       Trivial
-  > Door to Aerie
+  > Door to Training Grounds Aerie
       Any of the following:
           Space Jump
           All of the following:
@@ -127,7 +127,7 @@ Extra - room_id: [3, 6]
               High Jump or Movement (Intermediate)
 
 ----------------
-Aerie
+Training Grounds Aerie
 Extra - map_name: Sector 54
 Extra - room_id: [4]
 > Pickup (Power Bomb Tank); Heals? False
@@ -152,7 +152,7 @@ Extra - room_id: [4]
 
 > Door to Nightmare Training Grounds; Heals? False
   * Layers: default
-  * L0 Hatch to Nightmare Training Grounds/Door to Aerie
+  * L0 Hatch to Nightmare Training Grounds/Door to Training Grounds Aerie
   * Extra - door_idx: (10,)
   > Pickup (Power Bomb Tank)
       Speed Booster and Disabled Door Lock Rando and Disabled Entrance Rando

@@ -2895,7 +2895,7 @@
                                 "items": []
                             }
                         },
-                        "Door to Habitation Storage": {
+                        "Door to Central Hub Cache": {
                             "type": "or",
                             "data": {
                                 "comment": "TODO: Add shinespark",
@@ -2999,7 +2999,7 @@
                         }
                     }
                 },
-                "Door to Habitation Storage": {
+                "Door to Central Hub Cache": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -3020,7 +3020,7 @@
                     "dock_type": "Door",
                     "default_connection": {
                         "region": "Main Deck",
-                        "area": "Habitation Storage",
+                        "area": "Central Hub Cache",
                         "node": "Door to Central Hub"
                     },
                     "default_dock_weakness": "L2 Hatch",
@@ -8131,7 +8131,7 @@
                 }
             }
         },
-        "Habitation Storage": {
+        "Central Hub Cache": {
             "default_node": null,
             "extra": {
                 "map_name": "Main Deck57",
@@ -8236,7 +8236,7 @@
                     "default_connection": {
                         "region": "Main Deck",
                         "area": "Central Hub",
-                        "node": "Door to Habitation Storage"
+                        "node": "Door to Central Hub Cache"
                     },
                     "default_dock_weakness": "L2 Hatch",
                     "exclude_from_dock_rando": false,

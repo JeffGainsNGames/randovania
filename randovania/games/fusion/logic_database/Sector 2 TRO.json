@@ -2117,7 +2117,7 @@
                                 "items": []
                             }
                         },
-                        "Door to Conceiled Ceiling": {
+                        "Door to Shadow Moses Island": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -2360,7 +2360,7 @@
                         }
                     }
                 },
-                "Door to Conceiled Ceiling": {
+                "Door to Shadow Moses Island": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -2382,7 +2382,7 @@
                     "dock_type": "Door",
                     "default_connection": {
                         "region": "Sector 2 (TRO)",
-                        "area": "Conceiled Ceiling",
+                        "area": "Shadow Moses Island",
                         "node": "Door to Central Shaft"
                     },
                     "default_dock_weakness": "L0 Hatch",
@@ -7089,7 +7089,7 @@
                 }
             }
         },
-        "Conceiled Ceiling": {
+        "Shadow Moses Island": {
             "default_node": null,
             "extra": {
                 "map_name": "Sector 241",
@@ -7120,7 +7120,7 @@
                     "default_connection": {
                         "region": "Sector 2 (TRO)",
                         "area": "Central Shaft",
-                        "node": "Door to Conceiled Ceiling"
+                        "node": "Door to Shadow Moses Island"
                     },
                     "default_dock_weakness": "L0 Hatch",
                     "exclude_from_dock_rando": false,

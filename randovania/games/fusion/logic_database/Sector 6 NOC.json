@@ -881,7 +881,7 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Door to Missile Access": {
+                        "Door to Mimic Access": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -921,7 +921,7 @@
                         }
                     }
                 },
-                "Door to Missile Access": {
+                "Door to Mimic Access": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -942,7 +942,7 @@
                     "dock_type": "Door",
                     "default_connection": {
                         "region": "Sector 6 (NOC)",
-                        "area": "Missile Access",
+                        "area": "Mimic Access",
                         "node": "Door to Nocturnal Shaft"
                     },
                     "default_dock_weakness": "L0 Hatch",
@@ -1205,7 +1205,7 @@
                 }
             }
         },
-        "Missile Access": {
+        "Mimic Access": {
             "default_node": null,
             "extra": {
                 "map_name": "Sector 66",
@@ -1236,7 +1236,7 @@
                     "default_connection": {
                         "region": "Sector 6 (NOC)",
                         "area": "Nocturnal Shaft",
-                        "node": "Door to Missile Access"
+                        "node": "Door to Mimic Access"
                     },
                     "default_dock_weakness": "L0 Hatch",
                     "exclude_from_dock_rando": false,
@@ -1244,7 +1244,7 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Door to Missile Storage": {
+                        "Door to Missile Mimic": {
                             "type": "or",
                             "data": {
                                 "comment": null,
@@ -1272,7 +1272,7 @@
                         }
                     }
                 },
-                "Door to Missile Storage": {
+                "Door to Missile Mimic": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -1293,8 +1293,8 @@
                     "dock_type": "Door",
                     "default_connection": {
                         "region": "Sector 6 (NOC)",
-                        "area": "Missile Storage",
-                        "node": "Door to Missile Access"
+                        "area": "Missile Mimic",
+                        "node": "Door to Mimic Access"
                     },
                     "default_dock_weakness": "L0 Hatch",
                     "exclude_from_dock_rando": false,
@@ -4543,7 +4543,7 @@
                 }
             }
         },
-        "Missile Storage": {
+        "Missile Mimic": {
             "default_node": null,
             "extra": {
                 "map_name": "Sector 624",
@@ -4574,7 +4574,7 @@
                     "pickup_index": 92,
                     "location_category": "minor",
                     "connections": {
-                        "Door to Missile Access": {
+                        "Door to Mimic Access": {
                             "type": "or",
                             "data": {
                                 "comment": null,
@@ -4588,7 +4588,7 @@
                         }
                     }
                 },
-                "Door to Missile Access": {
+                "Door to Mimic Access": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -4609,8 +4609,8 @@
                     "dock_type": "Door",
                     "default_connection": {
                         "region": "Sector 6 (NOC)",
-                        "area": "Missile Access",
-                        "node": "Door to Missile Storage"
+                        "area": "Mimic Access",
+                        "node": "Door to Missile Mimic"
                     },
                     "default_dock_weakness": "L0 Hatch",
                     "exclude_from_dock_rando": false,

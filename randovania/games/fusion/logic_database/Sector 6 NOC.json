@@ -684,7 +684,7 @@
                                     {
                                         "type": "or",
                                         "data": {
-                                            "comment": null,
+                                            "comment": "Destroy the Bomb Block",
                                             "items": [
                                                 {
                                                     "type": "template",
@@ -693,7 +693,7 @@
                                                 {
                                                     "type": "and",
                                                     "data": {
-                                                        "comment": "Speed boost from entrance hub",
+                                                        "comment": "Store a Shinespark using Entrance Hub Room",
                                                         "items": [
                                                             {
                                                                 "type": "resource",
@@ -878,13 +878,59 @@
                             }
                         },
                         "Other to Vault": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
                                 "comment": null,
                                 "items": [
                                     {
-                                        "type": "template",
-                                        "data": "Can Break Single Bomb Blocks"
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Break Single Bomb Blocks"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": "Get into the tunnel (can't ledge grab)",
+                                            "items": [
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "items",
+                                                                    "name": "MorphBall",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "MidAirMorph",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Use Springball"
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -5117,12 +5163,12 @@
                                                 {
                                                     "type": "and",
                                                     "data": {
-                                                        "comment": "Vanilla Method - freeze a spikey on the crumble blocks (and have regular bombs only)",
+                                                        "comment": "Vanilla Method - Freeze an Owtch on the Crumble Blocks (and use regular Bombs to open the passage)",
                                                         "items": [
                                                             {
                                                                 "type": "or",
                                                                 "data": {
-                                                                    "comment": "Template not used because normal Ice missiles can't hit the spikey in the right spot",
+                                                                    "comment": "Template not used because normal Ice Missiles can't hit the Owtch to freeze it in the right spot",
                                                                     "items": [
                                                                         {
                                                                             "type": "resource",
@@ -5161,7 +5207,7 @@
                                                                         },
                                                                         {
                                                                             "type": "template",
-                                                                            "data": "Can Use Bombs"
+                                                                            "data": "Can Use Power Bombs"
                                                                         }
                                                                     ]
                                                                 }
@@ -5172,7 +5218,7 @@
                                                 {
                                                     "type": "and",
                                                     "data": {
-                                                        "comment": "Alternate method - jump onto and out of the crumble blocks with precise timing",
+                                                        "comment": "Alternate Method - Jump off the Crumble Blocks morphed (frame perfect)",
                                                         "items": [
                                                             {
                                                                 "type": "resource",
@@ -5186,6 +5232,23 @@
                                                             {
                                                                 "type": "template",
                                                                 "data": "Can Use Springball"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": "Alternate Method - Jump off the Crumble Blocks without Jumpball by unmorphing first (also frame perfect)",
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Movement",
+                                                                    "amount": 4,
+                                                                    "negate": false
+                                                                }
                                                             }
                                                         ]
                                                     }

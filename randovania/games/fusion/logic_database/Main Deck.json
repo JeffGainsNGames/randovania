@@ -6907,7 +6907,7 @@
                                     {
                                         "type": "or",
                                         "data": {
-                                            "comment": "Without charge beam, the shot to open the gate must be precisely timed.  With charge beam, just let go of beam while in the transition.",
+                                            "comment": "Without Charge Beam, the shot to open the gate must be precisely timed.  With Charge Beam, just let go of beam while in the transition.",
                                             "items": [
                                                 {
                                                     "type": "resource",

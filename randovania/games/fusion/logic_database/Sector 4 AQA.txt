@@ -991,8 +991,10 @@ Extra - room_id: [25]
       Any of the following:
           All of the following:
               Gravity Suit
-              Space Jump or Wall Jump (Intermediate)
-          # Long sequence (15-20) of underwater wall jumps
+              Any of the following:
+                  Space Jump or Wall Jump (Intermediate)
+                  High Jump and Wall Jump (Beginner)
+          # Long sequence (15-20) of Underwater Wall Jumps
           Underwater Wall Jump (Expert)
 
 > Other to Security Bypass; Heals? False
@@ -1013,11 +1015,13 @@ Extra - room_id: [25]
   * Layers: default
   > Door to Cheddar Bay
       Any of the following:
-          # Long sequence (15-20) of underwater wall jumps
+          # Long sequence (15-20) of Underwater Wall Jumps
           Underwater Wall Jump (Expert)
           All of the following:
               Gravity Suit
-              Space Jump or Wall Jump (Intermediate)
+              Any of the following:
+                  Space Jump or Wall Jump (Intermediate)
+                  High Jump and Wall Jump (Beginner)
   > Door to Level 4 Security Room
       Trivial
   > Other to Sciser Sanctuary
@@ -1301,7 +1305,7 @@ Extra - room_id: [35]
   * Layers: default
   * L0 Hatch to Owtch-Couch/Door to Powamp Shaft
   * Extra - door_idx: (28,)
-  > Top of Ladder
+  > In Narrow Tunnel
       Diffusion Missiles and Morph Ball
 
 > Door to Aquarium Speedway; Heals? False
@@ -1310,7 +1314,7 @@ Extra - room_id: [35]
   * Extra - door_idx: (56,)
   > Door to Connection to Sector 2 (TRO)
       Gravity Suit and Screw Attack
-  > Top of Ladder
+  > In Narrow Tunnel
       All of the following:
           Missiles
           Any of the following:
@@ -1339,10 +1343,10 @@ Extra - room_id: [35]
   * Layers: default
   * Tunnel to Diffusion Connection Access/Other to Powamp Shaft
   * Extra - door_idx: (112,)
-  > Top of Ladder
+  > In Narrow Tunnel
       Missiles
 
-> Top of Ladder; Heals? False
+> In Narrow Tunnel; Heals? False
   * Layers: default
   > Door to Owtch-Couch
       Morph Ball
@@ -1350,9 +1354,12 @@ Extra - room_id: [35]
       Missiles and Morph Ball
   > Other to Diffusion Connection Access
       All of the following:
-          Missiles
           # Get into tunnel
           Mid-Air Morph (Intermediate) or Can Bounce in Ball
+          Any of the following:
+              # Destroying the Missile Blocks
+              Diffusion Missiles
+              Missiles and Movement (Beginner)
 
 ----------------
 Drain Pipe

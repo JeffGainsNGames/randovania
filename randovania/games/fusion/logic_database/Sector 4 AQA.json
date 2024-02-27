@@ -6496,6 +6496,32 @@
                                                                 }
                                                             },
                                                             {
+                                                                "type": "and",
+                                                                "data": {
+                                                                    "comment": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "tricks",
+                                                                                "name": "WallJump",
+                                                                                "amount": 1,
+                                                                                "negate": false
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "items",
+                                                                                "name": "HighJump",
+                                                                                "amount": 1,
+                                                                                "negate": false
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
                                                                 "type": "resource",
                                                                 "data": {
                                                                     "type": "tricks",
@@ -6513,7 +6539,7 @@
                                     {
                                         "type": "and",
                                         "data": {
-                                            "comment": "Long sequence (15-20) of underwater wall jumps",
+                                            "comment": "Long sequence (15-20) of Underwater Wall Jumps",
                                             "items": [
                                                 {
                                                     "type": "resource",
@@ -6630,7 +6656,7 @@
                         "Door to Cheddar Bay": {
                             "type": "or",
                             "data": {
-                                "comment": "Long sequence (15-20) of underwater wall jumps",
+                                "comment": "Long sequence (15-20) of Underwater Wall Jumps",
                                 "items": [
                                     {
                                         "type": "resource",
@@ -6676,6 +6702,32 @@
                                                                     "name": "WallJump",
                                                                     "amount": 2,
                                                                     "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "and",
+                                                                "data": {
+                                                                    "comment": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "items",
+                                                                                "name": "HighJump",
+                                                                                "amount": 1,
+                                                                                "negate": false
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "tricks",
+                                                                                "name": "WallJump",
+                                                                                "amount": 1,
+                                                                                "negate": false
+                                                                            }
+                                                                        }
+                                                                    ]
                                                                 }
                                                             }
                                                         ]
@@ -8363,7 +8415,7 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Top of Ladder": {
+                        "In Narrow Tunnel": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -8447,7 +8499,7 @@
                                 ]
                             }
                         },
-                        "Top of Ladder": {
+                        "In Narrow Tunnel": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -8722,7 +8774,7 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Top of Ladder": {
+                        "In Narrow Tunnel": {
                             "type": "resource",
                             "data": {
                                 "type": "items",
@@ -8733,12 +8785,12 @@
                         }
                     }
                 },
-                "Top of Ladder": {
+                "In Narrow Tunnel": {
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 205.72494018645324,
-                        "y": 1039.165158723611,
+                        "x": 206.18,
+                        "y": 1048.62,
                         "z": 0.0
                     },
                     "description": "",
@@ -8797,15 +8849,6 @@
                                 "comment": null,
                                 "items": [
                                     {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "Missiles",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    },
-                                    {
                                         "type": "or",
                                         "data": {
                                             "comment": "Get into tunnel",
@@ -8822,6 +8865,49 @@
                                                 {
                                                     "type": "template",
                                                     "data": "Can Bounce in Ball"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": "Destroying the Missile Blocks",
+                                            "items": [
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "items",
+                                                                    "name": "Missiles",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Movement",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "DiffusionMissiles",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
                                                 }
                                             ]
                                         }

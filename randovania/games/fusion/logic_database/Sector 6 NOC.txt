@@ -116,9 +116,15 @@ Extra - room_id: [3]
           # Upper way
           Screw Attack
   > Other to Entrance Hub
-      Any of the following:
-          Can Break Single Bomb Blocks
-          Speed Booster and Knowledge (Intermediate) and Shinespark Tricks (Advanced) and Disabled Door Lock Rando and Disabled Entrance Rando
+      All of the following:
+          Any of the following:
+              Can Break Single Bomb Blocks
+              # Speed boost from entrance hub
+              Speed Booster and Knowledge (Intermediate) and Shinespark Tricks (Advanced) and Disabled Door Lock Rando and Disabled Entrance Rando
+          Any of the following:
+              # Get into the tunnel (can't ledge grab)
+              Can Bounce in Ball
+              Morph Ball and Mid-Air Morph (Beginner)
 
 > Door to Nocturnal Access; Heals? False
   * Layers: default
@@ -709,7 +715,15 @@ Extra - room_id: [18]
   > Pickup (Hidden Power Bomb Tank)
       All of the following:
           Can Use Any Bombs
-          Movement (Beginner) or Can Use Springball
+          Any of the following:
+              All of the following:
+                  # Vanilla Method - freeze a spikey on the crumble blocks (and have regular bombs only)
+                  Any of the following:
+                      # Template not used because normal Ice missiles can't hit the spikey in the right spot
+                      Diffusion Missiles or Can Use Bombs
+                      Ice Beam and Wave Beam
+              # Alternate method - jump onto and out of the crumble blocks with precise timing
+              Movement (Advanced) and Can Use Springball
   > Door to X-B.O.X. Arena (Lower)
       Screw Attack
 

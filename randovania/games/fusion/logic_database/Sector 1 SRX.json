@@ -479,7 +479,7 @@
                         "Door to Atmospheric Stabilizer Northwest": {
                             "type": "or",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: make this an event",
                                 "items": [
                                     {
                                         "type": "template",
@@ -815,6 +815,15 @@
                                                         "amount": 1,
                                                         "negate": true
                                                     }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Knowledge",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
                                                 }
                                             ]
                                         }
@@ -826,6 +835,32 @@
                                             "name": "ChargeBeam",
                                             "amount": 1,
                                             "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": "Farm X to kill with only 1 Missile",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Combat",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "Missiles",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
                                         }
                                     }
                                 ]
@@ -1369,7 +1404,7 @@
                                         "data": {
                                             "type": "damage",
                                             "name": "NormalDamage",
-                                            "amount": 50,
+                                            "amount": 84,
                                             "negate": false
                                         }
                                     },
@@ -1383,6 +1418,15 @@
                                             "type": "items",
                                             "name": "ScrewAttack",
                                             "amount": 1,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "tricks",
+                                            "name": "Combat",
+                                            "amount": 3,
                                             "negate": false
                                         }
                                     }
@@ -1566,6 +1610,15 @@
                                             "amount": 1,
                                             "negate": false
                                         }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "tricks",
+                                            "name": "Knowledge",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
                                     }
                                 ]
                             }
@@ -1608,7 +1661,7 @@
                         "Event - Stabilizer 5 Online": {
                             "type": "and",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: redo this. If using charge, you dont need to damage boost. You do need it for Missiles tho. But you dont for screw/PBs. Also add way to only kill with 1 missile.",
                                 "items": [
                                     {
                                         "type": "or",
@@ -2206,6 +2259,32 @@
                                             "amount": 1,
                                             "negate": false
                                         }
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": "Farm X with 1 Missile",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Combat",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "Missiles",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -2599,6 +2678,41 @@
                                                             }
                                                         ]
                                                     }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Knowledge",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": "Farm X to kill with only 1 Missile",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Combat",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "Missiles",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
                                                 }
                                             ]
                                         }
@@ -2744,7 +2858,7 @@
                                                 {
                                                     "type": "and",
                                                     "data": {
-                                                        "comment": "Jump on frozen Space Pirates TODO: someone please get a video of this.",
+                                                        "comment": "Jump on frozen Space Pirates TODO: someone please get a video of this. Also, how much harder is this with Diffusion, worth splitting out from template?",
                                                         "items": [
                                                             {
                                                                 "type": "template",
@@ -3378,6 +3492,13 @@
                                 "comment": null,
                                 "items": []
                             }
+                        },
+                        "TODO: redo this room with varia and proper damage reqs": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
                         }
                     }
                 },
@@ -3402,6 +3523,30 @@
                     "valid_starting_location": false,
                     "pickup_index": 101,
                     "location_category": "minor",
+                    "connections": {
+                        "Door to Zebesian Tower": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        }
+                    }
+                },
+                "TODO: redo this room with varia and proper damage reqs": {
+                    "node_type": "generic",
+                    "heal": false,
+                    "coordinates": {
+                        "x": 352.07,
+                        "y": -30.39,
+                        "z": 0.0
+                    },
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
                     "connections": {
                         "Door to Zebesian Tower": {
                             "type": "and",
@@ -5017,7 +5162,7 @@
                                                 {
                                                     "type": "and",
                                                     "data": {
-                                                        "comment": "DMG boost",
+                                                        "comment": "DMG boost - TODO: this damage value is wrong, get proper values",
                                                         "items": [
                                                             {
                                                                 "type": "resource",
@@ -5090,7 +5235,7 @@
                                     {
                                         "type": "and",
                                         "data": {
-                                            "comment": "DMG Boost",
+                                            "comment": "DMG Boost - TODO: this damage value is wrong, get proper values",
                                             "items": [
                                                 {
                                                     "type": "resource",
@@ -5232,7 +5377,7 @@
                         "Door to Ridley Arena Access": {
                             "type": "and",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: can this be done with single wall jump?",
                                 "items": [
                                     {
                                         "type": "resource",
@@ -6127,7 +6272,7 @@
                         "Door to Ripper Maze Access": {
                             "type": "or",
                             "data": {
-                                "comment": "TODO: duplicated requirements, make a general node for top of left shaft",
+                                "comment": "TODO: duplicated requirements, make a general node for top of left shaft. Also get proper damage values and fint hitless strat",
                                 "items": [
                                     {
                                         "type": "or",
@@ -6461,6 +6606,41 @@
                                                                 }
                                                             }
                                                         ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Knowledge",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": "Farm X with 1 Missile",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Combat",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "Missiles",
+                                                        "amount": 1,
+                                                        "negate": false
                                                     }
                                                 }
                                             ]
@@ -7005,13 +7185,22 @@
                                         "data": {
                                             "type": "tricks",
                                             "name": "Combat",
-                                            "amount": 1,
+                                            "amount": 2,
                                             "negate": false
                                         }
                                     },
                                     {
                                         "type": "template",
                                         "data": "Can Use Power Bombs"
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "damage",
+                                            "name": "NormalDamage",
+                                            "amount": 80,
+                                            "negate": false
+                                        }
                                     }
                                 ]
                             }
@@ -7341,7 +7530,7 @@
                         "Other to Watering Hole": {
                             "type": "or",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: can apparently break with speedbooster?",
                                 "items": [
                                     {
                                         "type": "template",
@@ -7422,8 +7611,16 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Hornoad Housing": {
-                            "type": "template",
-                            "data": "Can Use Any Bombs"
+                            "type": "and",
+                            "data": {
+                                "comment": "TODO: can apparently break with speedbooster?",
+                                "items": [
+                                    {
+                                        "type": "template",
+                                        "data": "Can Use Any Bombs"
+                                    }
+                                ]
+                            }
                         }
                     }
                 }

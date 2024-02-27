@@ -98,6 +98,7 @@ Extra - room_id: [3]
   * Extra - door_idx: (9,)
   > Door to Atmospheric Stabilizer Northwest
       Any of the following:
+          # TODO: make this an event
           Can Kill Missile Geron
           Speed Booster and Knowledge (Beginner)
 
@@ -143,12 +144,14 @@ Extra - room_id: [4]
           Charge Beam or Can Kill Missile Geron
           All of the following:
               # Kill with Shinespark from Yameba Corridor - https://www.youtube.com/watch?v=MIwjinIyBn4
-              Speed Booster and Disabled Door Lock Rando and Disabled Entrance Rando
+              Speed Booster and Knowledge (Beginner) and Disabled Door Lock Rando and Disabled Entrance Rando
               Any of the following:
                   # With HJ
                   High Jump and Shinespark Tricks (Intermediate)
                   # HJ-less
                   Shinespark Tricks (Advanced) and Wall Jump (Intermediate)
+          # Farm X to kill with only 1 Missile
+          Missiles and Combat (Beginner)
 
 ----------------
 Hornoad Hole
@@ -253,7 +256,7 @@ Extra - room_id: [8]
   * Extra - door_idx: (31,)
   > Door to Moto Motorway
       # Deal with the Pirates
-      Charge Beam or Missiles ≥ 10 or Screw Attack or Normal Damage ≥ 50 or Can Freeze Enemies or Can Use Power Bombs
+      Charge Beam or Missiles ≥ 10 or Screw Attack or Combat (Advanced) or Normal Damage ≥ 84 or Can Freeze Enemies or Can Use Power Bombs
 
 > Door to Lava Lake; Heals? False
   * Layers: default
@@ -281,7 +284,7 @@ Extra - room_id: [9]
       Trivial
   > Event - Stabilizer 5 Online
       # Kill with Shinespark from Checkpoint - https://discord.com/channels/119665192110915584/1205560315652349962/1212050030995836948
-      Speed Booster and Wave Beam and Shinespark Tricks (Intermediate) and Disabled Door Lock Rando and Disabled Entrance Rando
+      Speed Booster and Wave Beam and Knowledge (Beginner) and Shinespark Tricks (Intermediate) and Disabled Door Lock Rando and Disabled Entrance Rando
 
 > Room Center; Heals? False
   * Layers: default
@@ -291,6 +294,7 @@ Extra - room_id: [9]
       After Stabilizer 5 Online
   > Event - Stabilizer 5 Online
       All of the following:
+          # TODO: redo this. If using charge, you dont need to damage boost. You do need it for Missiles tho. But you dont for screw/PBs. Also add way to only kill with 1 missile.
           Charge Beam or Can Kill Missile Geron
           Any of the following:
               Morph Ball
@@ -397,7 +401,10 @@ Extra - room_id: [13]
   > Door to Sciser Puddle
       After Stabilizer 3 Online
   > Event - Stabilizer 3 Online
-      Charge Beam or Can Kill Missile Geron
+      Any of the following:
+          Charge Beam or Can Kill Missile Geron
+          # Farm X with 1 Missile
+          Missiles and Combat (Beginner)
 
 > Event - Stabilizer 3 Online; Heals? False
   * Layers: default
@@ -461,8 +468,10 @@ Extra - room_id: [15]
           Charge Beam or Can Kill Missile Geron
           All of the following:
               # Shinespark from Screw Shaft - https://youtu.be/IP4zjb-1kP4
-              Speed Booster and Shinespark Tricks (Advanced) and Disabled Door Lock Rando
+              Speed Booster and Knowledge (Beginner) and Shinespark Tricks (Advanced) and Disabled Door Lock Rando
               High Jump or Space Jump or Wall Jump (Advanced)
+          # Farm X to kill with only 1 Missile
+          Missiles and Combat (Beginner)
 
 > Event - Stabilizer 4 Online; Heals? False
   * Layers: default
@@ -492,7 +501,7 @@ Extra - room_id: [16]
               # Get up
               Space Jump
               All of the following:
-                  # Jump on frozen Space Pirates TODO: someone please get a video of this.
+                  # Jump on frozen Space Pirates TODO: someone please get a video of this. Also, how much harder is this with Diffusion, worth splitting out from template?
                   Can Freeze Enemies
                   Any of the following:
                       # HJ method. Some RNG involved due to pirates moving.
@@ -573,6 +582,8 @@ Extra - room_id: [17]
           Damage Runs (Intermediate) and Lava Damage ≥ 150
   > Pickup (Missile Tank on Platform)
       Trivial
+  > TODO: redo this room with varia and proper damage reqs
+      Trivial
 
 > Pickup (Missile Tank on Platform); Heals? False
   * Layers: default
@@ -581,6 +592,11 @@ Extra - room_id: [17]
   * Extra - room: 17
   * Extra - blockx: 25
   * Extra - blocky: 8
+  > Door to Zebesian Tower
+      Trivial
+
+> TODO: redo this room with varia and proper damage reqs; Heals? False
+  * Layers: default
   > Door to Zebesian Tower
       Trivial
 
@@ -831,7 +847,7 @@ Extra - room_id: [26]
           Can Kill Eye Door
           Any of the following:
               Screw Attack or Can Freeze Enemies
-              # DMG boost
+              # DMG boost - TODO: this damage value is wrong, get proper values
               Normal Damage ≥ 50
 
 > Door to Ridley Arena; Heals? False
@@ -841,7 +857,7 @@ Extra - room_id: [26]
   > Door to Tourian Hub West
       Any of the following:
           Screw Attack or Can Freeze Enemies
-          # DMG Boost
+          # DMG Boost - TODO: this damage value is wrong, get proper values
           Normal Damage ≥ 50
 
 ----------------
@@ -873,6 +889,7 @@ Extra - room_id: [27]
 > Arena; Heals? False
   * Layers: default
   > Door to Ridley Arena Access
+      # TODO: can this be done with single wall jump?
       Space Jump and After Neo-Ridley
   > Event - Neo-Ridley
       All of the following:
@@ -975,7 +992,7 @@ Extra - room_id: [30]
               # TODO: isnt this possible with SJ and maybe WJ too?
               Missiles ≥ 5 and Stand On Frozen Enemies (Beginner) and Can Freeze Enemies
   > Door to Ripper Maze Access
-      # TODO: duplicated requirements, make a general node for top of left shaft
+      # TODO: duplicated requirements, make a general node for top of left shaft. Also get proper damage values and fint hitless strat
       Charge Beam or Missiles ≥ 10 or Screw Attack or Wall Jump (Beginner) or Normal Damage ≥ 75 or Can climb High Jump Wall
 
 ----------------
@@ -1016,12 +1033,14 @@ Extra - room_id: [32]
           Charge Beam or Can Kill Missile Geron
           All of the following:
               # Shinespark from Moto Motorway - https://youtu.be/uppVC5hM3t0
-              Speed Booster and Disabled Door Lock Rando and Disabled Entrance Rando
+              Speed Booster and Knowledge (Beginner) and Disabled Door Lock Rando and Disabled Entrance Rando
               Any of the following:
                   # HJ-less
                   Shinespark Tricks (Expert)
                   # With HJ
                   High Jump and Shinespark Tricks (Advanced)
+          # Farm X with 1 Missile
+          Missiles and Combat (Beginner)
 
 > Event - Stabilizer 2 Online; Heals? False
   * Layers: default
@@ -1114,7 +1133,7 @@ Extra - room_id: [35]
   * Extra - door_idx: (73,)
   > Door to Short Shaft
       # Deal with the Pirates
-      Charge Beam or Missiles ≥ 10 or Screw Attack or Combat (Beginner) or Can Freeze Enemies or Can Use Power Bombs
+      Charge Beam or Missiles ≥ 10 or Screw Attack or Combat (Intermediate) or Normal Damage ≥ 80 or Can Freeze Enemies or Can Use Power Bombs
 
 ----------------
 Tourian Entrance
@@ -1162,6 +1181,7 @@ Extra - room_id: [37]
   > Door to Charge Core Arena
       Can Kill Eye Door
   > Other to Watering Hole
+      # TODO: can apparently break with speedbooster?
       Can Use Any Bombs
 
 > Door to Charge Core Arena; Heals? False
@@ -1176,6 +1196,7 @@ Extra - room_id: [37]
   * Open Passage to Watering Hole/Other to Charge Core Arena Access
   * Extra - door_idx: (100,)
   > Door to Hornoad Housing
+      # TODO: can apparently break with speedbooster?
       Can Use Any Bombs
 
 ----------------

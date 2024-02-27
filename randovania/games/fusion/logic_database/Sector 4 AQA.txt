@@ -1306,7 +1306,7 @@ Extra - room_id: [35]
   * L0 Hatch to Owtch-Couch/Door to Powamp Shaft
   * Extra - door_idx: (28,)
   > In Narrow Tunnel
-      Diffusion Missiles and Morph Ball
+      Diffusion Missiles and Missiles and Morph Ball
 
 > Door to Aquarium Speedway; Heals? False
   * Layers: default
@@ -1356,10 +1356,10 @@ Extra - room_id: [35]
       All of the following:
           # Get into tunnel
           Mid-Air Morph (Intermediate) or Can Bounce in Ball
-          Any of the following:
+          All of the following:
               # Destroying the Missile Blocks
-              Diffusion Missiles
-              Missiles and Movement (Beginner)
+              Missiles
+              Diffusion Missiles or Movement (Beginner)
 
 ----------------
 Drain Pipe

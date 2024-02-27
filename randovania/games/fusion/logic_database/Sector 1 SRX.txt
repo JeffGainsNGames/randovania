@@ -99,7 +99,7 @@ Extra - room_id: [3]
   > Door to Atmospheric Stabilizer Northwest
       Any of the following:
           Can Kill Missile Geron
-          Speed Booster and Knowledge (Intermediate) and Disabled Door Lock Rando and Disabled Entrance Rando
+          Speed Booster and Knowledge (Beginner)
 
 > Door to Atmospheric Stabilizer Northwest; Heals? False
   * Layers: default
@@ -142,7 +142,7 @@ Extra - room_id: [4]
       Any of the following:
           Charge Beam or Can Kill Missile Geron
           All of the following:
-              # Kill with Shinespark
+              # Kill with Shinespark from Yameba Corridor - https://www.youtube.com/watch?v=MIwjinIyBn4
               Speed Booster and Disabled Door Lock Rando and Disabled Entrance Rando
               Any of the following:
                   # With HJ
@@ -252,7 +252,8 @@ Extra - room_id: [8]
   * L0 Hatch to Sciser Puddle/Door to Zebesian Tower
   * Extra - door_idx: (31,)
   > Door to Moto Motorway
-      Charge Beam or Missiles ≥ 10 or Normal Damage ≥ 50 or Can Freeze Enemies or Can Use Power Bombs
+      # Deal with the Pirates
+      Charge Beam or Missiles ≥ 10 or Screw Attack or Normal Damage ≥ 50 or Can Freeze Enemies or Can Use Power Bombs
 
 > Door to Lava Lake; Heals? False
   * Layers: default
@@ -278,6 +279,9 @@ Extra - room_id: [9]
   * Extra - door_idx: (88,)
   > Room Center
       Trivial
+  > Event - Stabilizer 5 Online
+      # Kill with Shinespark from Checkpoint - https://discord.com/channels/119665192110915584/1205560315652349962/1212050030995836948
+      Speed Booster and Wave Beam and Shinespark Tricks (Intermediate) and Disabled Door Lock Rando and Disabled Entrance Rando
 
 > Room Center; Heals? False
   * Layers: default
@@ -456,9 +460,9 @@ Extra - room_id: [15]
       Any of the following:
           Charge Beam or Can Kill Missile Geron
           All of the following:
-              # Shinespark
-              Speed Booster and Shinespark Tricks (Advanced)
-              Space Jump or Wall Jump (Advanced)
+              # Shinespark from Screw Shaft - https://youtu.be/IP4zjb-1kP4
+              Speed Booster and Shinespark Tricks (Advanced) and Disabled Door Lock Rando
+              High Jump or Space Jump or Wall Jump (Advanced)
 
 > Event - Stabilizer 4 Online; Heals? False
   * Layers: default
@@ -482,7 +486,19 @@ Extra - room_id: [16]
   * L0 Hatch to Tourian Entrance/Door to Screw Shaft
   * Extra - door_idx: (35,)
   > Door to Moto Manor
-      Screw Attack and Space Jump
+      All of the following:
+          Screw Attack
+          Any of the following:
+              # Get up
+              Space Jump
+              All of the following:
+                  # Jump on frozen Space Pirates TODO: someone please get a video of this.
+                  Can Freeze Enemies
+                  Any of the following:
+                      # HJ method. Some RNG involved due to pirates moving.
+                      High Jump and Stand On Frozen Enemies (Advanced)
+                      # Walljump method. Heavy RNG involved due to pirates jumping
+                      Stand On Frozen Enemies (Hypermode) and Wall Jump (Beginner)
 
 > Door to Moto Manor; Heals? False
   * Layers: default
@@ -543,7 +559,7 @@ Extra - room_id: [17]
   > Pickup (Missile Tank on Cliffside)
       Any of the following:
           Space Jump
-          # Shinespark across
+          # Shinespark across from Moto Motorway - https://www.youtube.com/watch?v=HyXBjdbLfDs
           Speed Booster and Shinespark Tricks (Beginner) and Disabled Door Lock Rando and Disabled Entrance Rando
   > Pickup (Missile Tank in Lava)
       All of the following:
@@ -586,7 +602,7 @@ Extra - room_id: [18]
   > Door to Tourian Central Checkpoint
       All of the following:
           Morph Ball and Screw Attack
-          Wall Jump (Beginner) or Can climb High Jump Wall
+          Space Jump or Wall Jump (Beginner)
 
 ----------------
 Tourian Save Room East
@@ -643,36 +659,33 @@ Extra - room_id: [21]
   * Layers: default
   * Open Hatch to Gold Pirate Crossing/Door to Tourian Central Hub
   * Extra - door_idx: (45,)
-  > Door to Ripper Maze Access
+  > Left Ladder
       Can Use Any Bombs
 
 > Door to Tourian Central Checkpoint; Heals? False
   * Layers: default
   * L0 Hatch to Tourian Central Checkpoint/Door to Tourian Central Hub
   * Extra - door_idx: (46,)
-  > Door to Ripper Maze Access
-      Missiles ≥ 3 and Morph Ball
+  > Left Ladder
+      All of the following:
+          Morph Ball
+          Any of the following:
+              # Destroy Missile Blocks
+              Missiles ≥ 3
+              Diffusion Missiles and Missiles
 
 > Door to Ripper Maze Access; Heals? False
   * Layers: default
   * L0 Hatch to Ripper Maze Access/Door to Tourian Central Hub
   * Extra - door_idx: (47,)
-  > Door to Gold Pirate Crossing
-      All of the following:
-          Can Use Any Bombs
-          Any of the following:
-              Space Jump
-              High Jump and Wall Jump (Beginner)
-  > Door to Tourian Central Checkpoint
-      All of the following:
-          Missiles ≥ 3 and Morph Ball
-          Any of the following:
-              Space Jump
-              High Jump and Wall Jump (Beginner)
   > Door to Tourian Save Room East
       Trivial
   > Other to Animorphs
       Trivial
+  > Left Ladder
+      Any of the following:
+          Space Jump or Wall Jump (Intermediate)
+          High Jump and Wall Jump (Beginner)
 
 > Door to Tourian Save Room East; Heals? False
   * Layers: default
@@ -688,6 +701,20 @@ Extra - room_id: [21]
   > Door to Ripper Maze Access
       Trivial
 
+> Left Ladder; Heals? False
+  * Layers: default
+  > Door to Gold Pirate Crossing
+      Can Use Any Bombs
+  > Door to Tourian Central Checkpoint
+      All of the following:
+          Morph Ball
+          Any of the following:
+              # Destroy Missile Blocks
+              Missiles ≥ 3
+              Diffusion Missiles and Missiles
+  > Door to Ripper Maze Access
+      Trivial
+
 ----------------
 Gold Pirate Crossing
 Extra - map_name: Sector 122
@@ -698,13 +725,18 @@ Extra - room_id: [22]
   * Extra - door_idx: (48,)
   > Door to Tourian Hub West
       All of the following:
-          # Kill Genesis
-          Wave Beam or Can Use Power Bombs
           Any of the following:
-              # Kill Gold Zebesians (135hpx2)
+              # Kill Genesis (60 HP)
+              Wave Beam
+              # Power Bombs do 50 damage
+              Power Bombs ≥ 2 and Can Use Power Bombs
+          Any of the following:
+              # Kill Gold Zebesians (135 HP x2)
               Charge Beam or Screw Attack
               Missiles ≥ 30 and 20 DMG Missiles
               Missiles ≥ 10 and 45 DMG Missiles
+          # Get past Bomb Blocks
+          Can Use Any Bombs
 
 > Door to Tourian Hub West; Heals? False
   * Layers: default
@@ -712,13 +744,18 @@ Extra - room_id: [22]
   * Extra - door_idx: (49,)
   > Door to Tourian Central Hub
       All of the following:
-          # Kill Genesis
-          Wave Beam or Can Use Power Bombs
           Any of the following:
-              # Kill Gold Zebesians (135hpx2)
+              # Kill Genesis (60 HP)
+              Wave Beam
+              # Power Bombs do 50 damage
+              Power Bombs ≥ 2 and Can Use Power Bombs
+          Any of the following:
+              # Kill Gold Zebesians (135 HP x2)
               Charge Beam or Screw Attack
               Missiles ≥ 30 and 20 DMG Missiles
               Missiles ≥ 10 and 45 DMG Missiles
+          # Get past Bomb Blocks
+          Can Use Any Bombs
 
 ----------------
 Tourian Hub West
@@ -935,8 +972,10 @@ Extra - room_id: [30]
           Morph Ball
           Any of the following:
               Diffusion Missiles and Missiles
+              # TODO: isnt this possible with SJ and maybe WJ too?
               Missiles ≥ 5 and Stand On Frozen Enemies (Beginner) and Can Freeze Enemies
   > Door to Ripper Maze Access
+      # TODO: duplicated requirements, make a general node for top of left shaft
       Charge Beam or Missiles ≥ 10 or Screw Attack or Wall Jump (Beginner) or Normal Damage ≥ 75 or Can climb High Jump Wall
 
 ----------------
@@ -973,7 +1012,16 @@ Extra - room_id: [32]
   > Door to Shaft North
       After Stabilizer 2 Online
   > Event - Stabilizer 2 Online
-      Charge Beam or Can Kill Missile Geron
+      Any of the following:
+          Charge Beam or Can Kill Missile Geron
+          All of the following:
+              # Shinespark from Moto Motorway - https://youtu.be/uppVC5hM3t0
+              Speed Booster and Disabled Door Lock Rando and Disabled Entrance Rando
+              Any of the following:
+                  # HJ-less
+                  Shinespark Tricks (Expert)
+                  # With HJ
+                  High Jump and Shinespark Tricks (Advanced)
 
 > Event - Stabilizer 2 Online; Heals? False
   * Layers: default
@@ -1065,6 +1113,7 @@ Extra - room_id: [35]
   * L0 Hatch to Atmospheric Stabilizer Southeast/Door to South Shaft
   * Extra - door_idx: (73,)
   > Door to Short Shaft
+      # Deal with the Pirates
       Charge Beam or Missiles ≥ 10 or Screw Attack or Combat (Beginner) or Can Freeze Enemies or Can Use Power Bombs
 
 ----------------
@@ -1077,8 +1126,9 @@ Extra - room_id: [36]
   * Extra - door_idx: (7,)
   > Door to Tourian Shaft East
       All of the following:
-          Morph Ball and Screw Attack
+          Morph Ball and Screw Attack and Can Bounce in Ball
           Any of the following:
+              # Get past Rippers - TODO: health for damage runs
               Space Jump or Damage Runs (Intermediate)
               Stand On Frozen Enemies (Advanced) and Can Freeze Enemies
 
@@ -1090,6 +1140,7 @@ Extra - room_id: [36]
       All of the following:
           Morph Ball and Screw Attack and Wave Beam
           Any of the following:
+              # Get past Rippers - TODO: health for damage runs
               Space Jump or Damage Runs (Intermediate)
               Stand On Frozen Enemies (Advanced) and Can Freeze Enemies
 
@@ -1164,7 +1215,11 @@ Extra - room_id: [39]
   * L2 Hatch to Entrance Hub/Door to Antechamber
   * Extra - door_idx: (81,)
   > Top of Room
-      Screw Attack and Can climb High Jump Wall
+      All of the following:
+          Screw Attack
+          Any of the following:
+              Space Jump
+              High Jump and Wall Jump (Beginner)
 
 > Door to Connection to Sector 2 (TRO); Heals? False
   * Layers: default
@@ -1229,6 +1284,7 @@ Extra - room_id: [40]
   * Layers: default
   > Pickup (Energy Tank)
       All of the following:
+          # TODO: shinesparking from above! this is HJ, further below is a video HLess https://discord.com/channels/119665192110915584/1205560315652349962/1212051660436672573
           Speed Booster and Disabled Door Lock Rando and Disabled Entrance Rando and Can Kill Eye Door
           Any of the following:
               # Pre-Fight, with Hi-Jump
@@ -1243,8 +1299,10 @@ Extra - room_id: [40]
       After Charge Core-X
   > Event - Charge Core-X
       All of the following:
+          # TODO: do we want to require farming for this? the other bosses dont have it...
           Missiles
           Any of the following:
+              # Health requirements
               Combat (Advanced) or Normal Damage ≥ 200
               Combat (Beginner) and Normal Damage ≥ 125
               Combat (Intermediate) and Normal Damage ≥ 75
@@ -1382,9 +1440,12 @@ Extra - room_id: [47]
   > Pickup (Hidden Power Bomb Tank)
       All of the following:
           Morph Ball and Speed Booster and Disabled Door Lock Rando and Disabled Entrance Rando and Can Bounce in Ball
+          # A way to execute the Shinespark
           Gravity Suit or Shinespark Tricks (Expert)
-          # A way to pass by the sciser
-          Charge Beam or Missiles or Plasma Beam or Wave Beam or Shinespark Tricks (Advanced)
+          Any of the following:
+              # A way to pass by the Sciser
+              Charge Beam or Missiles or Plasma Beam or Wave Beam or Shinespark Tricks (Advanced)
+              Gravity Suit and Screw Attack
 
 ----------------
 Connection to Sector 2 (TRO)
@@ -1464,7 +1525,9 @@ Extra - room_id: [51]
 > Room Center; Heals? False
   * Layers: default
   > Other to Tourian Central Hub
-      Can climb High Jump Wall
+      Any of the following:
+          Space Jump
+          High Jump and Wall Jump (Beginner)
   > Door to Animorphs Cache
       All of the following:
           Any of the following:

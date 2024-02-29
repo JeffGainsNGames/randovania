@@ -405,7 +405,7 @@
                                 "items": []
                             }
                         },
-                        "Navigation Station": {
+                        "Navigation Terminal": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -453,20 +453,32 @@
                         }
                     }
                 },
-                "Navigation Station": {
-                    "node_type": "generic",
+                "Navigation Terminal": {
+                    "node_type": "hint",
                     "heal": false,
                     "coordinates": {
-                        "x": 152.69501600365797,
-                        "y": 82.98308184727938,
+                        "x": 152.7,
+                        "y": 82.98,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
+                    "extra": {
+                        "hint_name": "Sector5Entrance",
+                        "location_precision": "REGION_ONLY",
+                        "item_precision": "BROAD_CATEGORY"
+                    },
                     "valid_starting_location": false,
+                    "kind": "generic",
+                    "requirement_to_collect": {
+                        "type": "and",
+                        "data": {
+                            "comment": null,
+                            "items": []
+                        }
+                    },
                     "connections": {
                         "Door to Entrance Save Room": {
                             "type": "and",
@@ -528,8 +540,25 @@
                             }
                         },
                         "Door to Entrance Hub": {
-                            "type": "template",
-                            "data": "Can climb High Jump Wall"
+                            "type": "or",
+                            "data": {
+                                "comment": null,
+                                "items": [
+                                    {
+                                        "type": "template",
+                                        "data": "Can climb High Jump Wall"
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "tricks",
+                                            "name": "WallJump",
+                                            "amount": 3,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
+                            }
                         }
                     }
                 },
@@ -907,9 +936,9 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Data Checkpoint": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: damage run",
                                 "items": [
                                     {
                                         "type": "resource",
@@ -926,7 +955,7 @@
                         "Door to Crow's Nest": {
                             "type": "and",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: damage run?",
                                 "items": [
                                     {
                                         "type": "resource",
@@ -974,10 +1003,20 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Data Checkpoint": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
-                                "comment": null,
-                                "items": []
+                                "comment": "dmg runs",
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "VariaSuit",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         },
                         "Door to Artic Underside": {
@@ -997,10 +1036,36 @@
                                     {
                                         "type": "resource",
                                         "data": {
-                                            "type": "items",
-                                            "name": "VariaSuit",
+                                            "type": "misc",
+                                            "name": "DoorLockRando",
                                             "amount": 1,
-                                            "negate": false
+                                            "negate": true
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "misc",
+                                            "name": "EntranceRando",
+                                            "amount": 1,
+                                            "negate": true
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": "Damage Run",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
                                         }
                                     }
                                 ]
@@ -1040,13 +1105,30 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Artic Underside": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
                                 "comment": null,
                                 "items": [
                                     {
                                         "type": "template",
                                         "data": "Can Use Any Bombs"
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -1087,7 +1169,7 @@
                         "Door to Nightmare Training Grounds": {
                             "type": "or",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: varia/damage runs",
                                 "items": [
                                     {
                                         "type": "template",
@@ -1127,10 +1209,20 @@
                             }
                         },
                         "Door to Geron Checkpoint": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
-                                "comment": null,
-                                "items": []
+                                "comment": "TODO: needs varia or damage runs",
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "VariaSuit",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         },
                         "Door to Ripper Road": {
@@ -1143,8 +1235,49 @@
                                         "data": "Can Kill PB Geron"
                                     },
                                     {
-                                        "type": "template",
-                                        "data": "Can Use Any Bombs"
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Use Power Bombs"
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "template",
+                                                                "data": "Can Use Bombs"
+                                                            },
+                                                            {
+                                                                "type": "or",
+                                                                "data": {
+                                                                    "comment": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "template",
+                                                                            "data": "Can Use Springball"
+                                                                        },
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "tricks",
+                                                                                "name": "MidAirMorph",
+                                                                                "amount": 1,
+                                                                                "negate": false
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -1189,7 +1322,7 @@
                                 "items": [
                                     {
                                         "type": "template",
-                                        "data": "Can Use Power Bombs"
+                                        "data": "Can Kill PB Geron"
                                     }
                                 ]
                             }
@@ -1244,18 +1377,52 @@
                                     {
                                         "type": "template",
                                         "data": "Can climb High Jump Wall"
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
                         },
                         "Door to Waver Ward": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
                                 "comment": null,
                                 "items": [
                                     {
                                         "type": "template",
                                         "data": "Can Use Any Bombs"
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -1293,10 +1460,20 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Nightmare Training Grounds": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
-                                "comment": null,
-                                "items": []
+                                "comment": "TODO: damage run",
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "VariaSuit",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
@@ -1343,9 +1520,9 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Security Save Room": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: varia / damage runs",
                                 "items": [
                                     {
                                         "type": "resource",
@@ -1354,6 +1531,23 @@
                                             "name": "WaveBeam",
                                             "amount": 1,
                                             "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
                                         }
                                     }
                                 ]
@@ -1392,10 +1586,20 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Arctic Containment": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
-                                "comment": null,
-                                "items": []
+                                "comment": "TODO: varia / damage runs",
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "VariaSuit",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
@@ -1442,10 +1646,20 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Level 3 Security Room": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
-                                "comment": null,
-                                "items": []
+                                "comment": "TODO: varia / damage reqs",
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "VariaSuit",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
@@ -1483,7 +1697,7 @@
                         "Door to Security Save Room": {
                             "type": "and",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO:  damage reqs",
                                 "items": [
                                     {
                                         "type": "or",
@@ -1721,13 +1935,30 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Groznyj Shaft": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: varia / damage reqs",
                                 "items": [
                                     {
                                         "type": "template",
                                         "data": "Can Use Any Bombs"
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -1765,13 +1996,30 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Arctic Containment": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: varia / damage reqs",
                                 "items": [
                                     {
                                         "type": "template",
                                         "data": "Can Use Any Bombs"
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -1856,38 +2104,21 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Pickup (Hidden Energy Tank)": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
                                 "comment": null,
                                 "items": [
                                     {
                                         "type": "template",
-                                        "data": "Can Use Any Bombs"
+                                        "data": "Can Break Single Bomb Blocks"
                                     },
                                     {
-                                        "type": "and",
+                                        "type": "resource",
                                         "data": {
-                                            "comment": null,
-                                            "items": [
-                                                {
-                                                    "type": "resource",
-                                                    "data": {
-                                                        "type": "items",
-                                                        "name": "ScrewAttack",
-                                                        "amount": 1,
-                                                        "negate": false
-                                                    }
-                                                },
-                                                {
-                                                    "type": "resource",
-                                                    "data": {
-                                                        "type": "tricks",
-                                                        "name": "Knowledge",
-                                                        "amount": 1,
-                                                        "negate": false
-                                                    }
-                                                }
-                                            ]
+                                            "type": "items",
+                                            "name": "MorphBall",
+                                            "amount": 1,
+                                            "negate": false
                                         }
                                     }
                                 ]
@@ -1937,16 +2168,26 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Groznyj Shaft": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
-                                "comment": null,
-                                "items": []
+                                "comment": "TODO: varia / damag erun",
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "VariaSuit",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         },
                         "Door to Data Room": {
                             "type": "or",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: varia / damage run",
                                 "items": [
                                     {
                                         "type": "resource",
@@ -1993,27 +2234,44 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Energy Tank Storage": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
                                 "comment": null,
                                 "items": [
                                     {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "SpaceJump",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    },
-                                    {
-                                        "type": "and",
+                                        "type": "or",
                                         "data": {
                                             "comment": null,
                                             "items": [
                                                 {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "SpaceJump",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
                                                     "type": "template",
                                                     "data": "Can Freeze Enemies"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": "Damage Run",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
                                                 }
                                             ]
                                         }
@@ -2022,13 +2280,30 @@
                             }
                         },
                         "Other to Transformation Trial": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: varia / damage runs",
                                 "items": [
                                     {
                                         "type": "template",
                                         "data": "Can Bounce in Ball"
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -2066,10 +2341,20 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Groznyj Shaft": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
-                                "comment": null,
-                                "items": []
+                                "comment": "TODO: Varia / damag eruns",
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "VariaSuit",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
@@ -2105,10 +2390,20 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Groznyj Shaft": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
-                                "comment": null,
-                                "items": []
+                                "comment": "TODO: varia / frozen",
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "VariaSuit",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
@@ -2149,7 +2444,7 @@
                         "Other to Flooded Tower": {
                             "type": "and",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: varia / damage runs",
                                 "items": []
                             }
                         }
@@ -2186,9 +2481,9 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Pickup (Energy Tank)": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: varia / damage runs",
                                 "items": [
                                     {
                                         "type": "resource",
@@ -2197,6 +2492,44 @@
                                             "name": "MorphBall",
                                             "amount": 1,
                                             "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Bounce in Ball"
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Movement",
+                                                        "amount": 2,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": "Damage Run",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
                                         }
                                     }
                                 ]
@@ -2759,8 +3092,37 @@
                             }
                         },
                         "Door to Nightmare Recharge Room": {
-                            "type": "template",
-                            "data": "Can Use Power Bombs"
+                            "type": "or",
+                            "data": {
+                                "comment": null,
+                                "items": [
+                                    {
+                                        "type": "template",
+                                        "data": "Can Use Power Bombs"
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Use Bombs"
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "MidAirMorph",
+                                                        "amount": 4,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
                         }
                     }
                 },
@@ -2795,29 +3157,17 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Pickup (Hidden Power Bomb Tank)": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
                                 "comment": null,
                                 "items": [
                                     {
                                         "type": "template",
-                                        "data": "Can Use Bombs"
+                                        "data": "Can Use Any Bombs"
                                     },
                                     {
-                                        "type": "and",
-                                        "data": {
-                                            "comment": null,
-                                            "items": [
-                                                {
-                                                    "type": "template",
-                                                    "data": "Can Use Power Bombs"
-                                                },
-                                                {
-                                                    "type": "template",
-                                                    "data": "Can Use Springball"
-                                                }
-                                            ]
-                                        }
+                                        "type": "template",
+                                        "data": "Can Bounce in Ball"
                                     }
                                 ]
                             }
@@ -3443,6 +3793,27 @@
                                                 }
                                             ]
                                         }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": "Arena Requirements",
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can climb High Jump Wall"
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Combat",
+                                                        "amount": 3,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -3541,8 +3912,16 @@
                         "Door to Groznyj Grad": {
                             "type": "and",
                             "data": {
-                                "comment": null,
-                                "items": []
+                                "comment": "TODO: varia / damage reqs",
+                                "items": [
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": []
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
@@ -3579,21 +3958,9 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Groznyj Grad": {
-                            "type": "or",
-                            "data": {
-                                "comment": null,
-                                "items": [
-                                    {
-                                        "type": "template",
-                                        "data": "Can Use Power Bombs"
-                                    }
-                                ]
-                            }
-                        },
-                        "Door to Security Cache": {
                             "type": "and",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: varia / damage reqs",
                                 "items": [
                                     {
                                         "type": "template",
@@ -3603,6 +3970,35 @@
                                         "type": "or",
                                         "data": {
                                             "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "Door to Security Cache": {
+                            "type": "and",
+                            "data": {
+                                "comment": "TODO: varia / damage reqs",
+                                "items": [
+                                    {
+                                        "type": "template",
+                                        "data": "Can Use Power Bombs"
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": "Get up",
                                             "items": [
                                                 {
                                                     "type": "and",
@@ -3653,15 +4049,42 @@
                                                 }
                                             ]
                                         }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
                         },
                         "Door to Kago Blockade": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
-                                "comment": null,
-                                "items": []
+                                "comment": "TODO: varia / damage reqs",
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "VariaSuit",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
@@ -3697,25 +4120,59 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Pickup (Power Bomb Tank)": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: varia / damage reqs",
                                 "items": [
                                     {
                                         "type": "template",
                                         "data": "Can Use Any Bombs"
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
                         },
                         "Door to Level 3 Security Room": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: varia / damage reqs",
                                 "items": [
                                     {
                                         "type": "template",
                                         "data": "Can Use Power Bombs"
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -3753,13 +4210,30 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Level 3 Security Room": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: varia / damage reqs",
                                 "items": [
                                     {
                                         "type": "template",
                                         "data": "Can Use Power Bombs"
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -3797,10 +4271,20 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Level 3 Security Room": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
-                                "comment": null,
-                                "items": []
+                                "comment": "TODO: varia / damage reqs",
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "VariaSuit",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
@@ -4255,7 +4739,7 @@
                         "Door to Arctic Containment": {
                             "type": "and",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: varia / damage runs",
                                 "items": []
                             }
                         }
@@ -4294,7 +4778,7 @@
                         "Pickup (Power Bomb Tank)": {
                             "type": "and",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: varia / damage reqs",
                                 "items": [
                                     {
                                         "type": "resource",
@@ -4320,30 +4804,8 @@
                                                                 "data": "Can Freeze Enemies"
                                                             },
                                                             {
-                                                                "type": "or",
-                                                                "data": {
-                                                                    "comment": null,
-                                                                    "items": [
-                                                                        {
-                                                                            "type": "resource",
-                                                                            "data": {
-                                                                                "type": "items",
-                                                                                "name": "MorphBallBombs",
-                                                                                "amount": 1,
-                                                                                "negate": false
-                                                                            }
-                                                                        },
-                                                                        {
-                                                                            "type": "resource",
-                                                                            "data": {
-                                                                                "type": "items",
-                                                                                "name": "HighJump",
-                                                                                "amount": 1,
-                                                                                "negate": false
-                                                                            }
-                                                                        }
-                                                                    ]
-                                                                }
+                                                                "type": "template",
+                                                                "data": "Can Use Springball"
                                                             }
                                                         ]
                                                     }
@@ -4363,6 +4825,23 @@
                                                                 }
                                                             }
                                                         ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": "Damage Runs",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
                                                     }
                                                 }
                                             ]
@@ -4903,7 +5382,7 @@
                 ]
             },
             "nodes": {
-                "Other to Connection to Sector 5 (ARC)": {
+                "Area Transition to Sector 6 (NOC)": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -4921,11 +5400,11 @@
                         ]
                     },
                     "valid_starting_location": false,
-                    "dock_type": "Other",
+                    "dock_type": "area_transition",
                     "default_connection": {
                         "region": "Sector 6 (NOC)",
                         "area": "Connection to Sector 5 (ARC)",
-                        "node": "Other to Connection to Sector 6 (NOC)"
+                        "node": "Area Transition to Sector 5 (ARC)"
                     },
                     "default_dock_weakness": "Open Passage",
                     "exclude_from_dock_rando": false,
@@ -4972,7 +5451,7 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Other to Connection to Sector 5 (ARC)": {
+                        "Area Transition to Sector 6 (NOC)": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -5068,7 +5547,7 @@
                                 "items": []
                             }
                         },
-                        "Recharge Station": {
+                        "Recharge Terminal": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -5077,12 +5556,12 @@
                         }
                     }
                 },
-                "Recharge Station": {
+                "Recharge Terminal": {
                     "node_type": "generic",
                     "heal": true,
                     "coordinates": {
-                        "x": 151.652491998171,
-                        "y": 71.16780978509374,
+                        "x": 151.65,
+                        "y": 71.17,
                         "z": 0.0
                     },
                     "description": "",
@@ -5228,13 +5707,8 @@
                                                         "comment": null,
                                                         "items": [
                                                             {
-                                                                "type": "resource",
-                                                                "data": {
-                                                                    "type": "items",
-                                                                    "name": "HighJump",
-                                                                    "amount": 1,
-                                                                    "negate": false
-                                                                }
+                                                                "type": "template",
+                                                                "data": "Can Use Springball"
                                                             },
                                                             {
                                                                 "type": "template",
@@ -5330,19 +5804,30 @@
                     "pickup_index": 83,
                     "location_category": "minor",
                     "connections": {
-                        "Past Pit": {
+                        "Other to Nightmare Arena": {
                             "type": "and",
                             "data": {
                                 "comment": null,
+                                "items": []
+                            }
+                        },
+                        "Door to Nightmare Hub East": {
+                            "type": "and",
+                            "data": {
+                                "comment": "2 Frame perfect spring ball jumps",
                                 "items": [
                                     {
                                         "type": "resource",
                                         "data": {
-                                            "type": "items",
-                                            "name": "MorphBall",
-                                            "amount": 1,
+                                            "type": "tricks",
+                                            "name": "Movement",
+                                            "amount": 5,
                                             "negate": false
                                         }
+                                    },
+                                    {
+                                        "type": "template",
+                                        "data": "Can Use Springball"
                                     }
                                 ]
                             }
@@ -5410,8 +5895,8 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Other to Nightmare Arena": {
-                            "type": "or",
+                        "Pickup (Energy Tank)": {
+                            "type": "and",
                             "data": {
                                 "comment": null,
                                 "items": [
@@ -5423,54 +5908,66 @@
                                             "amount": 1,
                                             "negate": false
                                         }
-                                    }
-                                ]
-                            }
-                        },
-                        "Past Pit": {
-                            "type": "or",
-                            "data": {
-                                "comment": null,
-                                "items": [
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "tricks",
-                                            "name": "Movement",
-                                            "amount": 5,
-                                            "negate": false
-                                        }
                                     },
                                     {
-                                        "type": "template",
-                                        "data": "Can Use Bombs"
-                                    },
-                                    {
-                                        "type": "and",
+                                        "type": "or",
                                         "data": {
                                             "comment": null,
                                             "items": [
                                                 {
                                                     "type": "template",
-                                                    "data": "Can Use Power Bombs"
+                                                    "data": "Can Use Bombs"
                                                 },
                                                 {
-                                                    "type": "or",
+                                                    "type": "and",
                                                     "data": {
                                                         "comment": null,
                                                         "items": [
                                                             {
                                                                 "type": "template",
-                                                                "data": "Can Use Springball"
+                                                                "data": "Can Use Power Bombs"
                                                             },
+                                                            {
+                                                                "type": "or",
+                                                                "data": {
+                                                                    "comment": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "tricks",
+                                                                                "name": "MidAirMorph",
+                                                                                "amount": 3,
+                                                                                "negate": false
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "template",
+                                                                            "data": "Can Use Springball"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": "Crumble block side",
+                                                        "items": [
                                                             {
                                                                 "type": "resource",
                                                                 "data": {
                                                                     "type": "tricks",
-                                                                    "name": "MidAirMorph",
-                                                                    "amount": 3,
+                                                                    "name": "Movement",
+                                                                    "amount": 4,
                                                                     "negate": false
                                                                 }
+                                                            },
+                                                            {
+                                                                "type": "template",
+                                                                "data": "Can Use Springball"
                                                             }
                                                         ]
                                                     }
@@ -5480,25 +5977,8 @@
                                     }
                                 ]
                             }
-                        }
-                    }
-                },
-                "Past Pit": {
-                    "node_type": "generic",
-                    "heal": false,
-                    "coordinates": {
-                        "x": 200.490573464006,
-                        "y": 88.96697760459716,
-                        "z": 0.0
-                    },
-                    "description": "",
-                    "layers": [
-                        "default"
-                    ],
-                    "extra": {},
-                    "valid_starting_location": false,
-                    "connections": {
-                        "Pickup (Energy Tank)": {
+                        },
+                        "Other to Nightmare Arena": {
                             "type": "or",
                             "data": {
                                 "comment": null,
@@ -5513,15 +5993,6 @@
                                         }
                                     }
                                 ]
-                            }
-                        },
-                        "Other to Nightmare Arena": {
-                            "type": "resource",
-                            "data": {
-                                "type": "items",
-                                "name": "MorphBall",
-                                "amount": 1,
-                                "negate": false
                             }
                         }
                     }
@@ -5658,7 +6129,7 @@
                     "pickup_index": 84,
                     "location_category": "minor",
                     "connections": {
-                        "Door to Arctic Containment": {
+                        "Door to Connection to Sector 3 (PYR)": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -5697,6 +6168,203 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
+                        "Pickup (Hidden Power Bomb Tank)": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": [
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": "Get past bomb blocks by jumping",
+                                            "items": [
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "or",
+                                                                "data": {
+                                                                    "comment": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "template",
+                                                                            "data": "Can Use Power Bombs"
+                                                                        },
+                                                                        {
+                                                                            "type": "and",
+                                                                            "data": {
+                                                                                "comment": null,
+                                                                                "items": [
+                                                                                    {
+                                                                                        "type": "resource",
+                                                                                        "data": {
+                                                                                            "type": "items",
+                                                                                            "name": "ScrewAttack",
+                                                                                            "amount": 1,
+                                                                                            "negate": false
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "resource",
+                                                                                        "data": {
+                                                                                            "type": "tricks",
+                                                                                            "name": "Knowledge",
+                                                                                            "amount": 1,
+                                                                                            "negate": false
+                                                                                        }
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "or",
+                                                                "data": {
+                                                                    "comment": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "template",
+                                                                            "data": "Can climb High Jump Wall"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": "Shinespark from sector shortcuts",
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "items",
+                                                                    "name": "SpeedBooster",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "ShinesparkTrick",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Knowledge",
+                                                                    "amount": 2,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "misc",
+                                                                    "name": "DoorLockRando",
+                                                                    "amount": 1,
+                                                                    "negate": true
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "misc",
+                                                                    "name": "EntranceRando",
+                                                                    "amount": 1,
+                                                                    "negate": true
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": "Get past pirates",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "ChargeBeam",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "Missiles",
+                                                        "amount": 10,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "ScrewAttack",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": "Get up to gates and item",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "SpaceJump",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "WallJump",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "MorphBall",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
                         "Door to Arctic Containment": {
                             "type": "and",
                             "data": {
@@ -5736,104 +6404,6 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Pickup (Hidden Power Bomb Tank)": {
-                            "type": "and",
-                            "data": {
-                                "comment": null,
-                                "items": [
-                                    {
-                                        "type": "or",
-                                        "data": {
-                                            "comment": null,
-                                            "items": [
-                                                {
-                                                    "type": "template",
-                                                    "data": "Can Use Power Bombs"
-                                                },
-                                                {
-                                                    "type": "and",
-                                                    "data": {
-                                                        "comment": null,
-                                                        "items": [
-                                                            {
-                                                                "type": "resource",
-                                                                "data": {
-                                                                    "type": "items",
-                                                                    "name": "ScrewAttack",
-                                                                    "amount": 1,
-                                                                    "negate": false
-                                                                }
-                                                            },
-                                                            {
-                                                                "type": "resource",
-                                                                "data": {
-                                                                    "type": "tricks",
-                                                                    "name": "Knowledge",
-                                                                    "amount": 1,
-                                                                    "negate": false
-                                                                }
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "type": "or",
-                                        "data": {
-                                            "comment": null,
-                                            "items": [
-                                                {
-                                                    "type": "resource",
-                                                    "data": {
-                                                        "type": "items",
-                                                        "name": "SpaceJump",
-                                                        "amount": 1,
-                                                        "negate": false
-                                                    }
-                                                },
-                                                {
-                                                    "type": "and",
-                                                    "data": {
-                                                        "comment": "Possible to wall jump without high jump, but first jump through one tile gap is tricky",
-                                                        "items": [
-                                                            {
-                                                                "type": "resource",
-                                                                "data": {
-                                                                    "type": "items",
-                                                                    "name": "HighJump",
-                                                                    "amount": 1,
-                                                                    "negate": false
-                                                                }
-                                                            },
-                                                            {
-                                                                "type": "resource",
-                                                                "data": {
-                                                                    "type": "tricks",
-                                                                    "name": "WallJump",
-                                                                    "amount": 1,
-                                                                    "negate": false
-                                                                }
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "MorphBall",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    }
-                                ]
-                            }
-                        },
                         "Door to Connection to Sector 3 (PYR)": {
                             "type": "or",
                             "data": {
@@ -5944,7 +6514,7 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Other to Connection to Sector 5 (ARC)": {
+                        "Area Transition to Sector 3 (PYR)": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -5953,7 +6523,7 @@
                         }
                     }
                 },
-                "Other to Connection to Sector 5 (ARC)": {
+                "Area Transition to Sector 3 (PYR)": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -5971,11 +6541,11 @@
                         ]
                     },
                     "valid_starting_location": false,
-                    "dock_type": "Other",
+                    "dock_type": "area_transition",
                     "default_connection": {
                         "region": "Sector 3 (PYR)",
                         "area": "Connection to Sector 5 (ARC)",
-                        "node": "Other to Connection to Sector 3 (PYR)"
+                        "node": "Area Transition to Sector 5 (ARC)"
                     },
                     "default_dock_weakness": "Open Passage",
                     "exclude_from_dock_rando": false,
@@ -6372,6 +6942,23 @@
                                             "amount": 1,
                                             "negate": true
                                         }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -6443,6 +7030,23 @@
                                             "amount": 1,
                                             "negate": true
                                         }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -6497,7 +7101,40 @@
                                 "items": [
                                     {
                                         "type": "template",
-                                        "data": "Can Use Any Bombs"
+                                        "data": "Can Use Power Bombs"
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Use Bombs"
+                                                },
+                                                {
+                                                    "type": "or",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "MidAirMorph",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "template",
+                                                                "data": "Can Use Springball"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -6913,7 +7550,7 @@
                                         "type": "resource",
                                         "data": {
                                             "type": "items",
-                                            "name": "PlasmaBeam",
+                                            "name": "ChargeBeam",
                                             "amount": 1,
                                             "negate": false
                                         }
@@ -6923,8 +7560,34 @@
                                         "data": {
                                             "type": "damage",
                                             "name": "NormalDamage",
-                                            "amount": 75,
+                                            "amount": 100,
                                             "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "GravitySuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "ScrewAttack",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
                                         }
                                     }
                                 ]
@@ -6980,7 +7643,7 @@
                                         "type": "resource",
                                         "data": {
                                             "type": "items",
-                                            "name": "PlasmaBeam",
+                                            "name": "ChargeBeam",
                                             "amount": 1,
                                             "negate": false
                                         }
@@ -6990,8 +7653,34 @@
                                         "data": {
                                             "type": "damage",
                                             "name": "NormalDamage",
-                                            "amount": 75,
+                                            "amount": 100,
                                             "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "GravitySuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "ScrewAttack",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
                                         }
                                     }
                                 ]
@@ -7172,7 +7861,7 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Recharge Station": {
+                        "Recharge Terminal": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -7181,12 +7870,12 @@
                         }
                     }
                 },
-                "Recharge Station": {
+                "Recharge Terminal": {
                     "node_type": "generic",
                     "heal": true,
                     "coordinates": {
-                        "x": 135.6671239140375,
-                        "y": 67.34522176497487,
+                        "x": 135.67,
+                        "y": 67.35,
                         "z": 0.0
                     },
                     "description": "",
@@ -7395,7 +8084,7 @@
                                 ]
                             }
                         },
-                        "Door to Cargo Hold to Sector 5 (ARC)": {
+                        "Area Transition to Sector 4 (AQA)": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -7441,7 +8130,7 @@
                         }
                     }
                 },
-                "Door to Cargo Hold to Sector 5 (ARC)": {
+                "Area Transition to Sector 4 (AQA)": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -7459,13 +8148,13 @@
                         ]
                     },
                     "valid_starting_location": false,
-                    "dock_type": "Door",
+                    "dock_type": "area_transition",
                     "default_connection": {
                         "region": "Sector 4 (AQA)",
                         "area": "Cargo Hold to Sector 5 (ARC)",
-                        "node": "Other to Flooded Airlock to Sector 4 (AQA)"
+                        "node": "Area Transition to Sector 5 (ARC)"
                     },
-                    "default_dock_weakness": "Open Hatch",
+                    "default_dock_weakness": "Open Passage",
                     "exclude_from_dock_rando": false,
                     "incompatible_dock_weaknesses": [],
                     "override_default_open_requirement": null,
@@ -7551,10 +8240,20 @@
                     "location_category": "minor",
                     "connections": {
                         "Other to Frozen Tower": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
-                                "comment": null,
-                                "items": []
+                                "comment": "TODO: varia / damage reqs",
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "VariaSuit",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
@@ -7590,38 +8289,63 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Pickup (Hidden Missile Tank)": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
-                                "comment": null,
+                                "comment": "TODO: varia / damage reqs",
                                 "items": [
                                     {
-                                        "type": "and",
+                                        "type": "or",
                                         "data": {
                                             "comment": null,
                                             "items": [
                                                 {
-                                                    "type": "template",
-                                                    "data": "Can Freeze Enemies"
-                                                },
-                                                {
                                                     "type": "resource",
                                                     "data": {
                                                         "type": "items",
-                                                        "name": "HighJump",
+                                                        "name": "SpaceJump",
                                                         "amount": 1,
                                                         "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "items",
+                                                                    "name": "HighJump",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "template",
+                                                                "data": "Can Freeze Enemies"
+                                                            }
+                                                        ]
                                                     }
                                                 }
                                             ]
                                         }
                                     },
                                     {
-                                        "type": "resource",
+                                        "type": "or",
                                         "data": {
-                                            "type": "items",
-                                            "name": "SpaceJump",
-                                            "amount": 1,
-                                            "negate": false
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
                                         }
                                     }
                                 ]

@@ -517,19 +517,31 @@
                     }
                 },
                 "Navigation Terminal": {
-                    "node_type": "generic",
+                    "node_type": "hint",
                     "heal": false,
                     "coordinates": {
-                        "x": 152.63828000335937,
-                        "y": 79.4477198286722,
+                        "x": 152.64,
+                        "y": 79.45,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
+                    "extra": {
+                        "hint_name": "Sector3Entrance",
+                        "location_precision": "REGION_ONLY",
+                        "item_precision": "BROAD_CATEGORY"
+                    },
                     "valid_starting_location": false,
+                    "kind": "generic",
+                    "requirement_to_collect": {
+                        "type": "and",
+                        "data": {
+                            "comment": null,
+                            "items": []
+                        }
+                    },
                     "connections": {
                         "Door to Elevator to Main Deck": {
                             "type": "and",
@@ -1066,36 +1078,10 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Bob Room": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
                                 "comment": null,
-                                "items": [
-                                    {
-                                        "type": "template",
-                                        "data": "Can climb High Jump Wall"
-                                    },
-                                    {
-                                        "type": "and",
-                                        "data": {
-                                            "comment": "Enemies only spawn after that event is done",
-                                            "items": [
-                                                {
-                                                    "type": "resource",
-                                                    "data": {
-                                                        "type": "events",
-                                                        "name": "Level2Locks",
-                                                        "amount": 1,
-                                                        "negate": false
-                                                    }
-                                                },
-                                                {
-                                                    "type": "template",
-                                                    "data": "Can Freeze Enemies"
-                                                }
-                                            ]
-                                        }
-                                    }
-                                ]
+                                "items": []
                             }
                         },
                         "Other to Namihe's Abode": {
@@ -1366,7 +1352,7 @@
                         "Door to B.O.X. Access": {
                             "type": "or",
                             "data": {
-                                "comment": "TODO: when does this purple dissapear?",
+                                "comment": null,
                                 "items": [
                                     {
                                         "type": "template",
@@ -1480,7 +1466,7 @@
                         "Door to Checkpoint Shaft": {
                             "type": "and",
                             "data": {
-                                "comment": "TODO: when does this purple geron dissapear",
+                                "comment": null,
                                 "items": [
                                     {
                                         "type": "template",
@@ -1540,13 +1526,46 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Pickup (Missile Tank)": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
                                 "comment": null,
                                 "items": [
                                     {
                                         "type": "template",
-                                        "data": "Can Use Any Bombs"
+                                        "data": "Can Use Bombs"
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Use Power Bombs"
+                                                },
+                                                {
+                                                    "type": "or",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "template",
+                                                                "data": "Can Use Springball"
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "MidAirMorph",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -1554,7 +1573,7 @@
                         "Door to B.O.X. Access": {
                             "type": "or",
                             "data": {
-                                "comment": "TODO: bob skip? sounds like it should have some tricks.",
+                                "comment": null,
                                 "items": [
                                     {
                                         "type": "template",
@@ -1658,6 +1677,13 @@
                     "pickup_index": 44,
                     "location_category": "minor",
                     "connections": {
+                        "Other to Entrance Hub": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        },
                         "Above E-Tank": {
                             "type": "or",
                             "data": {
@@ -1697,31 +1723,15 @@
                         "Above E-Tank": {
                             "type": "and",
                             "data": {
-                                "comment": "TODO: requirements depend on whether you got this item from above or from below",
-                                "items": [
-                                    {
-                                        "type": "and",
-                                        "data": {
-                                            "comment": null,
-                                            "items": []
-                                        }
-                                    }
-                                ]
+                                "comment": null,
+                                "items": []
                             }
                         },
                         "Below E-Tank": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
-                                "comment": "TODO: reqs depend on whether you got the item from above or from below",
-                                "items": [
-                                    {
-                                        "type": "or",
-                                        "data": {
-                                            "comment": null,
-                                            "items": []
-                                        }
-                                    }
-                                ]
+                                "comment": null,
+                                "items": []
                             }
                         }
                     }
@@ -1872,7 +1882,7 @@
                                         "data": {
                                             "type": "tricks",
                                             "name": "ShinesparkTrick",
-                                            "amount": 1,
+                                            "amount": 2,
                                             "negate": false
                                         }
                                     },
@@ -1881,7 +1891,7 @@
                                         "data": {
                                             "type": "tricks",
                                             "name": "Knowledge",
-                                            "amount": 1,
+                                            "amount": 2,
                                             "negate": false
                                         }
                                     }
@@ -1930,38 +1940,8 @@
                                 "comment": null,
                                 "items": [
                                     {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "ScrewAttack",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    },
-                                    {
                                         "type": "template",
-                                        "data": "Can Use Any Bombs"
-                                    }
-                                ]
-                            }
-                        },
-                        "Below E-Tank": {
-                            "type": "or",
-                            "data": {
-                                "comment": null,
-                                "items": [
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "ScrewAttack",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    },
-                                    {
-                                        "type": "template",
-                                        "data": "Can Use Any Bombs"
+                                        "data": "Can Break Single Bomb Blocks"
                                     }
                                 ]
                             }
@@ -1984,16 +1964,60 @@
                     "valid_starting_location": false,
                     "connections": {
                         "Pickup (Hidden Energy Tank)": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
-                                "comment": "TODO: proper requirements",
+                                "comment": null,
                                 "items": [
                                     {
                                         "type": "or",
                                         "data": {
-                                            "comment": null,
-                                            "items": []
+                                            "comment": "TODO: space jump requires mid air morph if you have bombs. this whole block should probably get refacted a bit",
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Activate Pillar"
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "SpaceJump",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": "TODO: how is this supposed to be done if you have screw?",
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "items",
+                                                                    "name": "HighJump",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "WallJump",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
                                         }
+                                    },
+                                    {
+                                        "type": "template",
+                                        "data": "Can Break Single Bomb Blocks"
                                     }
                                 ]
                             }
@@ -2001,7 +2025,7 @@
                         "Other to Entrance Hub": {
                             "type": "or",
                             "data": {
-                                "comment": "TODO: template, also add mid air morph and other stuff to the bombs only path. Also screw should have knowledge",
+                                "comment": null,
                                 "items": [
                                     {
                                         "type": "and",
@@ -2025,6 +2049,15 @@
                                                         "amount": 1,
                                                         "negate": false
                                                     }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Knowledge",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
                                                 }
                                             ]
                                         }
@@ -2039,8 +2072,25 @@
                                                     "data": "Can Use Bombs"
                                                 },
                                                 {
-                                                    "type": "template",
-                                                    "data": "Can Use Springball"
+                                                    "type": "or",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "template",
+                                                                "data": "Can Use Springball"
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "MidAirMorph",
+                                                                    "amount": 2,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
                                                 }
                                             ]
                                         }
@@ -2048,78 +2098,6 @@
                                     {
                                         "type": "template",
                                         "data": "Can Use Power Bombs"
-                                    }
-                                ]
-                            }
-                        },
-                        "Above E-Tank": {
-                            "type": "or",
-                            "data": {
-                                "comment": null,
-                                "items": [
-                                    {
-                                        "type": "and",
-                                        "data": {
-                                            "comment": null,
-                                            "items": [
-                                                {
-                                                    "type": "or",
-                                                    "data": {
-                                                        "comment": null,
-                                                        "items": [
-                                                            {
-                                                                "type": "resource",
-                                                                "data": {
-                                                                    "type": "items",
-                                                                    "name": "SpaceJump",
-                                                                    "amount": 1,
-                                                                    "negate": false
-                                                                }
-                                                            },
-                                                            {
-                                                                "type": "and",
-                                                                "data": {
-                                                                    "comment": null,
-                                                                    "items": [
-                                                                        {
-                                                                            "type": "resource",
-                                                                            "data": {
-                                                                                "type": "items",
-                                                                                "name": "HighJump",
-                                                                                "amount": 1,
-                                                                                "negate": false
-                                                                            }
-                                                                        },
-                                                                        {
-                                                                            "type": "resource",
-                                                                            "data": {
-                                                                                "type": "tricks",
-                                                                                "name": "WallJump",
-                                                                                "amount": 2,
-                                                                                "negate": false
-                                                                            }
-                                                                        }
-                                                                    ]
-                                                                }
-                                                            }
-                                                        ]
-                                                    }
-                                                },
-                                                {
-                                                    "type": "resource",
-                                                    "data": {
-                                                        "type": "items",
-                                                        "name": "ScrewAttack",
-                                                        "amount": 1,
-                                                        "negate": false
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "type": "template",
-                                        "data": "Can Activate Pillar"
                                     }
                                 ]
                             }
@@ -2156,7 +2134,7 @@
                         "Door to Deserted Runway": {
                             "type": "or",
                             "data": {
-                                "comment": "TODO: Space or High Wall Jumping or Wall Jump with Ice",
+                                "comment": null,
                                 "items": [
                                     {
                                         "type": "resource",
@@ -2165,6 +2143,45 @@
                                             "name": "SpaceJump",
                                             "amount": 1,
                                             "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": "Stand on Frozen Enemy and Walljump off",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "HighJump",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "WallJump",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Freeze Enemies"
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "StandOnFrozenEnemies",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
                                         }
                                     }
                                 ]
@@ -2855,7 +2872,7 @@
                         "Pickup (Power Bomb Tank)": {
                             "type": "and",
                             "data": {
-                                "comment": "TODO: Can damage run this with varia (about 500 energy), high jump/spring ball not required",
+                                "comment": "TODO: Can damage run this with varia (about 500 energy)",
                                 "items": [
                                     {
                                         "type": "template",
@@ -2920,6 +2937,79 @@
                                                         "name": "SpaceJump",
                                                         "amount": 1,
                                                         "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": "Jump Extends",
+                                                        "items": [
+                                                            {
+                                                                "type": "or",
+                                                                "data": {
+                                                                    "comment": "Kill Enemies",
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "items",
+                                                                                "name": "ChargeBeam",
+                                                                                "amount": 1,
+                                                                                "negate": false
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "items",
+                                                                                "name": "Missiles",
+                                                                                "amount": 20,
+                                                                                "negate": false
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "items",
+                                                                                "name": "ScrewAttack",
+                                                                                "amount": 1,
+                                                                                "negate": false
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "and",
+                                                                            "data": {
+                                                                                "comment": null,
+                                                                                "items": [
+                                                                                    {
+                                                                                        "type": "resource",
+                                                                                        "data": {
+                                                                                            "type": "items",
+                                                                                            "name": "PowerBombs",
+                                                                                            "amount": 2,
+                                                                                            "negate": false
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        "type": "template",
+                                                                                        "data": "Can Use Power Bombs"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "JumpExtends",
+                                                                    "amount": 3,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
                                                     }
                                                 }
                                             ]
@@ -3158,12 +3248,29 @@
                                                                 "data": "Can Freeze Enemies"
                                                             },
                                                             {
-                                                                "type": "resource",
+                                                                "type": "or",
                                                                 "data": {
-                                                                    "type": "items",
-                                                                    "name": "HighJump",
-                                                                    "amount": 1,
-                                                                    "negate": false
+                                                                    "comment": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "items",
+                                                                                "name": "HighJump",
+                                                                                "amount": 1,
+                                                                                "negate": false
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "tricks",
+                                                                                "name": "WallJump",
+                                                                                "amount": 1,
+                                                                                "negate": false
+                                                                            }
+                                                                        }
+                                                                    ]
                                                                 }
                                                             }
                                                         ]
@@ -3263,12 +3370,73 @@
                                 "comment": "TODO: Heat DMG",
                                 "items": [
                                     {
-                                        "type": "resource",
+                                        "type": "or",
                                         "data": {
-                                            "type": "items",
-                                            "name": "VariaSuit",
-                                            "amount": 1,
-                                            "negate": false
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": "Get around enemy",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "ChargeBeam",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "Missiles",
+                                                        "amount": 10,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "ScrewAttack",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "damage",
+                                                        "name": "NormalDamage",
+                                                        "amount": 75,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Movement",
+                                                        "amount": 2,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
                                         }
                                     }
                                 ]
@@ -3309,7 +3477,7 @@
                         "Door to Pyrochamber Access": {
                             "type": "and",
                             "data": {
-                                "comment": "TODO: how to get past the wwall things damageless?",
+                                "comment": null,
                                 "items": [
                                     {
                                         "type": "or",
@@ -3322,6 +3490,59 @@
                                                         "type": "items",
                                                         "name": "VariaSuit",
                                                         "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": "Get around the enemy",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "ChargeBeam",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "Missiles",
+                                                        "amount": 10,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "ScrewAttack",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "damage",
+                                                        "name": "NormalDamage",
+                                                        "amount": 75,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Movement",
+                                                        "amount": 2,
                                                         "negate": false
                                                     }
                                                 }
@@ -3572,7 +3793,7 @@
                     "pickup_index": 48,
                     "location_category": "minor",
                     "connections": {
-                        "Door to Processing Access (Upper)": {
+                        "Beside Pickups": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -3603,19 +3824,11 @@
                     "pickup_index": 49,
                     "location_category": "minor",
                     "connections": {
-                        "Door to Processing Access (Upper)": {
+                        "Beside Lava": {
                             "type": "and",
                             "data": {
-                                "comment": "Doesnt this require HJ or WJ?",
-                                "items": [
-                                    {
-                                        "type": "and",
-                                        "data": {
-                                            "comment": null,
-                                            "items": []
-                                        }
-                                    }
-                                ]
+                                "comment": null,
+                                "items": []
                             }
                         }
                     }
@@ -3650,8 +3863,8 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Door to Processing Access (Upper)": {
-                            "type": "or",
+                        "Beside Lava": {
+                            "type": "and",
                             "data": {
                                 "comment": null,
                                 "items": [
@@ -3662,6 +3875,23 @@
                                             "name": "WaveBeam",
                                             "amount": 1,
                                             "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
                                         }
                                     }
                                 ]
@@ -3699,200 +3929,16 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Pickup (Energy Tank)": {
+                        "Beside Lava": {
                             "type": "and",
                             "data": {
-                                "comment": "TODO: make a general node for reaching the right platform so taht you dont duplicate reqs",
+                                "comment": null,
                                 "items": [
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "MorphBall",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    },
-                                    {
-                                        "type": "or",
-                                        "data": {
-                                            "comment": "TODO: freezing enemies should probably be a trick?",
-                                            "items": [
-                                                {
-                                                    "type": "resource",
-                                                    "data": {
-                                                        "type": "items",
-                                                        "name": "SpaceJump",
-                                                        "amount": 1,
-                                                        "negate": false
-                                                    }
-                                                },
-                                                {
-                                                    "type": "template",
-                                                    "data": "Can Freeze Enemies"
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "type": "and",
-                                        "data": {
-                                            "comment": "TODO: this whole room needs varia and heat requirements",
-                                            "items": [
-                                                {
-                                                    "type": "and",
-                                                    "data": {
-                                                        "comment": null,
-                                                        "items": []
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    },
                                     {
                                         "type": "resource",
                                         "data": {
                                             "type": "items",
                                             "name": "VariaSuit",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    }
-                                ]
-                            }
-                        },
-                        "Pickup (Missile Tank)": {
-                            "type": "and",
-                            "data": {
-                                "comment": null,
-                                "items": [
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "MorphBall",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    },
-                                    {
-                                        "type": "or",
-                                        "data": {
-                                            "comment": null,
-                                            "items": [
-                                                {
-                                                    "type": "template",
-                                                    "data": "Can Use Bombs"
-                                                },
-                                                {
-                                                    "type": "template",
-                                                    "data": "Can Use Springball"
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "type": "or",
-                                        "data": {
-                                            "comment": null,
-                                            "items": [
-                                                {
-                                                    "type": "resource",
-                                                    "data": {
-                                                        "type": "items",
-                                                        "name": "SpaceJump",
-                                                        "amount": 1,
-                                                        "negate": false
-                                                    }
-                                                },
-                                                {
-                                                    "type": "template",
-                                                    "data": "Can Freeze Enemies"
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "VariaSuit",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    }
-                                ]
-                            }
-                        },
-                        "Door to Processing Access (Lower)": {
-                            "type": "and",
-                            "data": {
-                                "comment": null,
-                                "items": []
-                            }
-                        },
-                        "Door to Garbage Chute": {
-                            "type": "and",
-                            "data": {
-                                "comment": null,
-                                "items": [
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "ScrewAttack",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    },
-                                    {
-                                        "type": "or",
-                                        "data": {
-                                            "comment": "Heat DMG",
-                                            "items": [
-                                                {
-                                                    "type": "resource",
-                                                    "data": {
-                                                        "type": "items",
-                                                        "name": "VariaSuit",
-                                                        "amount": 1,
-                                                        "negate": false
-                                                    }
-                                                },
-                                                {
-                                                    "type": "and",
-                                                    "data": {
-                                                        "comment": null,
-                                                        "items": [
-                                                            {
-                                                                "type": "resource",
-                                                                "data": {
-                                                                    "type": "tricks",
-                                                                    "name": "HeatRuns",
-                                                                    "amount": 2,
-                                                                    "negate": false
-                                                                }
-                                                            },
-                                                            {
-                                                                "type": "resource",
-                                                                "data": {
-                                                                    "type": "damage",
-                                                                    "name": "HeatDamage",
-                                                                    "amount": 70,
-                                                                    "negate": false
-                                                                }
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "GravitySuit",
                                             "amount": 1,
                                             "negate": false
                                         }
@@ -3932,20 +3978,11 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Door to Processing Access (Upper)": {
+                        "Beside Lava": {
                             "type": "and",
                             "data": {
                                 "comment": null,
                                 "items": [
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "GravitySuit",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    },
                                     {
                                         "type": "resource",
                                         "data": {
@@ -3956,9 +3993,18 @@
                                         }
                                     },
                                     {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "GravitySuit",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
                                         "type": "or",
                                         "data": {
-                                            "comment": "Heat DMG",
+                                            "comment": "Heat Run Logic",
                                             "items": [
                                                 {
                                                     "type": "resource",
@@ -3968,34 +4014,226 @@
                                                         "amount": 1,
                                                         "negate": false
                                                     }
-                                                },
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "Beside Pickups": {
+                    "node_type": "generic",
+                    "heal": false,
+                    "coordinates": {
+                        "x": 698.7888820484757,
+                        "y": 412.67537679275824,
+                        "z": 0.0
+                    },
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "connections": {
+                        "Pickup (Energy Tank)": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        },
+                        "Pickup (Missile Tank)": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": [
+                                    {
+                                        "type": "template",
+                                        "data": "Can Bounce in Ball"
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
                                                 {
-                                                    "type": "and",
+                                                    "type": "resource",
                                                     "data": {
-                                                        "comment": null,
-                                                        "items": [
-                                                            {
-                                                                "type": "resource",
-                                                                "data": {
-                                                                    "type": "tricks",
-                                                                    "name": "HeatRuns",
-                                                                    "amount": 2,
-                                                                    "negate": false
-                                                                }
-                                                            },
-                                                            {
-                                                                "type": "resource",
-                                                                "data": {
-                                                                    "type": "damage",
-                                                                    "name": "HeatDamage",
-                                                                    "amount": 100,
-                                                                    "negate": false
-                                                                }
-                                                            }
-                                                        ]
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
                                                     }
                                                 }
                                             ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "Beside Lava": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        }
+                    }
+                },
+                "Beside Lava": {
+                    "node_type": "generic",
+                    "heal": false,
+                    "coordinates": {
+                        "x": 202.6309141072121,
+                        "y": 244.56538294913014,
+                        "z": 0.0
+                    },
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "connections": {
+                        "Door to Processing Access (Lower)": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "VariaSuit",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "Door to Processing Access (Upper)": {
+                            "type": "or",
+                            "data": {
+                                "comment": null,
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "VariaSuit",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "Door to Garbage Chute": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "ScrewAttack",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "GravitySuit",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": "Heat Run logic",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "Beside Pickups": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": [
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "SpaceJump",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Movement",
+                                                        "amount": 4,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Freeze Enemies"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "VariaSuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "MorphBall",
+                                            "amount": 1,
+                                            "negate": false
                                         }
                                     }
                                 ]
@@ -4561,13 +4799,13 @@
                                                                 "data": {
                                                                     "type": "items",
                                                                     "name": "Missiles",
-                                                                    "amount": 30,
+                                                                    "amount": 15,
                                                                     "negate": false
                                                                 }
                                                             },
                                                             {
                                                                 "type": "template",
-                                                                "data": "30 DMG Missiles"
+                                                                "data": "45 DMG Missiles"
                                                             }
                                                         ]
                                                     }
@@ -4582,22 +4820,13 @@
                                                                 "data": {
                                                                     "type": "items",
                                                                     "name": "Missiles",
-                                                                    "amount": 50,
+                                                                    "amount": 25,
                                                                     "negate": false
                                                                 }
                                                             },
                                                             {
                                                                 "type": "template",
                                                                 "data": "20 DMG Missiles"
-                                                            },
-                                                            {
-                                                                "type": "resource",
-                                                                "data": {
-                                                                    "type": "tricks",
-                                                                    "name": "Combat",
-                                                                    "amount": 1,
-                                                                    "negate": false
-                                                                }
                                                             }
                                                         ]
                                                     }
@@ -4612,7 +4841,7 @@
                                                                 "data": {
                                                                     "type": "items",
                                                                     "name": "Missiles",
-                                                                    "amount": 75,
+                                                                    "amount": 45,
                                                                     "negate": false
                                                                 }
                                                             },
@@ -4625,7 +4854,7 @@
                                                                 "data": {
                                                                     "type": "tricks",
                                                                     "name": "Combat",
-                                                                    "amount": 2,
+                                                                    "amount": 1,
                                                                     "negate": false
                                                                 }
                                                             }
@@ -4645,7 +4874,7 @@
                                                     "data": {
                                                         "type": "tricks",
                                                         "name": "Combat",
-                                                        "amount": 5,
+                                                        "amount": 4,
                                                         "negate": false
                                                     }
                                                 },
@@ -4654,7 +4883,7 @@
                                                     "data": {
                                                         "type": "damage",
                                                         "name": "NormalDamage",
-                                                        "amount": 700,
+                                                        "amount": 500,
                                                         "negate": false
                                                     }
                                                 },
@@ -4677,7 +4906,7 @@
                                                                 "data": {
                                                                     "type": "damage",
                                                                     "name": "NormalDamage",
-                                                                    "amount": 600,
+                                                                    "amount": 400,
                                                                     "negate": false
                                                                 }
                                                             }
@@ -4703,7 +4932,7 @@
                                                                 "data": {
                                                                     "type": "damage",
                                                                     "name": "NormalDamage",
-                                                                    "amount": 500,
+                                                                    "amount": 300,
                                                                     "negate": false
                                                                 }
                                                             }
@@ -4721,32 +4950,6 @@
                                                                     "type": "tricks",
                                                                     "name": "Combat",
                                                                     "amount": 3,
-                                                                    "negate": false
-                                                                }
-                                                            },
-                                                            {
-                                                                "type": "resource",
-                                                                "data": {
-                                                                    "type": "damage",
-                                                                    "name": "NormalDamage",
-                                                                    "amount": 200,
-                                                                    "negate": false
-                                                                }
-                                                            }
-                                                        ]
-                                                    }
-                                                },
-                                                {
-                                                    "type": "and",
-                                                    "data": {
-                                                        "comment": null,
-                                                        "items": [
-                                                            {
-                                                                "type": "resource",
-                                                                "data": {
-                                                                    "type": "tricks",
-                                                                    "name": "Combat",
-                                                                    "amount": 4,
                                                                     "negate": false
                                                                 }
                                                             },
@@ -4904,10 +5107,10 @@
                         "Event - Wide Core-X": {
                             "type": "and",
                             "data": {
-                                "comment": "TODO: wide core x reqs",
+                                "comment": "Core-X Requirements",
                                 "items": [
                                     {
-                                        "type": "or",
+                                        "type": "and",
                                         "data": {
                                             "comment": null,
                                             "items": [
@@ -4919,6 +5122,27 @@
                                                         "amount": 1,
                                                         "negate": false
                                                     }
+                                                },
+                                                {
+                                                    "type": "or",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "template",
+                                                                "data": "20 DMG Missiles"
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Combat",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
                                                 }
                                             ]
                                         }
@@ -4926,7 +5150,7 @@
                                     {
                                         "type": "and",
                                         "data": {
-                                            "comment": null,
+                                            "comment": "TODO: Heat dmg",
                                             "items": [
                                                 {
                                                     "type": "or",
@@ -4955,7 +5179,7 @@
                                                                 "data": {
                                                                     "type": "tricks",
                                                                     "name": "Combat",
-                                                                    "amount": 1,
+                                                                    "amount": 2,
                                                                     "negate": false
                                                                 }
                                                             },
@@ -4964,8 +5188,34 @@
                                                                 "data": {
                                                                     "type": "damage",
                                                                     "name": "NormalDamage",
-                                                                    "amount": 100,
+                                                                    "amount": 200,
                                                                     "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "and",
+                                                                "data": {
+                                                                    "comment": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "tricks",
+                                                                                "name": "Combat",
+                                                                                "amount": 1,
+                                                                                "negate": false
+                                                                            }
+                                                                        },
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "damage",
+                                                                                "name": "NormalDamage",
+                                                                                "amount": 100,
+                                                                                "negate": false
+                                                                            }
+                                                                        }
+                                                                    ]
                                                                 }
                                                             }
                                                         ]
@@ -5719,66 +5969,6 @@
                                     {
                                         "type": "template",
                                         "data": "Can Break Single Bomb Blocks"
-                                    },
-                                    {
-                                        "type": "and",
-                                        "data": {
-                                            "comment": null,
-                                            "items": [
-                                                {
-                                                    "type": "resource",
-                                                    "data": {
-                                                        "type": "items",
-                                                        "name": "SpeedBooster",
-                                                        "amount": 1,
-                                                        "negate": false
-                                                    }
-                                                },
-                                                {
-                                                    "type": "or",
-                                                    "data": {
-                                                        "comment": null,
-                                                        "items": [
-                                                            {
-                                                                "type": "and",
-                                                                "data": {
-                                                                    "comment": null,
-                                                                    "items": [
-                                                                        {
-                                                                            "type": "resource",
-                                                                            "data": {
-                                                                                "type": "items",
-                                                                                "name": "HighJump",
-                                                                                "amount": 1,
-                                                                                "negate": false
-                                                                            }
-                                                                        },
-                                                                        {
-                                                                            "type": "resource",
-                                                                            "data": {
-                                                                                "type": "tricks",
-                                                                                "name": "ShinesparkTrick",
-                                                                                "amount": 2,
-                                                                                "negate": false
-                                                                            }
-                                                                        }
-                                                                    ]
-                                                                }
-                                                            },
-                                                            {
-                                                                "type": "resource",
-                                                                "data": {
-                                                                    "type": "tricks",
-                                                                    "name": "ShinesparkTrick",
-                                                                    "amount": 3,
-                                                                    "negate": false
-                                                                }
-                                                            }
-                                                        ]
-                                                    }
-                                                }
-                                            ]
-                                        }
                                     }
                                 ]
                             }
@@ -5838,15 +6028,44 @@
                         "Door to Red Tower": {
                             "type": "and",
                             "data": {
-                                "comment": "TODO: cant you use the frozen enemy?",
+                                "comment": null,
                                 "items": [
                                     {
                                         "type": "template",
                                         "data": "Can Use Power Bombs"
                                     },
                                     {
-                                        "type": "template",
-                                        "data": "Can climb High Jump Wall"
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can climb High Jump Wall"
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "template",
+                                                                "data": "Can Use Bombs"
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "JBJ",
+                                                                    "amount": 4,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
@@ -5886,7 +6105,7 @@
                         "Pickup (Power Bomb Tank)": {
                             "type": "and",
                             "data": {
-                                "comment": "TODO: do some shenanigans with mid air morph and bombs?",
+                                "comment": null,
                                 "items": [
                                     {
                                         "type": "template",
@@ -5904,6 +6123,27 @@
                                                 {
                                                     "type": "template",
                                                     "data": "Can Freeze Enemies"
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "template",
+                                                                "data": "Can Use Bombs"
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "JBJ",
+                                                                    "amount": 4,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
                                                 }
                                             ]
                                         }
@@ -6420,20 +6660,11 @@
                         "Door to Red Tower": {
                             "type": "or",
                             "data": {
-                                "comment": "TODO: template",
+                                "comment": null,
                                 "items": [
                                     {
                                         "type": "template",
-                                        "data": "Can Use Any Bombs"
-                                    },
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "ScrewAttack",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
+                                        "data": "Can Break Single Bomb Blocks"
                                     }
                                 ]
                             }
@@ -6441,7 +6672,7 @@
                         "Door to Sova Processing (Upper)": {
                             "type": "or",
                             "data": {
-                                "comment": "TODO: this freezing enemy should probably have a trick?",
+                                "comment": null,
                                 "items": [
                                     {
                                         "type": "resource",
@@ -6467,8 +6698,37 @@
                                                     }
                                                 },
                                                 {
-                                                    "type": "template",
-                                                    "data": "Can Freeze Enemies"
+                                                    "type": "or",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "template",
+                                                                "data": "Can Freeze Enemies"
+                                                            },
+                                                            {
+                                                                "type": "and",
+                                                                "data": {
+                                                                    "comment": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "template",
+                                                                            "data": "Can Use Bombs"
+                                                                        },
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "tricks",
+                                                                                "name": "JBJ",
+                                                                                "amount": 4,
+                                                                                "negate": false
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
                                                 }
                                             ]
                                         }
@@ -6511,35 +6771,18 @@
                         "Pickup (Hidden Missile Tank)": {
                             "type": "and",
                             "data": {
-                                "comment": "TODO: can you unveil this with only beam?",
-                                "items": [
-                                    {
-                                        "type": "and",
-                                        "data": {
-                                            "comment": null,
-                                            "items": []
-                                        }
-                                    }
-                                ]
+                                "comment": null,
+                                "items": []
                             }
                         },
                         "Door to Sova Processing (Lower)": {
                             "type": "or",
                             "data": {
-                                "comment": "TODO: template for htis",
+                                "comment": null,
                                 "items": [
                                     {
                                         "type": "template",
-                                        "data": "Can Use Any Bombs"
-                                    },
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "ScrewAttack",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
+                                        "data": "Can Break Single Bomb Blocks"
                                     }
                                 ]
                             }
@@ -6903,16 +7146,8 @@
                         "Other to Deserted Runway": {
                             "type": "and",
                             "data": {
-                                "comment": "TODO: trivial to destroy sidehoppers?",
-                                "items": [
-                                    {
-                                        "type": "and",
-                                        "data": {
-                                            "comment": null,
-                                            "items": []
-                                        }
-                                    }
-                                ]
+                                "comment": null,
+                                "items": []
                             }
                         }
                     }
@@ -6950,16 +7185,8 @@
                         "Door to Garbage Chute": {
                             "type": "and",
                             "data": {
-                                "comment": "TODO: trivial to destroy sidehoppers?",
-                                "items": [
-                                    {
-                                        "type": "and",
-                                        "data": {
-                                            "comment": null,
-                                            "items": []
-                                        }
-                                    }
-                                ]
+                                "comment": null,
+                                "items": []
                             }
                         }
                     }
@@ -7039,16 +7266,58 @@
                         "Pickup (Hidden Power Bomb Tank)": {
                             "type": "or",
                             "data": {
-                                "comment": "TODO: mid air morph and similar things?",
+                                "comment": null,
                                 "items": [
                                     {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Use Bombs"
+                                                },
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Use Springball"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
                                         "type": "template",
-                                        "data": "Can Use Any Bombs"
+                                        "data": "Can Use Power Bombs"
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "ScrewAttack",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Knowledge",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 ]
                             }
                         },
-                        "Other to Connection to Sector 3 (PYR)": {
+                        "Area Transition to Sector 5 (ARC)": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -7057,7 +7326,7 @@
                         }
                     }
                 },
-                "Other to Connection to Sector 3 (PYR)": {
+                "Area Transition to Sector 5 (ARC)": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -7075,11 +7344,11 @@
                         ]
                     },
                     "valid_starting_location": false,
-                    "dock_type": "Other",
+                    "dock_type": "area_transition",
                     "default_connection": {
                         "region": "Sector 5 (ARC)",
                         "area": "Connection to Sector 3 (PYR)",
-                        "node": "Other to Connection to Sector 5 (ARC)"
+                        "node": "Area Transition to Sector 3 (PYR)"
                     },
                     "default_dock_weakness": "Open Passage",
                     "exclude_from_dock_rando": false,
@@ -7137,7 +7406,7 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Other to Connection to Sector 3 (PYR)": {
+                        "Area Transition to Sector 1 (SRX)": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -7146,7 +7415,7 @@
                         }
                     }
                 },
-                "Other to Connection to Sector 3 (PYR)": {
+                "Area Transition to Sector 1 (SRX)": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -7164,11 +7433,11 @@
                         ]
                     },
                     "valid_starting_location": false,
-                    "dock_type": "Other",
+                    "dock_type": "area_transition",
                     "default_connection": {
                         "region": "Sector 1 (SRX)",
                         "area": "Connection to Sector 3 (PYR)",
-                        "node": "Other to Connection to Sector 1 (SRX)"
+                        "node": "Area Transition to Sector 3 (PYR)"
                     },
                     "default_dock_weakness": "Open Passage",
                     "exclude_from_dock_rando": false,

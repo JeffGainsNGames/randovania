@@ -337,7 +337,7 @@
             },
             "Movement": {
                 "long_name": "Movement",
-                "description": "",
+                "description": "The player may be expected to use unique movement to traverse a room or complete an action.",
                 "extra": {}
             },
             "ShinesparkTrick": {
@@ -378,6 +378,16 @@
             "MidAirMorph": {
                 "long_name": "Mid-Air Morph",
                 "description": "The player may be expected to morph mid-air to access tunnels without Bombs or Spring Ball.",
+                "extra": {}
+            },
+            "JumpExtends": {
+                "long_name": "Jump Extends",
+                "description": "The player may be expected to extend their jump horizontally by re-spinning multiple times to traverse a room.",
+                "extra": {}
+            },
+            "DamageBoosts": {
+                "long_name": "Damage Boosts",
+                "description": "The player may be expected to take intentional damage from an enemy to traverse a room or complete an action.",
                 "extra": {}
             }
         },
@@ -912,7 +922,7 @@
                 }
             },
             "Can Screw Single Walljump": {
-                "display_name": "Can Screw Single Walljump",
+                "display_name": "Can Single Walljump",
                 "requirement": {
                     "type": "and",
                     "data": {
@@ -1573,13 +1583,28 @@
         "Knowledge": [
             1,
             2,
+            3,
             4
         ],
-        "HeatRuns": [
+        "MidAirMorph": [
             1,
-            2
+            2,
+            3,
+            4
+        ],
+        "DamageBoosts": [
+            1,
+            2,
+            3,
+            4
         ],
         "StandOnFrozenEnemies": [
+            1,
+            2,
+            3,
+            5
+        ],
+        "HeatRuns": [
             1,
             2
         ],
@@ -1594,7 +1619,7 @@
             4,
             5
         ],
-        "MidAirMorph": [
+        "JumpExtends": [
             3
         ]
     },

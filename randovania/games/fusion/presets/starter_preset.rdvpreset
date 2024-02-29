@@ -62,7 +62,7 @@
                 "Power Bomb Launcher": {
                     "num_shuffled_pickups": 1,
                     "included_ammo": [
-                        2
+                        10
                     ]
                 },
                 "Hi-Jump Boots": {
@@ -117,7 +117,7 @@
                 },
                 "Power Bomb Expansion": {
                     "ammo_count": [
-                        5
+                        2
                     ],
                     "pickup_count": 30,
                     "requires_main_item": true
@@ -129,8 +129,8 @@
         "pickup_model_data_source": "etm",
         "logical_resource_action": "randomly",
         "first_progression_must_be_local": false,
-        "minimum_available_locations_for_hint_placement": 0,
-        "minimum_location_weight_for_hint_placement": 0.0,
+        "minimum_available_locations_for_hint_placement": 5,
+        "minimum_location_weight_for_hint_placement": 0.1,
         "dock_rando": {
             "mode": "vanilla",
             "types_state": {

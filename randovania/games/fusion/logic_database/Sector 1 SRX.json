@@ -283,16 +283,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 153.27257505083125,
-                        "y": 85.82131324004305,
+                        "x": 153.27,
+                        "y": 85.82,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 9,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Entrance Navigation Room": {
                             "type": "and",
@@ -782,15 +785,6 @@
                                                                                 "amount": 3,
                                                                                 "negate": false
                                                                             }
-                                                                        },
-                                                                        {
-                                                                            "type": "resource",
-                                                                            "data": {
-                                                                                "type": "tricks",
-                                                                                "name": "WallJump",
-                                                                                "amount": 2,
-                                                                                "negate": false
-                                                                            }
                                                                         }
                                                                     ]
                                                                 }
@@ -899,7 +893,7 @@
                     },
                     "valid_starting_location": false,
                     "pickup_index": 13,
-                    "location_category": "minor",
+                    "location_category": "major",
                     "connections": {
                         "Door to Atmospheric Stabilizer Northwest": {
                             "type": "or",
@@ -2591,10 +2585,6 @@
                                 "comment": null,
                                 "items": [
                                     {
-                                        "type": "template",
-                                        "data": "Can Kill Geron"
-                                    },
-                                    {
                                         "type": "resource",
                                         "data": {
                                             "type": "items",
@@ -2712,6 +2702,53 @@
                                                         "name": "Missiles",
                                                         "amount": 1,
                                                         "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "Missiles",
+                                            "amount": 5,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "ScrewAttack",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Knowledge",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "or",
+                                                    "data": {
+                                                        "comment": "Add SSWJ",
+                                                        "items": [
+                                                            {
+                                                                "type": "template",
+                                                                "data": "Can climb High Jump Wall"
+                                                            }
+                                                        ]
                                                     }
                                                 }
                                             ]
@@ -3772,8 +3809,11 @@
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 10,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Tourian Central Hub": {
                             "type": "and",
@@ -5029,16 +5069,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 135.30778180078505,
-                        "y": 72.33532309097433,
+                        "x": 135.31,
+                        "y": 72.34,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 8,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Tourian Hub West": {
                             "type": "and",
@@ -6028,7 +6071,7 @@
                     },
                     "valid_starting_location": false,
                     "pickup_index": 17,
-                    "location_category": "minor",
+                    "location_category": "major",
                     "connections": {
                         "Door to Elevator to Restricted Zone": {
                             "type": "and",
@@ -7044,16 +7087,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 167.08910417414185,
-                        "y": 76.36789857672525,
+                        "x": 167.09,
+                        "y": 76.37,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 10,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Short Shaft": {
                             "type": "and",
@@ -7984,7 +8030,7 @@
                     },
                     "valid_starting_location": false,
                     "pickup_index": 19,
-                    "location_category": "minor",
+                    "location_category": "major",
                     "connections": {
                         "Arena": {
                             "type": "and",
@@ -8533,16 +8579,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 137.77777777777777,
-                        "y": 77.62962962962962,
+                        "x": 137.78,
+                        "y": 77.63,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 8,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Hornoad Housing": {
                             "type": "and",

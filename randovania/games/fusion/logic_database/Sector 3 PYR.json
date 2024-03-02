@@ -1964,32 +1964,91 @@
                     "valid_starting_location": false,
                     "connections": {
                         "Pickup (Hidden Energy Tank)": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
                                 "comment": null,
                                 "items": [
                                     {
-                                        "type": "or",
+                                        "type": "and",
                                         "data": {
-                                            "comment": "TODO: space jump requires mid air morph if you have bombs. this whole block should probably get refacted a bit",
+                                            "comment": "Use Pillar to Morph Ball Jump and place a Bomb",
                                             "items": [
                                                 {
                                                     "type": "template",
-                                                    "data": "Can Activate Pillar"
+                                                    "data": "Can Use Bombs"
                                                 },
+                                                {
+                                                    "type": "or",
+                                                    "data": {
+                                                        "comment": "Bomb Jump is harder",
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Movement",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "template",
+                                                                "data": "Can Use Springball"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "or",
+                                                    "data": {
+                                                        "comment": "Pillar is hidden information, most players may not even know it exists unless you Power Bomb the room",
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Knowledge",
+                                                                    "amount": 2,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "template",
+                                                                "data": "Can Use Power Bombs"
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": "Alternate - Screw Attack and some extra Jump height (knowledge)",
+                                            "items": [
                                                 {
                                                     "type": "resource",
                                                     "data": {
                                                         "type": "items",
-                                                        "name": "SpaceJump",
+                                                        "name": "ScrewAttack",
                                                         "amount": 1,
                                                         "negate": false
                                                     }
                                                 },
                                                 {
-                                                    "type": "and",
+                                                    "type": "resource",
                                                     "data": {
-                                                        "comment": "TODO: how is this supposed to be done if you have screw?",
+                                                        "type": "tricks",
+                                                        "name": "Knowledge",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "or",
+                                                    "data": {
+                                                        "comment": null,
                                                         "items": [
                                                             {
                                                                 "type": "resource",
@@ -2003,8 +2062,8 @@
                                                             {
                                                                 "type": "resource",
                                                                 "data": {
-                                                                    "type": "tricks",
-                                                                    "name": "WallJump",
+                                                                    "type": "items",
+                                                                    "name": "SpaceJump",
                                                                     "amount": 1,
                                                                     "negate": false
                                                                 }
@@ -2014,10 +2073,6 @@
                                                 }
                                             ]
                                         }
-                                    },
-                                    {
-                                        "type": "template",
-                                        "data": "Can Break Single Bomb Blocks"
                                     }
                                 ]
                             }
@@ -3709,7 +3764,7 @@
                         "Door to Main Boiler Control Room": {
                             "type": "and",
                             "data": {
-                                "comment": "TODO: varia suit?",
+                                "comment": null,
                                 "items": [
                                     {
                                         "type": "template",
@@ -5150,25 +5205,8 @@
                                     {
                                         "type": "and",
                                         "data": {
-                                            "comment": "TODO: Heat dmg",
+                                            "comment": null,
                                             "items": [
-                                                {
-                                                    "type": "or",
-                                                    "data": {
-                                                        "comment": "Heat DMG",
-                                                        "items": [
-                                                            {
-                                                                "type": "resource",
-                                                                "data": {
-                                                                    "type": "items",
-                                                                    "name": "VariaSuit",
-                                                                    "amount": 1,
-                                                                    "negate": false
-                                                                }
-                                                            }
-                                                        ]
-                                                    }
-                                                },
                                                 {
                                                     "type": "or",
                                                     "data": {

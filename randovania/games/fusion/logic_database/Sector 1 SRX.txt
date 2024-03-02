@@ -1201,7 +1201,7 @@ Extra - room_id: [37]
               # Speed Boosting from Hornoad Housing
               Speed Booster and Disabled Door Lock Rando and Disabled Entrance Rando
               # Need Any Beam except Normal to kill the Hornoads fast enough
-              Charge Beam or Ice Beam or Plasma Beam or Wave Beam or Wide Beam
+              Have Any Beam Upgrade
               # Knowledge because breaking Bomb Blocks with Speed Booster is a bit obscure
               Knowledge (Intermediate)
 

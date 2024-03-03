@@ -333,7 +333,7 @@ Extra - room_id: [8]
       Any of the following:
           All of the following:
               # Use Pillar to Morph Ball Jump and place a Bomb
-              Can Use Any Bombs
+              Can Activate Pillar
               Any of the following:
                   Can Use Springball
                   # Bomb Jump is harder

@@ -669,13 +669,13 @@ Extra - room_id: [19]
   * Extra - door_idx: (78,)
   > Beside Lava
       All of the following:
-          Screw Attack
+          Gravity Suit and Screw Attack
           Any of the following:
               # Heat Run logic (need Gravity to do Screw Attack in the lava)
               # Gravity - Lava and Heat Damage
-              Gravity Suit and Damage Runs (Intermediate) and Lava Damage ≥ 110
+              Damage Runs (Intermediate) and Lava Damage ≥ 110
               # Varia and Gravity - No Damage
-              Gravity Suit and Varia Suit
+              Varia Suit
 
 > Beside Pickups; Heals? False
   * Layers: default
@@ -698,13 +698,13 @@ Extra - room_id: [19]
           Damage Runs (Beginner) and Heat Damage ≥ 5
   > Door to Garbage Chute
       All of the following:
-          Screw Attack
+          Gravity Suit and Screw Attack
           Any of the following:
               # Heat Run logic (need Gravity to do Screw Attack in the lava)
               # Gravity - Lava and Heat Damage
-              Gravity Suit and Damage Runs (Intermediate) and Lava Damage ≥ 110
+              Damage Runs (Intermediate) and Lava Damage ≥ 110
               # Varia and Gravity - No Damage
-              Gravity Suit and Varia Suit
+              Varia Suit
   > Beside Pickups
       All of the following:
           Morph Ball

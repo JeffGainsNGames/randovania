@@ -333,15 +333,13 @@ Extra - room_id: [8]
       Any of the following:
           All of the following:
               # Use Pillar to Morph Ball Jump and place a Bomb
-              Can Use Bombs
-              # Bomb Jump is harder
-              Movement (Beginner) or Can Use Springball
-              # Pillar is hidden information, most players may not even know it exists unless you Power Bomb the room
-              Knowledge (Intermediate) or Can Use Power Bombs
-          All of the following:
-              # Alternate - Screw Attack and some extra Jump height (knowledge)
-              Screw Attack and Knowledge (Beginner)
-              High Jump or Space Jump
+              Can Use Any Bombs
+              Any of the following:
+                  Can Use Springball
+                  # Bomb Jump is harder
+                  Movement (Beginner) and Can Use Bombs
+          # Alternate - Screw Attack and some extra Jump height (knowledge)
+          Screw Attack and Knowledge (Beginner) and Can climb High Jump Wall
   > Other to Entrance Hub
       Any of the following:
           Can Use Power Bombs

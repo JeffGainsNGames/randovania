@@ -661,7 +661,9 @@ Extra - room_id: [19]
   * L0 Hatch to Processing Access/Door to Sova Processing (Upper)
   * Extra - door_idx: (75,)
   > Beside Lava
-      Varia Suit or Heat Damage ≥ 5
+      Any of the following:
+          Varia Suit
+          Damage Runs (Beginner) and Heat Damage ≥ 5
 
 > Door to Garbage Chute; Heals? False
   * Layers: default
@@ -1180,7 +1182,7 @@ Extra - room_id: [35]
   > Door to Sova Processing
       Any of the following:
           Varia Suit
-          Damage Runs (Intermediate) and Heat Damage ≥ 45
+          Damage Runs (Intermediate) and Lava Damage ≥ 45
   > Beside Pickup
       All of the following:
           Speed Booster

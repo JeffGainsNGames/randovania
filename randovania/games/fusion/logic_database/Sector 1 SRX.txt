@@ -304,11 +304,10 @@ Extra - room_id: [9]
               Any of the following:
                   # Missiles can be used to damage the Geron from the wrong side, but only by getting too close
                   All of the following:
-                      Knowledge (Intermediate)
+                      Knowledge (Intermediate) and Normal Damage ≥ 30
                       Any of the following:
-                          Damage Boosts (Intermediate) and Normal Damage ≥ 90 and 10 DMG Missiles
-                          Damage Boosts (Intermediate) and Normal Damage ≥ 60 and 20 DMG Missiles
-                          Damage Boosts (Beginner) and Normal Damage ≥ 30 and 30 DMG Missiles
+                          Damage Boosts (Intermediate) and 10 DMG Missiles
+                          Damage Boosts (Beginner) and 30 DMG Missiles
               All of the following:
                   # Alternate methods of defeating the Geron
                   Knowledge (Beginner)
@@ -483,7 +482,7 @@ Extra - room_id: [15]
           All of the following:
               # Shinespark from Screw Shaft - https://youtu.be/IP4zjb-1kP4
               Speed Booster and Knowledge (Beginner) and Shinespark Tricks (Advanced) and Disabled Door Lock Rando
-              High Jump or Space Jump or Wall Jump (Advanced)
+              Wall Jump (Advanced) or Can climb High Jump Wall
           # Farm X to kill with only 1 Missile
           Missiles and Combat (Beginner)
 
@@ -1186,7 +1185,7 @@ Extra - room_id: [37]
   * L0 Hatch to Sciser Playground/Door to Charge Core Arena Access
   * Extra - door_idx: (25,)
   > Door to Hornoad Housing
-      Morph Ball
+      Morph Ball or Can Break Single Bomb Blocks
 
 > Door to Hornoad Housing; Heals? False
   * Layers: default

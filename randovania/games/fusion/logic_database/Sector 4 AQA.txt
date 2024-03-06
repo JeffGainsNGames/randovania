@@ -45,8 +45,10 @@ Extra - room_id: [1]
   > Save Station
       Trivial
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 9
+  * Extra - Y: 10
   > Door to Entrance Navigation Room
       Trivial
 
@@ -360,7 +362,7 @@ Extra - map_name: Sector 410
 Extra - room_id: [10]
 > Pickup (Energy Tank); Heals? False
   * Layers: default
-  * Pickup 59; Category? Minor
+  * Pickup 59; Category? Major
   * Extra - area: 4
   * Extra - room: 10
   * Extra - blockx: 12
@@ -406,8 +408,10 @@ Extra - room_id: [11]
   > Save Station
       Trivial
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 10
+  * Extra - Y: 10
   > Door to Serris Escape
       Trivial
 
@@ -582,7 +586,12 @@ Extra - room_id: [15]
   * L0 Hatch to Aquarium Shaft West/Door to Worst Room in the Game
   * Extra - door_idx: (35,)
   > Pickup (Missile Tank)
-      Trivial
+      Any of the following:
+          Missiles ≥ 10 or Combat (Advanced)
+          Charge Beam and Have Any Beam Upgrade
+          Gravity Suit and Screw Attack
+          Power Bombs ≥ 2 and Can Use Power Bombs
+          Damage Boosts (Advanced) and Normal Damage ≥ 150
 
 ----------------
 Evir Shaft
@@ -852,8 +861,10 @@ Extra - room_id: [22]
   > Door to Pump Control Access
       Morph Ball
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 10
+  * Extra - Y: 10
   > Door to Pump Control Access
       Trivial
 
@@ -949,8 +960,12 @@ Extra - room_id: [24]
   > Door to Aquarium Shaft West
       Trivial
   > Other to Security Bypass
-      # Two block height in tube prevents screw attack from working here
-      Missiles and Can Use Any Bombs
+      All of the following:
+          Missiles
+          Any of the following:
+              Can Use Any Bombs
+              # You can Screw Attack these blocks
+              Gravity Suit and Screw Attack and Knowledge (Beginner)
 
 > Door to Aquarium Shaft West; Heals? False
   * Layers: default
@@ -1200,8 +1215,10 @@ Extra - room_id: [32]
   > Save Station
       Trivial
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 8
+  * Extra - Y: 10
   > Door to Bridge Access
       Trivial
 
@@ -1549,8 +1566,10 @@ Extra - room_id: [39]
   > Save Station
       Trivial
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 10
+  * Extra - Y: 10
   > Door to Aquarium Shaft West
       Trivial
 
@@ -1586,7 +1605,7 @@ Extra - map_name: Sector 441
 Extra - room_id: [41]
 > Pickup (Hidden Energy Tank); Heals? False
   * Layers: default
-  * Pickup 71; Category? Minor
+  * Pickup 71; Category? Major
   * Extra - area: 4
   * Extra - room: 41
   * Extra - blockx: 15
@@ -1747,8 +1766,10 @@ Extra - room_id: [47]
   > Save Station
       Trivial
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 10
+  * Extra - Y: 10
   > Door to Aquarium Hub
       Trivial
 

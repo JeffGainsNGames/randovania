@@ -327,6 +327,22 @@
             "Cooling": {
                 "long_name": "Cooling Unit Operational",
                 "extra": {}
+            },
+            "MainDeckPBGeron": {
+                "long_name": "Main Deck PB Geron",
+                "extra": {}
+            },
+            "S1MissileBlock": {
+                "long_name": "Sector 1 Charge Core Escape Missile Block",
+                "extra": {}
+            },
+            "S1MissileGeron": {
+                "long_name": "Sector 1 Yameba Corridor Missile Geron",
+                "extra": {}
+            },
+            "S1ShotBlock": {
+                "long_name": "Sector 1 Save Room East Shot Block",
+                "extra": {}
             }
         },
         "tricks": {
@@ -1341,6 +1357,166 @@
                         ]
                     }
                 }
+            },
+            "Have Any Beam Upgrade": {
+                "display_name": "Have Any Beam Upgrade",
+                "requirement": {
+                    "type": "or",
+                    "data": {
+                        "comment": null,
+                        "items": [
+                            {
+                                "type": "resource",
+                                "data": {
+                                    "type": "items",
+                                    "name": "ChargeBeam",
+                                    "amount": 1,
+                                    "negate": false
+                                }
+                            },
+                            {
+                                "type": "resource",
+                                "data": {
+                                    "type": "items",
+                                    "name": "WideBeam",
+                                    "amount": 1,
+                                    "negate": false
+                                }
+                            },
+                            {
+                                "type": "resource",
+                                "data": {
+                                    "type": "items",
+                                    "name": "PlasmaBeam",
+                                    "amount": 1,
+                                    "negate": false
+                                }
+                            },
+                            {
+                                "type": "resource",
+                                "data": {
+                                    "type": "items",
+                                    "name": "WaveBeam",
+                                    "amount": 1,
+                                    "negate": false
+                                }
+                            },
+                            {
+                                "type": "resource",
+                                "data": {
+                                    "type": "items",
+                                    "name": "IceBeam",
+                                    "amount": 1,
+                                    "negate": false
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "Can Kill Tough Beam-Weak Enemy": {
+                "display_name": "Can Kill Tough Beam-Weak Enemy",
+                "requirement": {
+                    "type": "or",
+                    "data": {
+                        "comment": null,
+                        "items": [
+                            {
+                                "type": "template",
+                                "data": "Have Any Beam Upgrade"
+                            },
+                            {
+                                "type": "template",
+                                "data": "Can Use Power Bombs"
+                            },
+                            {
+                                "type": "resource",
+                                "data": {
+                                    "type": "tricks",
+                                    "name": "Combat",
+                                    "amount": 2,
+                                    "negate": false
+                                }
+                            },
+                            {
+                                "type": "resource",
+                                "data": {
+                                    "type": "items",
+                                    "name": "Missiles",
+                                    "amount": 5,
+                                    "negate": false
+                                }
+                            },
+                            {
+                                "type": "resource",
+                                "data": {
+                                    "type": "items",
+                                    "name": "ScrewAttack",
+                                    "amount": 1,
+                                    "negate": false
+                                }
+                            },
+                            {
+                                "type": "template",
+                                "data": "Can Freeze Enemies"
+                            }
+                        ]
+                    }
+                }
+            },
+            "Can Kill Tough Beam-Resistant Enemy": {
+                "display_name": "Can Kill Tough Beam-Resistant Enemy",
+                "requirement": {
+                    "type": "or",
+                    "data": {
+                        "comment": null,
+                        "items": [
+                            {
+                                "type": "and",
+                                "data": {
+                                    "comment": null,
+                                    "items": [
+                                        {
+                                            "type": "resource",
+                                            "data": {
+                                                "type": "items",
+                                                "name": "ChargeBeam",
+                                                "amount": 1,
+                                                "negate": false
+                                            }
+                                        },
+                                        {
+                                            "type": "template",
+                                            "data": "Have Any Beam Upgrade"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "resource",
+                                "data": {
+                                    "type": "items",
+                                    "name": "Missiles",
+                                    "amount": 10,
+                                    "negate": false
+                                }
+                            },
+                            {
+                                "type": "resource",
+                                "data": {
+                                    "type": "items",
+                                    "name": "ScrewAttack",
+                                    "amount": 1,
+                                    "negate": false
+                                }
+                            },
+                            {
+                                "type": "template",
+                                "data": "Can Use Power Bombs"
+                            }
+                        ]
+                    }
+                }
             }
         },
         "damage_reductions": [],
@@ -1586,12 +1762,6 @@
             3,
             4
         ],
-        "MidAirMorph": [
-            1,
-            2,
-            3,
-            4
-        ],
         "DamageBoosts": [
             1,
             2,
@@ -1607,6 +1777,12 @@
         "HeatRuns": [
             1,
             2
+        ],
+        "MidAirMorph": [
+            1,
+            2,
+            3,
+            4
         ],
         "JBJ": [
             3,

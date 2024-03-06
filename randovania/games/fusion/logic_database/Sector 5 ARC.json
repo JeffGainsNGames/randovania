@@ -337,16 +337,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 151.09925925925927,
-                        "y": 71.24148148148149,
+                        "x": 151.1,
+                        "y": 71.24,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 9,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Entrance Navigation Room": {
                             "type": "and",
@@ -1549,6 +1552,10 @@
                                                 }
                                             ]
                                         }
+                                    },
+                                    {
+                                        "type": "template",
+                                        "data": "Can Kill PB Geron"
                                     }
                                 ]
                             }
@@ -1586,7 +1593,7 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Arctic Containment": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
                                 "comment": "TODO: varia / damage runs",
                                 "items": [
@@ -1598,6 +1605,10 @@
                                             "amount": 1,
                                             "negate": false
                                         }
+                                    },
+                                    {
+                                        "type": "template",
+                                        "data": "Can Kill PB Geron"
                                     }
                                 ]
                             }
@@ -2057,7 +2068,7 @@
                     },
                     "valid_starting_location": false,
                     "pickup_index": 75,
-                    "location_category": "minor",
+                    "location_category": "major",
                     "connections": {
                         "Door to Frozen Tower": {
                             "type": "or",
@@ -2439,7 +2450,7 @@
                     },
                     "valid_starting_location": false,
                     "pickup_index": 76,
-                    "location_category": "minor",
+                    "location_category": "major",
                     "connections": {
                         "Other to Flooded Tower": {
                             "type": "and",
@@ -5205,15 +5216,18 @@
                     "heal": false,
                     "coordinates": {
                         "x": 152.0,
-                        "y": 71.69185185185185,
+                        "y": 71.69,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 9,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Security Shaft West": {
                             "type": "and",
@@ -5802,7 +5816,7 @@
                     },
                     "valid_starting_location": false,
                     "pickup_index": 83,
-                    "location_category": "minor",
+                    "location_category": "major",
                     "connections": {
                         "Other to Nightmare Arena": {
                             "type": "and",
@@ -6662,16 +6676,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 151.652491998171,
-                        "y": 70.82030178326474,
+                        "x": 151.65,
+                        "y": 70.82,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 9,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Groznyj Shaft": {
                             "type": "and",
@@ -7560,7 +7577,7 @@
                                         "data": {
                                             "type": "damage",
                                             "name": "NormalDamage",
-                                            "amount": 100,
+                                            "amount": 190,
                                             "negate": false
                                         }
                                     },
@@ -7589,6 +7606,19 @@
                                                 }
                                             ]
                                         }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "Missiles",
+                                            "amount": 10,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "template",
+                                        "data": "Can Use Power Bombs"
                                     }
                                 ]
                             }
@@ -7653,7 +7683,7 @@
                                         "data": {
                                             "type": "damage",
                                             "name": "NormalDamage",
-                                            "amount": 100,
+                                            "amount": 190,
                                             "negate": false
                                         }
                                     },
@@ -7682,15 +7712,95 @@
                                                 }
                                             ]
                                         }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "Missiles",
+                                            "amount": 10,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "template",
+                                        "data": "Can Use Power Bombs"
                                     }
                                 ]
                             }
                         },
                         "Door to Flooded Access": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
                                 "comment": null,
-                                "items": []
+                                "items": [
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "GravitySuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "ScrewAttack",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "ChargeBeam",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "Missiles",
+                                            "amount": 10,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "tricks",
+                                            "name": "Combat",
+                                            "amount": 2,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "template",
+                                        "data": "Can Use Power Bombs"
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "damage",
+                                            "name": "NormalDamage",
+                                            "amount": 95,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
@@ -7726,10 +7836,77 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Door to Flooded Airlock to Sector 4 (AQA)": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
                                 "comment": null,
-                                "items": []
+                                "items": [
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "GravitySuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "ScrewAttack",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "ChargeBeam",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "Missiles",
+                                            "amount": 10,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "template",
+                                        "data": "Can Use Power Bombs"
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "tricks",
+                                            "name": "Combat",
+                                            "amount": 2,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "damage",
+                                            "name": "NormalDamage",
+                                            "amount": 95,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
@@ -7948,16 +8125,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 167.31259259259258,
-                        "y": 70.34074074074076,
+                        "x": 167.31,
+                        "y": 70.34,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 10,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Nightmare Hub West": {
                             "type": "and",
@@ -8123,6 +8303,45 @@
                                             "name": "EntranceRando",
                                             "amount": 1,
                                             "negate": true
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": "Some way to kill the pirates",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "ChargeBeam",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "Missiles",
+                                                        "amount": 10,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "ScrewAttack",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Use Power Bombs"
+                                                }
+                                            ]
                                         }
                                     }
                                 ]

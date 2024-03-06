@@ -83,8 +83,10 @@ Extra - room_id: [1]
   > Save Station
       Trivial
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 9
+  * Extra - Y: 10
   > Door to Entrance Navigation Room
       Trivial
 
@@ -500,8 +502,10 @@ Extra - room_id: [16]
   > Save Station
       Trivial
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 10
+  * Extra - Y: 10
   > Door to Southern Save Access
       Trivial
 
@@ -511,7 +515,7 @@ Extra - map_name: Sector 217
 Extra - room_id: [17]
 > Pickup (Energy Tank); Heals? False
   * Layers: default
-  * Pickup 28; Category? Minor
+  * Pickup 28; Category? Major
   * Extra - area: 2
   * Extra - room: 17
   * Extra - blockx: 44
@@ -653,7 +657,7 @@ Extra - room_id: [20, 34]
   * Open Hatch to Eastern Shaft/Door to Nettori Access
   * Extra - door_idx: (46, 76)
   > Door to Shooting Gallery
-      Trivial
+      Can Kill Tough Beam-Weak Enemy
   > Door to Nettori Arena
       All of the following:
           Can Kill Eye Door
@@ -664,7 +668,7 @@ Extra - room_id: [20, 34]
   * L0 Hatch to Shooting Gallery/Door to Nettori Access
   * Extra - door_idx: (47, 75)
   > Door to Eastern Shaft
-      Trivial
+      Can Kill Tough Beam-Weak Enemy
 
 > Door to Nettori Arena; Heals? False
   * Layers: default
@@ -679,7 +683,7 @@ Extra - map_name: Sector 221
 Extra - room_id: [21]
 > Pickup (Hidden Energy Tank); Heals? False
   * Layers: default
-  * Pickup 29; Category? Minor
+  * Pickup 29; Category? Major
   * Extra - area: 2
   * Extra - room: 21
   * Extra - blockx: 29
@@ -767,14 +771,14 @@ Extra - room_id: [23]
   * L0 Hatch to Eastern Shaft/Door to Kihunter Hallway
   * Extra - door_idx: (52,)
   > Other to Entrance Hub
-      Trivial
+      Space Jump or Can Kill Tough Beam-Weak Enemy
 
 > Other to Entrance Hub; Heals? False
   * Layers: default
   * Tunnel to Entrance Hub/Other to Kihunter Hallway
   * Extra - door_idx: (53,)
   > Door to Eastern Shaft
-      Trivial
+      Space Jump or Can Kill Tough Beam-Weak Enemy
 
 ----------------
 Overgrown Entrance
@@ -1025,7 +1029,7 @@ Extra - room_id: [32, 35]
   > Other to Hidden Recharge Room
       Morph Ball
   > Door to Nettori Save Room
-      Trivial
+      Can Kill Tough Beam-Weak Enemy
 
 > Door to Collapsed Shaft; Heals? False
   * Layers: default
@@ -1066,13 +1070,17 @@ Extra - room_id: [32, 35]
   > Door to Nettori Access
       Trivial
   > Door to Kihunter Hallway
-      Any of the following:
-          Space Jump
-          All of the following:
-              High Jump
-              Any of the following:
-                  Wall Jump (Intermediate)
-                  Stand On Frozen Enemies (Intermediate) and Can Freeze Enemies
+      All of the following:
+          Any of the following:
+              # Movement Requirements
+              Space Jump
+              All of the following:
+                  High Jump
+                  Any of the following:
+                      Wall Jump (Beginner)
+                      Stand On Frozen Enemies (Beginner) and Can Freeze Enemies
+          # Weapon Requirements
+          Can Kill Tough Beam-Weak Enemy
   > Door to Collapsed Shaft
       After Nettori
 
@@ -1098,7 +1106,8 @@ Extra - room_id: [33]
       Any of the following:
           High Jump or Screw Attack or Space Jump or Can Freeze Enemies
           # Kago Jump
-          Damage Boosts (Expert) and Wall Jump (Expert) and Normal Damage ≥ 40
+          Damage Boosts (Expert) and Wall Jump (Expert) and Normal Damage ≥ 35
+          # Shinespark from entrance rooms
           Speed Booster and Shinespark Tricks (Beginner) and Disabled Door Lock Rando and Disabled Entrance Rando
 
 > Door to Connection to Sector 1 (SRX); Heals? False
@@ -1199,8 +1208,10 @@ Extra - room_id: [40]
   > Door to Collapsed Shaft
       Trivial
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 9
+  * Extra - Y: 10
   > Door to Collapsed Shaft
       Trivial
 
@@ -1352,8 +1363,10 @@ Extra - room_id: [49]
   > Door to Puyo Palace
       Trivial
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 9
+  * Extra - Y: 10
   > Door to Puyo Palace
       Trivial
 
@@ -1438,7 +1451,7 @@ Extra - map_name: Sector 254
 Extra - room_id: [54]
 > Pickup (Energy Tank); Heals? False
   * Layers: default
-  * Pickup 38; Category? Minor
+  * Pickup 38; Category? Major
   * Extra - area: 2
   * Extra - room: 54
   * Extra - blockx: 4

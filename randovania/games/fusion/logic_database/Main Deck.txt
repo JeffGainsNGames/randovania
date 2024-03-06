@@ -234,8 +234,10 @@ Extra - room_id: [11]
   > Save Station
       Trivial
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 10
+  * Extra - Y: 10
   > Door to Elevator to Central Hub
       Trivial
 
@@ -495,9 +497,18 @@ Extra - room_id: [18]
   > Door to Main Deck Navigation Room West
       Trivial
   > Door to Habitation Storage
-      Can Use Power Bombs
+      After Main Deck PB Geron
   > Other to Western Hub
       Morph Ball and Can Break Single Bomb Blocks
+  > Event - Central Hub PB Geron
+      Any of the following:
+          Can Kill PB Geron
+          All of the following:
+              # https://www.youtube.com/watch?v=EiFFpvNaT_A
+              Speed Booster and Knowledge (Intermediate) and Disabled Door Lock Rando and Disabled Entrance Rando
+              Any of the following:
+                  Shinespark Tricks (Hypermode)
+                  Shinespark Tricks (Expert) and Can climb High Jump Wall
 
 > Door to Hornoad Hallway; Heals? False
   * Layers: default
@@ -518,7 +529,9 @@ Extra - room_id: [18]
   * L2 Hatch to Habitation Storage/Door to Central Hub
   * Extra - door_idx: (132,)
   > Door to Station Entrance
-      Can Use Power Bombs
+      After Main Deck PB Geron
+  > Event - Central Hub PB Geron
+      Can Kill PB Geron
 
 > Other to Western Hub; Heals? False
   * Layers: default
@@ -526,6 +539,12 @@ Extra - room_id: [18]
   * Extra - door_idx: (203,)
   > Door to Station Entrance
       Can Use Any Bombs
+
+> Event - Central Hub PB Geron; Heals? False
+  * Layers: default
+  * Event Main Deck PB Geron
+  > Door to Habitation Storage
+      Trivial
 
 ----------------
 Western Hub
@@ -877,8 +896,10 @@ Extra - room_id: [33]
   > Door to Hornoad Hallway
       Trivial
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 9
+  * Extra - Y: 10
   > Door to Hornoad Hallway
       Trivial
 
@@ -962,8 +983,10 @@ Extra - room_id: [37]
   > Save Station
       Trivial
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 10
+  * Extra - Y: 10
   > Door to Crew Quarters East
       Trivial
 
@@ -973,7 +996,7 @@ Extra - map_name: Main Deck38
 Extra - room_id: [38]
 > Pickup (Energy Tank); Heals? False
   * Layers: default
-  * Pickup 3; Category? Minor
+  * Pickup 3; Category? Major
   * Extra - area: 0
   * Extra - room: 38
   * Extra - blockx: 53
@@ -1119,8 +1142,10 @@ Extra - room_id: [44]
   > Save Station
       Trivial
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 8
+  * Extra - Y: 10
   > Door to Operations Deck Recharge Room
       Trivial
 
@@ -1216,46 +1241,41 @@ Extra - room_id: [49, 59]
   * Layers: default
   * Open Hatch to Silo Access/Door to Central Reactor Core
   * Extra - door_idx: (112, 134)
-  > Door to Silo Save Room
+  > Door to Reactor Save Room
       Trivial
 
 > Door to Silo Scaffolding A; Heals? False
   * Layers: default
   * Open Hatch to Silo Scaffolding A/Door to Central Reactor Core
   * Extra - door_idx: (113, 136)
-  > Door to Silo Save Room
+  > Door to Reactor Save Room
       Trivial
 
 > Door to Reactor Checkpoint; Heals? False
   * Layers: default
   * Open Hatch to Reactor Checkpoint/Door to Central Reactor Core
   * Extra - door_idx: (124, 137)
-  > Other to Silo Tunnel
-      All of the following:
-          # Charge shinespark from Auxilary Power Station https://discord.com/channels/119665192110915584/1199873303892992020/1207854781406777405
-          High Jump and Speed Booster and Wave Beam and Shinespark Tricks (Expert) and Disabled Door Lock Rando and Disabled Enemy Rando
-          # Without Charge Beam, the shot to open the gate must be precisely timed.  With Charge Beam, just let go of beam while in the transition.
-          Charge Beam or Movement (Advanced)
-          # Get into tunnel
-          Mid-Air Morph (Intermediate) or Movement (Intermediate) or Can Bounce in Ball
-  > Door to Silo Save Room
+  > Door to Reactor Save Room
       Trivial
 
 > Other to Silo Tunnel; Heals? False
   * Layers: default
   * Tunnel to Silo Tunnel/Other to Central Reactor Core
   * Extra - door_idx: (125, 135)
-  > Door to Silo Save Room
-      Trivial
+  > Door to Reactor Save Room
+      After Nettori or Can Use Any Bombs
 
-> Door to Silo Save Room; Heals? False
+> Door to Reactor Save Room; Heals? False
   * Layers: default
-  * Open Hatch to Silo Save Room/Door to Central Reactor Core
+  * Open Hatch to Reactor Save Room/Door to Central Reactor Core
   * Extra - door_idx: (130, 138)
   > Door to Silo Access
       Any of the following:
           Space Jump
-          Speed Booster and Shinespark Tricks (Beginner) and Disabled Door Lock Rando and Disabled Entrance Rando
+          All of the following:
+              Speed Booster and Shinespark Tricks (Beginner) and Disabled Door Lock Rando and Disabled Entrance Rando
+              # Needed to break the vines
+              Wave Beam or Wide Beam
   > Door to Silo Scaffolding A
       Wall Jump (Beginner) or Can climb High Jump Wall
   > Door to Reactor Checkpoint
@@ -1269,24 +1289,22 @@ Extra - map_name: Main Deck50
 Extra - room_id: [50]
 > Pickup (Energy Tank); Heals? False
   * Layers: default
-  * Pickup 6; Category? Minor
+  * Pickup 6; Category? Major
   * Extra - area: 0
   * Extra - room: 50
   * Extra - blockx: 54
   * Extra - blocky: 8
-  > Door to Central Reactor Core
-      Trivial
   > Other to Silo Scaffolding B
+      Trivial
+  > Beside Pickup
       Trivial
 
 > Door to Central Reactor Core; Heals? False
   * Layers: default
   * Open Hatch to Central Reactor Core/Door to Silo Scaffolding A
   * Extra - door_idx: (114,)
-  > Pickup (Energy Tank)
-      Trivial
-  > Other to Silo Scaffolding B
-      Movement (Intermediate)
+  > Beside Pickup
+      Space Jump or Combat (Intermediate) or Can Kill Tough Beam-Resistant Enemy
 
 > Other to Silo Scaffolding B; Heals? False
   * Layers: default
@@ -1294,7 +1312,16 @@ Extra - room_id: [50]
   * Extra - door_idx: (115,)
   > Pickup (Energy Tank)
       Trivial
+  > Beside Pickup
+      Movement (Intermediate)
+
+> Beside Pickup; Heals? False
+  * Layers: default
+  > Pickup (Energy Tank)
+      Trivial
   > Door to Central Reactor Core
+      Space Jump or Combat (Intermediate) or Can Kill Tough Beam-Resistant Enemy
+  > Other to Silo Scaffolding B
       Movement (Intermediate)
 
 ----------------
@@ -1316,7 +1343,9 @@ Extra - room_id: [51]
   * Open Passage to Silo Scaffolding A/Other to Silo Scaffolding B
   * Extra - door_idx: (116,)
   > Beside Pickup
-      Trivial
+      Any of the following:
+          Combat (Advanced) or Can Kill Tough Beam-Resistant Enemy
+          Damage Boosts (Intermediate) and Normal Damage ≥ 195
 
 > Door to Yakuza Arena; Heals? False
   * Layers: default
@@ -1328,7 +1357,11 @@ Extra - room_id: [51]
   > Pickup (Missile Tank)
       Morph Ball
   > Other to Silo Scaffolding A
-      Wall Jump (Advanced) or Can climb High Jump Wall
+      All of the following:
+          Wall Jump (Advanced) or Can climb High Jump Wall
+          Any of the following:
+              Combat (Advanced) or Can Kill Tough Beam-Resistant Enemy
+              Damage Boosts (Intermediate) and Normal Damage ≥ 195
   > Door to Yakuza Arena
       All of the following:
           Morph Ball and Can Kill Eye Door
@@ -1336,6 +1369,9 @@ Extra - room_id: [51]
               # Destroy shot block before eye door
               Wave Beam or Can Use Any Bombs
               Diffusion Missiles and Missiles
+          Any of the following:
+              Combat (Advanced) or Can Kill Tough Beam-Resistant Enemy
+              Damage Boosts (Intermediate) and Normal Damage ≥ 95
 
 ----------------
 Reactor Checkpoint
@@ -1459,18 +1495,20 @@ Extra - room_id: [57]
       Can Use Bombs or Can Use Springball
 
 ----------------
-Silo Save Room
+Reactor Save Room
 Extra - map_name: Main Deck58
 Extra - room_id: [58]
 > Door to Central Reactor Core; Heals? False
   * Layers: default
-  * Open Hatch to Central Reactor Core/Door to Silo Save Room
+  * Open Hatch to Central Reactor Core/Door to Reactor Save Room
   * Extra - door_idx: (133,)
   > Save Station
       Trivial
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 10
+  * Extra - Y: 10
   > Door to Central Reactor Core
       Trivial
 
@@ -1548,8 +1586,10 @@ Extra - room_id: [64]
   > Save Station
       Trivial
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 9
+  * Extra - Y: 10
   > Door to Restricted Corridor
       Trivial
 
@@ -1866,7 +1906,7 @@ Extra - map_name: Main Deck84
 Extra - room_id: [84]
 > Pickup (Energy Tank); Heals? False
   * Layers: default
-  * Pickup 12; Category? Minor
+  * Pickup 12; Category? Major
   * Extra - area: 0
   * Extra - room: 84
   * Extra - blockx: 14

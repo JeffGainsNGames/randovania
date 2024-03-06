@@ -1329,16 +1329,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 167.91354272205334,
-                        "y": 82.226274907126,
+                        "x": 167.91,
+                        "y": 82.23,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 10,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Elevator to Central Hub": {
                             "type": "and",
@@ -2967,8 +2970,13 @@
                                 "comment": null,
                                 "items": [
                                     {
-                                        "type": "template",
-                                        "data": "Can Use Power Bombs"
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "events",
+                                            "name": "MainDeckPBGeron",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
                                     }
                                 ]
                             }
@@ -2989,6 +2997,100 @@
                                             "name": "MorphBall",
                                             "amount": 1,
                                             "negate": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "Event - Central Hub PB Geron": {
+                            "type": "or",
+                            "data": {
+                                "comment": null,
+                                "items": [
+                                    {
+                                        "type": "template",
+                                        "data": "Can Kill PB Geron"
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": "https://www.youtube.com/watch?v=EiFFpvNaT_A",
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "SpeedBooster",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Knowledge",
+                                                        "amount": 2,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "misc",
+                                                        "name": "DoorLockRando",
+                                                        "amount": 1,
+                                                        "negate": true
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "misc",
+                                                        "name": "EntranceRando",
+                                                        "amount": 1,
+                                                        "negate": true
+                                                    }
+                                                },
+                                                {
+                                                    "type": "or",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "ShinesparkTrick",
+                                                                    "amount": 5,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "and",
+                                                                "data": {
+                                                                    "comment": null,
+                                                                    "items": [
+                                                                        {
+                                                                            "type": "template",
+                                                                            "data": "Can climb High Jump Wall"
+                                                                        },
+                                                                        {
+                                                                            "type": "resource",
+                                                                            "data": {
+                                                                                "type": "tricks",
+                                                                                "name": "ShinesparkTrick",
+                                                                                "amount": 4,
+                                                                                "negate": false
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
                                         }
                                     }
                                 ]
@@ -3110,8 +3212,25 @@
                                 "comment": null,
                                 "items": [
                                     {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "events",
+                                            "name": "MainDeckPBGeron",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "Event - Central Hub PB Geron": {
+                            "type": "or",
+                            "data": {
+                                "comment": null,
+                                "items": [
+                                    {
                                         "type": "template",
-                                        "data": "Can Use Power Bombs"
+                                        "data": "Can Kill PB Geron"
                                     }
                                 ]
                             }
@@ -3158,6 +3277,31 @@
                                         "data": "Can Use Any Bombs"
                                     }
                                 ]
+                            }
+                        }
+                    }
+                },
+                "Event - Central Hub PB Geron": {
+                    "node_type": "event",
+                    "heal": false,
+                    "coordinates": {
+                        "x": 214.34502302515054,
+                        "y": 613.433463218798,
+                        "z": 0.0
+                    },
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "event_name": "MainDeckPBGeron",
+                    "connections": {
+                        "Door to Habitation Storage": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
                             }
                         }
                     }
@@ -3505,7 +3649,15 @@
                             "type": "and",
                             "data": {
                                 "comment": "Geron no longer here",
-                                "items": []
+                                "items": [
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": []
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
@@ -3583,7 +3735,15 @@
                             "type": "and",
                             "data": {
                                 "comment": "Geron no longer here",
-                                "items": []
+                                "items": [
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": []
+                                        }
+                                    }
+                                ]
                             }
                         },
                         "Door to Main Deck Navigation Room East": {
@@ -5063,16 +5223,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 151.33595456531236,
-                        "y": 72.82131935342946,
+                        "x": 151.34,
+                        "y": 72.82,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 9,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Hornoad Hallway": {
                             "type": "and",
@@ -5486,16 +5649,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 169.37540009144948,
-                        "y": 65.20225575369608,
+                        "x": 169.38,
+                        "y": 65.2,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 10,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Crew Quarters East": {
                             "type": "and",
@@ -5537,7 +5703,7 @@
                     },
                     "valid_starting_location": false,
                     "pickup_index": 3,
-                    "location_category": "minor",
+                    "location_category": "major",
                     "connections": {
                         "Beside Door": {
                             "type": "and",
@@ -6309,8 +6475,11 @@
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 8,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Operations Deck Recharge Room": {
                             "type": "and",
@@ -6801,7 +6970,7 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Door to Silo Save Room": {
+                        "Door to Reactor Save Room": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -6841,7 +7010,7 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Door to Silo Save Room": {
+                        "Door to Reactor Save Room": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -6881,125 +7050,7 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Other to Silo Tunnel": {
-                            "type": "and",
-                            "data": {
-                                "comment": "Charge shinespark from Auxilary Power Station https://discord.com/channels/119665192110915584/1199873303892992020/1207854781406777405",
-                                "items": [
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "SpeedBooster",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    },
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "HighJump",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    },
-                                    {
-                                        "type": "or",
-                                        "data": {
-                                            "comment": "Without Charge Beam, the shot to open the gate must be precisely timed.  With Charge Beam, just let go of beam while in the transition.",
-                                            "items": [
-                                                {
-                                                    "type": "resource",
-                                                    "data": {
-                                                        "type": "items",
-                                                        "name": "ChargeBeam",
-                                                        "amount": 1,
-                                                        "negate": false
-                                                    }
-                                                },
-                                                {
-                                                    "type": "resource",
-                                                    "data": {
-                                                        "type": "tricks",
-                                                        "name": "Movement",
-                                                        "amount": 3,
-                                                        "negate": false
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "misc",
-                                            "name": "DoorLockRando",
-                                            "amount": 1,
-                                            "negate": true
-                                        }
-                                    },
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "misc",
-                                            "name": "EnemyRando",
-                                            "amount": 1,
-                                            "negate": true
-                                        }
-                                    },
-                                    {
-                                        "type": "or",
-                                        "data": {
-                                            "comment": "Get into tunnel",
-                                            "items": [
-                                                {
-                                                    "type": "template",
-                                                    "data": "Can Bounce in Ball"
-                                                },
-                                                {
-                                                    "type": "resource",
-                                                    "data": {
-                                                        "type": "tricks",
-                                                        "name": "MidAirMorph",
-                                                        "amount": 2,
-                                                        "negate": false
-                                                    }
-                                                },
-                                                {
-                                                    "type": "resource",
-                                                    "data": {
-                                                        "type": "tricks",
-                                                        "name": "Movement",
-                                                        "amount": 2,
-                                                        "negate": false
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "items",
-                                            "name": "WaveBeam",
-                                            "amount": 1,
-                                            "negate": false
-                                        }
-                                    },
-                                    {
-                                        "type": "resource",
-                                        "data": {
-                                            "type": "tricks",
-                                            "name": "ShinesparkTrick",
-                                            "amount": 4,
-                                            "negate": false
-                                        }
-                                    }
-                                ]
-                            }
-                        },
-                        "Door to Silo Save Room": {
+                        "Door to Reactor Save Room": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -7039,31 +7090,22 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Door to Silo Save Room": {
+                        "Door to Reactor Save Room": {
                             "type": "or",
                             "data": {
                                 "comment": null,
                                 "items": [
                                     {
-                                        "type": "and",
-                                        "data": {
-                                            "comment": "TODO: depends on whether vines will be there?",
-                                            "items": []
-                                        }
+                                        "type": "template",
+                                        "data": "Can Use Any Bombs"
                                     },
                                     {
-                                        "type": "or",
+                                        "type": "resource",
                                         "data": {
-                                            "comment": "TODO: depends on whether vines will be there?",
-                                            "items": [
-                                                {
-                                                    "type": "or",
-                                                    "data": {
-                                                        "comment": null,
-                                                        "items": []
-                                                    }
-                                                }
-                                            ]
+                                            "type": "events",
+                                            "name": "Nettori",
+                                            "amount": 1,
+                                            "negate": false
                                         }
                                     }
                                 ]
@@ -7071,7 +7113,7 @@
                         }
                     }
                 },
-                "Door to Silo Save Room": {
+                "Door to Reactor Save Room": {
                     "node_type": "dock",
                     "heal": false,
                     "coordinates": {
@@ -7093,7 +7135,7 @@
                     "dock_type": "Door",
                     "default_connection": {
                         "region": "Main Deck",
-                        "area": "Silo Save Room",
+                        "area": "Reactor Save Room",
                         "node": "Door to Central Reactor Core"
                     },
                     "default_dock_weakness": "Open Hatch",
@@ -7155,6 +7197,32 @@
                                                         "name": "DoorLockRando",
                                                         "amount": 1,
                                                         "negate": true
+                                                    }
+                                                },
+                                                {
+                                                    "type": "or",
+                                                    "data": {
+                                                        "comment": "Needed to break the vines",
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "items",
+                                                                    "name": "WaveBeam",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "items",
+                                                                    "name": "WideBeam",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
                                                     }
                                                 }
                                             ]
@@ -7241,16 +7309,16 @@
                     },
                     "valid_starting_location": false,
                     "pickup_index": 6,
-                    "location_category": "minor",
+                    "location_category": "major",
                     "connections": {
-                        "Door to Central Reactor Core": {
+                        "Other to Silo Scaffolding B": {
                             "type": "and",
                             "data": {
                                 "comment": null,
                                 "items": []
                             }
                         },
-                        "Other to Silo Scaffolding B": {
+                        "Beside Pickup": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -7289,24 +7357,30 @@
                     "override_default_open_requirement": null,
                     "override_default_lock_requirement": null,
                     "connections": {
-                        "Pickup (Energy Tank)": {
-                            "type": "and",
-                            "data": {
-                                "comment": null,
-                                "items": []
-                            }
-                        },
-                        "Other to Silo Scaffolding B": {
-                            "type": "and",
+                        "Beside Pickup": {
+                            "type": "or",
                             "data": {
                                 "comment": null,
                                 "items": [
                                     {
+                                        "type": "template",
+                                        "data": "Can Kill Tough Beam-Resistant Enemy"
+                                    },
+                                    {
                                         "type": "resource",
                                         "data": {
                                             "type": "tricks",
-                                            "name": "Movement",
+                                            "name": "Combat",
                                             "amount": 2,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "SpaceJump",
+                                            "amount": 1,
                                             "negate": false
                                         }
                                     }
@@ -7352,7 +7426,78 @@
                                 "items": []
                             }
                         },
+                        "Beside Pickup": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": [
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "tricks",
+                                            "name": "Movement",
+                                            "amount": 2,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "Beside Pickup": {
+                    "node_type": "generic",
+                    "heal": false,
+                    "coordinates": {
+                        "x": 816.9329591518552,
+                        "y": 111.46783078682049,
+                        "z": 0.0
+                    },
+                    "description": "",
+                    "layers": [
+                        "default"
+                    ],
+                    "extra": {},
+                    "valid_starting_location": false,
+                    "connections": {
+                        "Pickup (Energy Tank)": {
+                            "type": "and",
+                            "data": {
+                                "comment": null,
+                                "items": []
+                            }
+                        },
                         "Door to Central Reactor Core": {
+                            "type": "or",
+                            "data": {
+                                "comment": null,
+                                "items": [
+                                    {
+                                        "type": "template",
+                                        "data": "Can Kill Tough Beam-Resistant Enemy"
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "tricks",
+                                            "name": "Combat",
+                                            "amount": 2,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "SpaceJump",
+                                            "amount": 1,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "Other to Silo Scaffolding B": {
                             "type": "and",
                             "data": {
                                 "comment": null,
@@ -7454,10 +7599,50 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Beside Pickup": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
                                 "comment": null,
-                                "items": []
+                                "items": [
+                                    {
+                                        "type": "template",
+                                        "data": "Can Kill Tough Beam-Resistant Enemy"
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "DamageBoosts",
+                                                        "amount": 2,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "damage",
+                                                        "name": "NormalDamage",
+                                                        "amount": 195,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "tricks",
+                                            "name": "Combat",
+                                            "amount": 3,
+                                            "negate": false
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
@@ -7526,21 +7711,76 @@
                             }
                         },
                         "Other to Silo Scaffolding A": {
-                            "type": "or",
+                            "type": "and",
                             "data": {
                                 "comment": null,
                                 "items": [
                                     {
-                                        "type": "template",
-                                        "data": "Can climb High Jump Wall"
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "WallJump",
+                                                        "amount": 3,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can climb High Jump Wall"
+                                                }
+                                            ]
+                                        }
                                     },
                                     {
-                                        "type": "resource",
+                                        "type": "or",
                                         "data": {
-                                            "type": "tricks",
-                                            "name": "WallJump",
-                                            "amount": 3,
-                                            "negate": false
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Kill Tough Beam-Resistant Enemy"
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "DamageBoosts",
+                                                                    "amount": 2,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "damage",
+                                                                    "name": "NormalDamage",
+                                                                    "amount": 195,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Combat",
+                                                        "amount": 3,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
                                         }
                                     }
                                 ]
@@ -7605,6 +7845,53 @@
                                                         "type": "items",
                                                         "name": "WaveBeam",
                                                         "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Kill Tough Beam-Resistant Enemy"
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": null,
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "DamageBoosts",
+                                                                    "amount": 2,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "damage",
+                                                                    "name": "NormalDamage",
+                                                                    "amount": 95,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "Combat",
+                                                        "amount": 3,
                                                         "negate": false
                                                     }
                                                 }
@@ -8257,7 +8544,7 @@
                 }
             }
         },
-        "Silo Save Room": {
+        "Reactor Save Room": {
             "default_node": null,
             "extra": {
                 "map_name": "Main Deck58",
@@ -8288,7 +8575,7 @@
                     "default_connection": {
                         "region": "Main Deck",
                         "area": "Central Reactor Core",
-                        "node": "Door to Silo Save Room"
+                        "node": "Door to Reactor Save Room"
                     },
                     "default_dock_weakness": "Open Hatch",
                     "exclude_from_dock_rando": false,
@@ -8309,16 +8596,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 167.71574195427408,
-                        "y": 76.80559196155528,
+                        "x": 167.72,
+                        "y": 76.81,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 10,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Central Reactor Core": {
                             "type": "and",
@@ -8715,16 +9005,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 151.33595456531236,
-                        "y": 75.47750109218,
+                        "x": 151.34,
+                        "y": 75.48,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 9,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Restricted Corridor": {
                             "type": "and",
@@ -10287,7 +10580,7 @@
                     },
                     "valid_starting_location": false,
                     "pickup_index": 12,
-                    "location_category": "minor",
+                    "location_category": "major",
                     "connections": {
                         "Other to Arachnus Arena": {
                             "type": "and",

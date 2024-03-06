@@ -68,8 +68,10 @@ Extra - room_id: [1]
   > Save Station
       Trivial
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 9
+  * Extra - Y: 10
   > Door to Entrance Navigation Room
       Trivial
 
@@ -290,7 +292,7 @@ Extra - room_id: [8]
 
 > Pickup (Hidden Energy Tank); Heals? False
   * Layers: default
-  * Pickup 45; Category? Minor
+  * Pickup 45; Category? Major
   * Extra - area: 3
   * Extra - room: 8
   * Extra - blockx: 22
@@ -328,13 +330,16 @@ Extra - room_id: [8]
 > Below E-Tank; Heals? False
   * Layers: default
   > Pickup (Hidden Energy Tank)
-      All of the following:
-          Can Break Single Bomb Blocks
-          Any of the following:
-              # TODO: space jump requires mid air morph if you have bombs. this whole block should probably get refacted a bit
-              Space Jump or Can Activate Pillar
-              # TODO: how is this supposed to be done if you have screw?
-              High Jump and Wall Jump (Beginner)
+      Any of the following:
+          All of the following:
+              # Use Pillar to Morph Ball Jump and place a Bomb
+              Can Activate Pillar
+              Any of the following:
+                  Can Use Springball
+                  # Bomb Jump is harder
+                  Movement (Beginner) and Can Use Bombs
+          # Alternate - Screw Attack and some extra Jump height (knowledge)
+          Screw Attack and Knowledge (Beginner) and Can climb High Jump Wall
   > Other to Entrance Hub
       Any of the following:
           Can Use Power Bombs
@@ -502,8 +507,9 @@ Extra - room_id: [12]
   * L0 Hatch to Sova Suite/Door to Lava Maze
   * Extra - door_idx: (25,)
   > Door to Lava Reservoirs
-      # TODO: Add damage reqs
-      Varia Suit
+      Any of the following:
+          Varia Suit
+          Damage Runs (Intermediate) and Heat Damage ≥ 15
 
 ----------------
 Sova Suite
@@ -514,16 +520,18 @@ Extra - room_id: [13]
   * L0 Hatch to Lava Maze/Door to Sova Suite
   * Extra - door_idx: (26,)
   > Door to Pyrochamber Access
-      # TODO: add damage reqs
-      Varia Suit
+      Any of the following:
+          Varia Suit
+          Damage Runs (Intermediate) and Heat Damage ≥ 10
 
 > Door to Pyrochamber Access; Heals? False
   * Layers: default
   * L0 Hatch to Pyrochamber Access/Door to Sova Suite
   * Extra - door_idx: (27,)
   > Door to Lava Maze
-      # TODO: add damage reqs
-      Varia Suit
+      Any of the following:
+          Varia Suit
+          Damage Runs (Intermediate) and Heat Damage ≥ 10
 
 ----------------
 Pyrochamber Access
@@ -582,16 +590,20 @@ Extra - room_id: [16]
   * L0 Hatch to Pyrochamber/Door to Boiler Access
   * Extra - door_idx: (32,)
   > Door to Main Boiler
-      # TODO: add damage reqs?
-      Varia Suit
+      Any of the following:
+          Varia Suit
+          # Clean leap across
+          Damage Runs (Intermediate) and Heat Damage ≥ 20
 
 > Door to Main Boiler; Heals? False
   * Layers: default
   * L0 Hatch to Main Boiler/Door to Boiler Access
   * Extra - door_idx: (33,)
   > Door to Pyrochamber
-      # TODO: Add damage reqs?
-      Varia Suit
+      Any of the following:
+          Varia Suit
+          # Clean leap across
+          Damage Runs (Intermediate) and Heat Damage ≥ 20
 
 ----------------
 Main Boiler
@@ -602,7 +614,6 @@ Extra - room_id: [17, 29]
   * L0 Hatch to Boiler Access/Door to Main Boiler
   * Extra - door_idx: (34, 72)
   > Door to Main Boiler Control Room
-      # TODO: varia suit?
       Can Kill Eye Door
 
 > Door to Main Boiler Control Room; Heals? False
@@ -618,7 +629,7 @@ Extra - map_name: Sector 319
 Extra - room_id: [19]
 > Pickup (Energy Tank); Heals? False
   * Layers: default
-  * Pickup 48; Category? Minor
+  * Pickup 48; Category? Major
   * Extra - area: 3
   * Extra - room: 19
   * Extra - blockx: 43
@@ -641,14 +652,20 @@ Extra - room_id: [19]
   * L0 Hatch to Processing Access/Door to Sova Processing (Lower)
   * Extra - door_idx: (40,)
   > Beside Lava
-      Varia Suit and Wave Beam
+      All of the following:
+          Wave Beam
+          Any of the following:
+              Varia Suit
+              Damage Runs (Beginner) and Heat Damage ≥ 5
 
 > Door to Processing Access (Upper); Heals? False
   * Layers: default
   * L0 Hatch to Processing Access/Door to Sova Processing (Upper)
   * Extra - door_idx: (75,)
   > Beside Lava
-      Varia Suit
+      Any of the following:
+          Varia Suit
+          Damage Runs (Beginner) and Heat Damage ≥ 5
 
 > Door to Garbage Chute; Heals? False
   * Layers: default
@@ -657,8 +674,12 @@ Extra - room_id: [19]
   > Beside Lava
       All of the following:
           Gravity Suit and Screw Attack
-          # Heat Run Logic
-          Varia Suit
+          Any of the following:
+              # Heat Run logic (need Gravity to do Screw Attack in the lava)
+              # Gravity - Lava and Heat Damage
+              Damage Runs (Intermediate) and Lava Damage ≥ 110
+              # Varia and Gravity - No Damage
+              Varia Suit
 
 > Beside Pickups; Heals? False
   * Layers: default
@@ -672,18 +693,29 @@ Extra - room_id: [19]
 > Beside Lava; Heals? False
   * Layers: default
   > Door to Processing Access (Lower)
-      Varia Suit
+      Any of the following:
+          Varia Suit
+          Damage Runs (Beginner) and Heat Damage ≥ 5
   > Door to Processing Access (Upper)
-      Varia Suit
+      Any of the following:
+          Varia Suit
+          Damage Runs (Beginner) and Heat Damage ≥ 5
   > Door to Garbage Chute
       All of the following:
           Gravity Suit and Screw Attack
-          # Heat Run logic
-          Varia Suit
+          Any of the following:
+              # Heat Run logic (need Gravity to do Screw Attack in the lava)
+              # Gravity - Lava and Heat Damage
+              Damage Runs (Intermediate) and Lava Damage ≥ 110
+              # Varia and Gravity - No Damage
+              Varia Suit
   > Beside Pickups
       All of the following:
-          Morph Ball and Varia Suit
+          Morph Ball
           Space Jump or Movement (Expert) or Can Freeze Enemies
+          Any of the following:
+              Varia Suit
+              Damage Runs (Intermediate) and Heat Damage ≥ 85
 
 ----------------
 Elevator to Main Deck
@@ -823,14 +855,10 @@ Extra - room_id: [25]
           # Core-X Requirements
           Missiles
           Combat (Beginner) or 20 DMG Missiles
-          All of the following:
-              # TODO: Heat dmg
-              # Heat DMG
-              Varia Suit
-              Any of the following:
-                  # Normal DMG
-                  Combat (Intermediate) or Normal Damage ≥ 200
-                  Combat (Beginner) and Normal Damage ≥ 100
+          Any of the following:
+              # Normal DMG
+              Combat (Intermediate) or Normal Damage ≥ 200
+              Combat (Beginner) and Normal Damage ≥ 100
 
 > Event - Cooling Unit; Heals? False
   * Layers: default
@@ -916,7 +944,7 @@ Extra - map_name: Sector 328
 Extra - room_id: [28]
 > Pickup (Energy Tank); Heals? False
   * Layers: default
-  * Pickup 50; Category? Minor
+  * Pickup 50; Category? Major
   * Extra - area: 3
   * Extra - room: 28
   * Extra - blockx: 12
@@ -1051,8 +1079,10 @@ Extra - room_id: [32]
   > Door to B.O.X. Access
       Trivial
 
-> Save Station; Heals? False
+> Save Station; Heals? False; Spawn Point
   * Layers: default
+  * Extra - X: 9
+  * Extra - Y: 10
   > Door to B.O.X. Access
       Trivial
 
@@ -1134,7 +1164,11 @@ Extra - room_id: [35]
   * Extra - blockx: 4
   * Extra - blocky: 27
   > Beside Pickup
-      Screw Attack
+      All of the following:
+          Screw Attack
+          Any of the following:
+              Varia Suit
+              Damage Runs (Beginner) and Heat Damage ≥ 40
 
 > Pickup (Power Bomb Tank in Shaft); Heals? False
   * Layers: default
@@ -1144,17 +1178,26 @@ Extra - room_id: [35]
   * Extra - blockx: 15
   * Extra - blocky: 86
   > Door to Sova Processing
-      Trivial
+      Any of the following:
+          Varia Suit
+          Damage Runs (Intermediate) and Lava Damage ≥ 45
   > Beside Pickup
-      Speed Booster
+      All of the following:
+          Speed Booster
+          Any of the following:
+              Varia Suit
+              Damage Runs (Beginner) and Heat Damage ≥ 40
 
 > Door to Sova Processing; Heals? False
   * Layers: default
   * L0 Hatch to Sova Processing/Door to Garbage Chute
   * Extra - door_idx: (79,)
   > Pickup (Power Bomb Tank in Shaft)
-      # TODO: Heat DMG
-      Gravity Suit and Screw Attack and Speed Booster and Disabled Door Lock Rando and Disabled Entrance Rando
+      All of the following:
+          Gravity Suit and Screw Attack and Speed Booster and Disabled Door Lock Rando and Disabled Entrance Rando
+          Any of the following:
+              Varia Suit
+              Damage Runs (Intermediate) and Lava Damage ≥ 75
 
 > Door to Chute Access; Heals? False
   * Layers: default
@@ -1164,11 +1207,19 @@ Extra - room_id: [35]
 > Beside Pickup; Heals? False
   * Layers: default
   > Pickup (Power Bomb Tank in Cave)
-      Screw Attack
+      All of the following:
+          Screw Attack
+          Any of the following:
+              Varia Suit
+              Damage Runs (Beginner) and Heat Damage ≥ 40
   > Pickup (Power Bomb Tank in Shaft)
-      Trivial
+      Any of the following:
+          Varia Suit
+          Damage Runs (Beginner) and Heat Damage ≥ 40
   > Door to Chute Access
-      Speed Booster
+      Any of the following:
+          Varia Suit
+          Damage Runs (Beginner) and Heat Damage ≥ 30
 
 ----------------
 Chute Access

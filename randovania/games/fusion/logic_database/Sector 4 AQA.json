@@ -237,16 +237,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 152.3967410556146,
-                        "y": 70.34218916046757,
+                        "x": 152.4,
+                        "y": 70.34,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 9,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Entrance Navigation Room": {
                             "type": "and",
@@ -2425,7 +2428,7 @@
                     },
                     "valid_starting_location": false,
                     "pickup_index": 59,
-                    "location_category": "minor",
+                    "location_category": "major",
                     "connections": {
                         "Door to Bridge Access": {
                             "type": "and",
@@ -2690,16 +2693,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 168.26638328019837,
-                        "y": 70.07769512339118,
+                        "x": 168.27,
+                        "y": 70.08,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 10,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Serris Escape": {
                             "type": "and",
@@ -3692,10 +3698,123 @@
                     "override_default_lock_requirement": null,
                     "connections": {
                         "Pickup (Missile Tank)": {
-                            "type": "and",
+                            "type": "or",
                             "data": {
                                 "comment": null,
-                                "items": []
+                                "items": [
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "ChargeBeam",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "template",
+                                                    "data": "Have Any Beam Upgrade"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "items",
+                                            "name": "Missiles",
+                                            "amount": 10,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "GravitySuit",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "ScrewAttack",
+                                                        "amount": 1,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Use Power Bombs"
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "items",
+                                                        "name": "PowerBombs",
+                                                        "amount": 2,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "type": "resource",
+                                        "data": {
+                                            "type": "tricks",
+                                            "name": "Combat",
+                                            "amount": 3,
+                                            "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "and",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "tricks",
+                                                        "name": "DamageBoosts",
+                                                        "amount": 3,
+                                                        "negate": false
+                                                    }
+                                                },
+                                                {
+                                                    "type": "resource",
+                                                    "data": {
+                                                        "type": "damage",
+                                                        "name": "NormalDamage",
+                                                        "amount": 150,
+                                                        "negate": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
@@ -5601,16 +5720,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 168.50917779950038,
-                        "y": 70.10796133376778,
+                        "x": 168.51,
+                        "y": 70.11,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 10,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Pump Control Access": {
                             "type": "and",
@@ -6256,12 +6378,8 @@
                         "Other to Security Bypass": {
                             "type": "and",
                             "data": {
-                                "comment": "Two block height in tube prevents screw attack from working here",
+                                "comment": null,
                                 "items": [
-                                    {
-                                        "type": "template",
-                                        "data": "Can Use Any Bombs"
-                                    },
                                     {
                                         "type": "resource",
                                         "data": {
@@ -6269,6 +6387,53 @@
                                             "name": "Missiles",
                                             "amount": 1,
                                             "negate": false
+                                        }
+                                    },
+                                    {
+                                        "type": "or",
+                                        "data": {
+                                            "comment": null,
+                                            "items": [
+                                                {
+                                                    "type": "template",
+                                                    "data": "Can Use Any Bombs"
+                                                },
+                                                {
+                                                    "type": "and",
+                                                    "data": {
+                                                        "comment": "You can Screw Attack these blocks",
+                                                        "items": [
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "items",
+                                                                    "name": "ScrewAttack",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "items",
+                                                                    "name": "GravitySuit",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "type": "resource",
+                                                                "data": {
+                                                                    "type": "tricks",
+                                                                    "name": "Knowledge",
+                                                                    "amount": 1,
+                                                                    "negate": false
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
                                         }
                                     }
                                 ]
@@ -7730,16 +7895,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 135.57932853150706,
-                        "y": 71.1136301019404,
+                        "x": 135.58,
+                        "y": 71.11,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 8,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Bridge Access": {
                             "type": "and",
@@ -10407,16 +10575,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 167.97984807336562,
-                        "y": 71.55445349706773,
+                        "x": 167.98,
+                        "y": 71.55,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 10,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Aquarium Shaft West": {
                             "type": "and",
@@ -10658,7 +10829,7 @@
                     },
                     "valid_starting_location": false,
                     "pickup_index": 71,
-                    "location_category": "minor",
+                    "location_category": "major",
                     "connections": {
                         "Door to Sciser Sanctuary": {
                             "type": "template",
@@ -11523,16 +11694,19 @@
                     "node_type": "generic",
                     "heal": false,
                     "coordinates": {
-                        "x": 168.20025977092928,
-                        "y": 71.99527689219505,
+                        "x": 168.2,
+                        "y": 72.0,
                         "z": 0.0
                     },
                     "description": "",
                     "layers": [
                         "default"
                     ],
-                    "extra": {},
-                    "valid_starting_location": false,
+                    "extra": {
+                        "X": 10,
+                        "Y": 10
+                    },
+                    "valid_starting_location": true,
                     "connections": {
                         "Door to Aquarium Hub": {
                             "type": "and",

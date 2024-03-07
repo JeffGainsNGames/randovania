@@ -1350,7 +1350,7 @@ Extra - room_id: [51]
               # Expected dmg trickless
               Combat (Intermediate) or Normal Damage ≥ 128
           Damage Boosts (Intermediate) and Normal Damage ≥ 195
-          Power Bombs ≥ 4 and Knowledge (Beginner) and Can Use Power Bombs
+          Power Bombs ≥ 4 and Combat (Beginner) and Can Use Power Bombs
 
 > Door to Yakuza Arena; Heals? False
   * Layers: default

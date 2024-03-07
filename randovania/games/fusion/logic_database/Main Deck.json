@@ -7707,7 +7707,7 @@
                                                     "type": "resource",
                                                     "data": {
                                                         "type": "tricks",
-                                                        "name": "Knowledge",
+                                                        "name": "Combat",
                                                         "amount": 1,
                                                         "negate": false
                                                     }

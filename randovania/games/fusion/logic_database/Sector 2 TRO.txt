@@ -1108,7 +1108,7 @@ Extra - room_id: [33]
           All of the following:
               # dmg expectations
               High Jump
-              Combat (Intermediate) or Normal Damage ≥ 34
+              Movement (Intermediate) or Normal Damage ≥ 34
           # Kago Jump
           Damage Boosts (Expert) and Wall Jump (Expert) and Normal Damage ≥ 34
           # Shinespark from entrance rooms

@@ -309,7 +309,7 @@ Extra - room_id: [13, 74, 85]
       All of the following:
           All Infants Collected
           Any of the following:
-              Can climb High Jump Wall
+              Can Climb High Jump Wall
               Speed Booster and Shinespark Tricks (Intermediate) and Disabled Door Lock Rando and Disabled Entrance Rando
 
 > Door to Operations Room; Heals? False

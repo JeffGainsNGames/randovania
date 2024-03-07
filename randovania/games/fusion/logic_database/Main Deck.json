@@ -1707,7 +1707,7 @@
                                             "items": [
                                                 {
                                                     "type": "template",
-                                                    "data": "Can climb High Jump Wall"
+                                                    "data": "Can Climb High Jump Wall"
                                                 },
                                                 {
                                                     "type": "and",

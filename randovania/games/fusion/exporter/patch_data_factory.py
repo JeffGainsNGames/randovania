@@ -62,6 +62,41 @@ class FusionPatchDataFactory(PatchDataFactory):
         }
         return starting_location_dict
 
+    def _create_starting_items(self) -> dict:
+        starting_dict = {
+            "Energy": self.configuration.energy_per_tank - 1,
+            "Abilities": [],
+            "SecurityLevels": [],
+            "DownloadedMaps": [0, 1, 2, 3, 4, 5, 6],
+        }
+        missile_launcher = next(
+            state
+            for defi, state in self.configuration.standard_pickup_configuration.pickups_state.items()
+            if defi.name == "Missile Launcher Data"
+        )
+        starting_dict["Missiles"] = missile_launcher.included_ammo[0]
+        pb_launcher = next(
+            state
+            for defi, state in self.configuration.standard_pickup_configuration.pickups_state.items()
+            if defi.name == "Power Bomb Data"
+        )
+        starting_dict["PowerBombs"] = pb_launcher.included_ammo[0]
+
+        for item in self.patches.starting_equipment:
+            if "Metroid" in item.name:
+                print("skip metroid")
+                continue
+            pickup_def = next(
+                value for key, value in self.pickup_db.standard_pickups.items() if value.name == item.name
+            )
+            category = pickup_def.extra["StartingItemCategory"]
+            # Special Case for E-Tanks
+            if category == "Energy":
+                starting_dict[category] += self.configuration.energy_per_tank
+                continue
+            starting_dict[category].append(pickup_def.extra["StartingItemName"])
+        return starting_dict
+
     def _create_tank_increments(self) -> dict:
         tank_dict = {}
         for definition, state in self.patches.configuration.ammo_pickup_configuration.pickups_state.items():
@@ -72,13 +107,18 @@ class FusionPatchDataFactory(PatchDataFactory):
     def _create_door_locks(self):
         result = []
         for node, weakness in self.patches.all_dock_weaknesses():
-            result.append(
-                {
-                    "Area": self.game.region_list.nodes_to_region(node).extra["area_id"],
-                    "Door": node.extra["door_idx"][0],
-                    "LockType": weakness.extra["type"],
-                }
-            )
+            for door, value in enumerate(node.extra["door_idx"]):
+                print("area " + str(self.game.region_list.nodes_to_region(node).extra["area_id"]))
+                print("room " + str(self.game.region_list.nodes_to_area(node).extra["room_id"][0]))
+                print("door " + str(door))
+                print("value " + str(value))
+                result.append(
+                    {
+                        "Area": self.game.region_list.nodes_to_region(node).extra["area_id"],
+                        "Door": node.extra["door_idx"][door],
+                        "LockType": weakness.extra["type"],
+                    }
+                )
         return result
 
     def _create_palette(self) -> dict:
@@ -125,6 +165,7 @@ class FusionPatchDataFactory(PatchDataFactory):
         mars_data = {
             "SeedHash": self.description.shareable_hash,
             "StartingLocation": self._create_starting_location(),
+            "StartingItems": self._create_starting_items(),
             "Locations": self._create_pickup_dict(pickup_list),
             "RequiredMetroidCount": self.configuration.artifacts.required_artifacts,
             "TankIncrements": self._create_tank_increments(),

@@ -107,15 +107,11 @@ class FusionPatchDataFactory(PatchDataFactory):
     def _create_door_locks(self):
         result = []
         for node, weakness in self.patches.all_dock_weaknesses():
-            for door, value in enumerate(node.extra["door_idx"]):
-                print("area " + str(self.game.region_list.nodes_to_region(node).extra["area_id"]))
-                print("room " + str(self.game.region_list.nodes_to_area(node).extra["room_id"][0]))
-                print("door " + str(door))
-                print("value " + str(value))
+            for id in node.extra["door_idx"]:
                 result.append(
                     {
                         "Area": self.game.region_list.nodes_to_region(node).extra["area_id"],
-                        "Door": node.extra["door_idx"][door],
+                        "Door": id,
                         "LockType": weakness.extra["type"],
                     }
                 )
@@ -123,15 +119,25 @@ class FusionPatchDataFactory(PatchDataFactory):
 
     def _create_palette(self) -> dict:
         cosmetics = self.cosmetic_patches
-        palettes = []
+        palettes = {}
+        # TODO make this cleaner
         if cosmetics.enable_suit_palette:
-            palettes.append("Samus")
+            palettes["Samus"] = {
+                "HueMin": cosmetics.suit_hue_min,
+                "HueMax": cosmetics.suit_hue_max,
+            }
         if cosmetics.enable_beam_palette:
-            palettes.append("Beams")
+            palettes["Beams"] = {
+                "HueMin": cosmetics.beam_hue_min,
+                "HueMax": cosmetics.beam_hue_max,
+            }
         if cosmetics.enable_enemy_palette:
-            palettes.append("Enemies")
+            palettes["Enemies"] = {"HueMin": cosmetics.enemy_hue_min, "HueMax": cosmetics.enemy_hue_max}
         if cosmetics.enable_tileset_palette:
-            palettes.append("Tilesets")
+            palettes["Tilesets"] = {
+                "HueMin": cosmetics.tileset_hue_min,
+                "HueMax": cosmetics.tileset_hue_max,
+            }
 
         palette_dict = {
             "Randomize": palettes,

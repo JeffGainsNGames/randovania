@@ -2,11 +2,13 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING
 
-from randovania.exporter import pickup_exporter
+from randovania.exporter import item_names, pickup_exporter
+from randovania.exporter.hints import guaranteed_item_hint
+from randovania.exporter.hints.hint_exporter import HintExporter
 from randovania.exporter.patch_data_factory import PatchDataFactory
 from randovania.game_description.assignment import PickupTarget
-
-# from randovania.games.fusion.exporter.hint_namer import FusionHintNamer
+from randovania.game_description.db.hint_node import HintNode
+from randovania.games.fusion.exporter.hint_namer import FusionHintNamer
 from randovania.games.game import RandovaniaGame
 from randovania.generator.pickup_pool import pickup_creator
 
@@ -84,7 +86,6 @@ class FusionPatchDataFactory(PatchDataFactory):
 
         for item in self.patches.starting_equipment:
             if "Metroid" in item.name:
-                print("skip metroid")
                 continue
             pickup_def = next(
                 value for key, value in self.pickup_db.standard_pickups.items() if value.name == item.name
@@ -146,7 +147,66 @@ class FusionPatchDataFactory(PatchDataFactory):
         return palette_dict
 
     def _create_nav_text(self) -> dict:
-        return
+        nav_text_json = {}
+        hint_lang_list = ["JapaneseKanji", "JapaneseHiragana", "English", "German", "French", "Italian", "Spanish"]
+        namer = FusionHintNamer(self.description.all_patches, self.players_config)
+        exporter = HintExporter(namer, self.rng, ["A joke hint."])
+
+        artifacts = [self.game.resource_database.get_item(f"Infant Metroid {i + 1}") for i in range(20)]
+
+        metroid_hint_mapping = guaranteed_item_hint.create_guaranteed_hints_for_resources(
+            self.description.all_patches,
+            self.players_config,
+            FusionHintNamer(self.description.all_patches, self.players_config),
+            False,  # TODO: make this depending on hint settings later:tm:
+            artifacts,
+            True,
+        )
+
+        hints = {}
+        for node in self.game.region_list.iterate_nodes():
+            if not isinstance(node, HintNode):
+                continue
+            hints[node.extra["hint_name"]] = exporter.create_message_for_hint(
+                self.patches.hints[self.game.region_list.identifier_for_node(node)],
+                self.description.all_patches,
+                self.players_config,
+                True,
+            ).strip()
+            if node.extra["hint_name"] == "RestrictedLabs":
+                hints[node.extra["hint_name"]] = " ".join(
+                    [text for _, text in metroid_hint_mapping.items() if "has no need to be located" not in text]
+                )
+
+        starting_items_list = item_names.additional_starting_equipment(
+            self.patches.configuration, self.patches.game, self.patches
+        )
+        starting_items_text = (
+            "HQ has provided you with the following starting items: " + ", ".join(starting_items_list) + ". "
+            if len(starting_items_list) > 0
+            else ""
+        )
+        metroid_location_text = "anywhere" if self.configuration.artifacts.prefer_anywhere else "at bosses"
+        for lang in hint_lang_list:
+            nav_text_json[lang] = {
+                "NavigationTerminals": hints,
+                "ShipText": {
+                    "InitialText": (
+                        f"{starting_items_text}Your objective is as follows: the [COLOR=3]SA-X[/COLOR] "
+                        f"has discovered and destroyed a top secret [COLOR=3]Metroid[/COLOR] breeding facility. "
+                        f"It released {self.patches.configuration.artifacts.placed_artifacts} "
+                        "infant Metroids into the station. "
+                        f"Initial scans indicate that they are hiding {metroid_location_text}. "
+                        f"Find and capture {self.patches.configuration.artifacts.required_artifacts} of them, "
+                        "to lure out the SA-X. "
+                        "Then initiate the station's self-destruct sequence. "
+                        "Uplink at [COLOR=2]Navigation Rooms[/COLOR] along the way. "
+                        "I can scan the station for useful equipment from there.[OBJECTIVE]Good. Move out."
+                    ),
+                    "ConfirmText": "Any Objections, Lady?",
+                },
+            }
+        return nav_text_json
 
     def create_data(self) -> dict:
         db = self.game
@@ -178,7 +238,7 @@ class FusionPatchDataFactory(PatchDataFactory):
             "DoorLocks": self._create_door_locks(),
             "SkipDoorTransitions": self.configuration.instant_transitions,
             "Palettes": self._create_palette(),
-            # "NavigationText": self._create_nav_text(),
+            "NavigationText": self._create_nav_text(),
         }
         import json
 

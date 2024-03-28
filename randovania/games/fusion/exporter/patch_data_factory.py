@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 from randovania.exporter import item_names, pickup_exporter
-from randovania.exporter.hints import guaranteed_item_hint
+from randovania.exporter.hints import credits_spoiler, guaranteed_item_hint
 from randovania.exporter.hints.hint_exporter import HintExporter
 from randovania.exporter.patch_data_factory import PatchDataFactory
 from randovania.game_description.assignment import PickupTarget
@@ -208,6 +208,31 @@ class FusionPatchDataFactory(PatchDataFactory):
             }
         return nav_text_json
 
+    def _create_credits_text(self) -> dict:
+        credits_array = []
+        # TODO needs to be redone by elements, if someone has a world name with " - " this breaks
+        # spoiler_dict = credits_spoiler.generic_credits(
+        #     self.configuration.standard_pickup_configuration,
+        #     self.description.all_patches,
+        #      self.players_config,
+        #     FusionHintNamer(self.description.all_patches, self.players_config),
+        #     "{}",
+        #     False,
+        # )
+        # for key, value in spoiler_dict.items():
+        #    credits_array.append({"LineType": "Red", "Text": str(key), "BlankLines": 1})
+        #    text = value.split("\n")
+        #    for i in text:
+        #        t = i.split(" - ")
+        #        credits_array.append({"LineType": "White1", "Text": t[0], "BlankLines": 0})
+        #        credits_array.append({"LineType": "White1", "Text": t[1], "BlankLines": 1})
+        #    credits_array.append({"LineType": "Red", "Text": "", "BlankLines": 1})
+
+        elements = credits_spoiler.credits_elements(self.description.all_patches, self.players_config)
+        print(str(elements))
+
+        return credits_array
+
     def create_data(self) -> dict:
         db = self.game
 
@@ -239,9 +264,12 @@ class FusionPatchDataFactory(PatchDataFactory):
             "SkipDoorTransitions": self.configuration.instant_transitions,
             "Palettes": self._create_palette(),
             "NavigationText": self._create_nav_text(),
+            "CreditsText": self._create_credits_text(),
         }
         import json
 
-        foo = json.dumps(mars_data)
+        foo = json.dumps(mars_data, indent=2)
         print(foo)
+        # with open("sample.json", "w") as outfile:
+        #     outfile.write(foo)
         return {}

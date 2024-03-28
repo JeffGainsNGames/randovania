@@ -5,6 +5,7 @@ import math
 from typing import TYPE_CHECKING, NamedTuple
 
 from randovania.exporter.hints.hint_namer import HintNamer, PickupLocation
+from randovania.game_description import default_database
 
 if TYPE_CHECKING:
     from randovania.game_description.game_patches import GamePatches
@@ -44,7 +45,6 @@ def get_locations_for_major_pickups_and_keys(
                 results[target.pickup].append(
                     OwnedPickupLocation(player_name, PickupLocation(patches.configuration.game, pickup_index))
                 )
-
     return results
 
 
@@ -72,6 +72,38 @@ def generic_credits(
         pickup_name_format.format(pickup.name): "\n".join(major_pickups_spoiler[pickup]) or "Nowhere"
         for pickup in sorted(major_pickups_spoiler.keys(), key=sort_pickup)
     }
+
+
+def credits_elements(
+    all_patches: dict[int, GamePatches],
+    players_config: PlayersConfiguration,
+) -> dict:
+    results = []
+
+    for player_index, patches in all_patches.items():
+        for pickup_index, target in patches.pickup_assignment.items():
+            if target.player != players_config.player_index:
+                continue
+            region_list = default_database.game_description_for(patches.configuration.game).region_list
+            pickup_category = target.pickup.pickup_category
+            if pickup_category.hinted_as_major or pickup_category.is_key:
+                player_name = None
+                if players_config.is_multiworld:
+                    player_name = players_config.player_names[player_index]
+                results.append(
+                    {
+                        "Item": target.pickup.name,
+                        "Location": {
+                            "World": player_name,
+                            "Region": region_list.region_name_from_node(
+                                region_list.node_from_pickup_index(pickup_index), True
+                            ),
+                            "Area": region_list.nodes_to_area(region_list.node_from_pickup_index(pickup_index)).name,
+                        },
+                    }
+                )
+
+    return results
 
 
 def prime_trilogy_credits(

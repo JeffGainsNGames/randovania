@@ -326,7 +326,9 @@
             ],
             "preferred_location_category": "minor",
             "expected_case_for_describer": "shuffled",
-            "custom_count_for_shuffled_case": 14
+            "custom_count_for_shuffled_case": 14,
+            "probability_offset": 1.5,
+            "probability_multiplier": 2.0
         },
         "Morph Ball": {
             "pickup_category": "morph_ball",
@@ -583,7 +585,9 @@
             "preferred_location_category": "minor",
             "unlocked_by": "MissileLauncher",
             "temporary": "LockedMissile",
-            "allows_negative": true
+            "allows_negative": true,
+            "probability_offset": 1.5,
+            "probability_multiplier": 2.0
         },
         "Power Bomb Expansion": {
             "broad_category": "morph_ball_related",

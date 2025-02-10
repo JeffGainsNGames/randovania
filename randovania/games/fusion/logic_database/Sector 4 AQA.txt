@@ -217,6 +217,7 @@ Extra - room_id: [3]
 Data Room
 Extra - map_name: Sector 44
 Extra - room_id: [4]
+Hint Features - Data Room
 > Door to Powamp Place; Heals? False
   * Layers: default
   * L4 Hatch to Powamp Place/Door to Data Room
@@ -255,6 +256,7 @@ Extra - room_id: [5]
 Reservoir East
 Extra - map_name: Sector 46
 Extra - room_id: [6]
+Hint Features - Ladder
 > Pickup (Hidden Power Bomb Tank); Heals? False
   * Layers: default
   * Pickup 58; Category? Minor
@@ -1313,6 +1315,7 @@ Extra - room_id: [25]
 Level 4 Security Room
 Extra - map_name: Sector 426
 Extra - room_id: [26]
+Hint Features - Security Room
 > Door to Security Access; Heals? False
   * Layers: default
   * L4 Hatch to Security Access/Door to Level 4 Security Room
@@ -1511,6 +1514,7 @@ Extra - unlocked_save_recharge_station: True
 Pump Control Unit
 Extra - map_name: Sector 433
 Extra - room_id: [33]
+Hint Features - Ladder
 > Pickup (Missile Tank); Heals? False
   * Layers: default
   * Pickup 67; Category? Minor
@@ -1766,6 +1770,7 @@ Extra - room_id: [35]
 Drain Pipe
 Extra - map_name: Sector 436
 Extra - room_id: [36]
+Hint Features - Checkpoint
 > Pickup (Hidden Missile Tank); Heals? False
   * Layers: default
   * Pickup 68; Category? Minor
@@ -2059,6 +2064,7 @@ Extra - room_id: [41]
 Serris Arena
 Extra - map_name: Sector 442
 Extra - room_id: [42]
+Hint Features - Boss, Ladder
 > Door to Serris Speedway; Heals? False
   * Layers: default
   * L0 Hatch to Serris Speedway/Door to Serris Arena

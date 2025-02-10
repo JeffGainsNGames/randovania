@@ -6220,7 +6220,9 @@
         },
         "Operations Maintenance Shaft": {
             "default_node": null,
-            "hint_features": [],
+            "hint_features": [
+                "ladder"
+            ],
             "extra": {
                 "map_name": "Main Deck35",
                 "room_id": [
@@ -7099,7 +7101,9 @@
                     "valid_starting_location": false,
                     "pickup_index": 100,
                     "location_category": "major",
-                    "hint_features": [],
+                    "hint_features": [
+                        "boss"
+                    ],
                     "connections": {
                         "Arena": {
                             "type": "and",
@@ -7339,7 +7343,9 @@
         },
         "Operations Deck Data Room": {
             "default_node": null,
-            "hint_features": [],
+            "hint_features": [
+                "data_room"
+            ],
             "extra": {
                 "map_name": "Main Deck39",
                 "room_id": [
@@ -9138,7 +9144,9 @@
         },
         "Silo Scaffolding": {
             "default_node": null,
-            "hint_features": [],
+            "hint_features": [
+                "ladder"
+            ],
             "extra": {
                 "map_name": "Main Deck51",
                 "room_id": [
@@ -11192,7 +11200,9 @@
         },
         "Habitation Deck": {
             "default_node": null,
-            "hint_features": [],
+            "hint_features": [
+                "checkpoint"
+            ],
             "extra": {
                 "map_name": "Main Deck69",
                 "room_id": [
